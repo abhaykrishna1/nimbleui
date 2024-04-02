@@ -52,10 +52,26 @@ class Constants {
   static const String certification = "Certification";
   static const String expertise = "Expertise";
   static const String booking = "Bookings";
-  static const String post = "Post";
+  static const String post = "Posts";
   static const String message = "Message";
   static const String account = "My Account";
   static const String createpost = "Create Post";
   static const String seekername = "Seeker name";
   static const String service = "Service";
+  static const String typeofService = "Type of service";
+  static const String schedule = "Schedule";
+  static const String time = "Time";
+  static const String location = "Location";
+  static const String date = "Date";
+  static const String pricerange = "Price range";
+  static const String distancewithin = "Distance within ";
+  static const String rating = "Rating";
+  static const String gender = "Gender";
+  static const String language = "Language";
+  static const String categories  = "Categories";
+  static const String selectlanguage = "Select language";
+  static const String feedback = "FeedBack";
+  static const String helpcenter = "Help Center";
+  static const String callsupport = "Call Support";
+  static const String settings = "Settings";
 }

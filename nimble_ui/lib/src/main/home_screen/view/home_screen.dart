@@ -6,6 +6,7 @@ import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/src/main/home_screen/view/tab_view/tab_all_screen.dart';
 import 'package:nimple_ui/src/main/home_screen/view/tab_view/tab_care_screen.dart';
+import 'package:nimple_ui/src/main/home_screen/view/tab_view/tab_clean_screen.dart';
 import 'package:nimple_ui/src/main/home_screen/view/tab_view/tab_cook_screen.dart';
 import 'package:nimple_ui/src/main/home_screen/view_model/home_provider.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
@@ -99,7 +100,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   TabAllScreen(),
                   const TabCareScreen(),
                   const TabCookScreen(),
-                  const ClipTestWidget(),
+                  const TabCleanScreen()
+                  // const ClipTestWidget(),
                 ],
               ),
             ),

@@ -193,7 +193,7 @@ class ShowDialogWidget extends StatelessWidget {
                       ],
                     ),
                   ),
-                   10.verticalSpace,
+                  10.verticalSpace,
                   // Container(
                   //   padding: const EdgeInsets.all(10),
                   //   width: double.maxFinite,
@@ -219,8 +219,8 @@ class ShowDialogWidget extends StatelessWidget {
                   //     ],
                   //   ),
                   // ),
-                
-                   Container(
+
+                  Container(
                     padding: const EdgeInsets.all(17),
                     width: double.maxFinite,
                     decoration: BoxDecoration(

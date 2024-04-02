@@ -32,4 +32,16 @@ class Assets {
   static const String logoutIcon = "assets/icons/logout.svg";
   static const String help = "assets/icons/help (1).svg";
   static const String emogiSmile = "assets/icons/Group 48095883.svg";
+  static const String locationSearch = "assets/icons/location_searching.svg";
+  static const String more = "assets/icons/more_vert.svg";
+  static const String editicon = "assets/icons/edit.svg";
+  static const String deleteicon = "assets/icons/delete.svg";
+  static const String tickIcon = "assets/icons/successtick.svg";
+  static const String doneIcon = "assets/icons/done.svg";
+  static const String twoline = "assets/icons/twoline.svg";
+  static const String emailRed = "assets/icons/mail (1).svg";
+  static const String whatsappicon = "assets/icons/WhatsApp.svg";
+  static const String callicon = "assets/icons/Vector.svg";
+  static const String infoicon = "assets/icons/info.svg";
+  static const String addicon = "assets/icons/add.svg";
 }

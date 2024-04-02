@@ -8,6 +8,7 @@ import 'package:nimple_ui/src/main/account_screen/view/account_screen.dart';
 import 'package:nimple_ui/src/main/booking_screen/view/booking_screen.dart';
 import 'package:nimple_ui/src/main/home_screen/view/home_screen.dart';
 import 'package:nimple_ui/src/main/message_screen/view/message_screen.dart';
+import 'package:nimple_ui/src/main/post/view/post_screen.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 
@@ -21,13 +22,10 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   List pages = [
     const HomeScreen(),
-    BookingScreen(),
-    const Text(
-      "Page 3",
-      style: TextStyle(fontSize: 30),
-    ),
+    const BookingScreen(),
+    const PostScreen(),
     MessageScreen(),
-    AccountScreen()
+    const AccountScreen()
   ];
 
   int pageindex = 0;
@@ -81,14 +79,58 @@ class _MainScreenState extends State<MainScreen> {
                     ),
                   ),
                   12.horizontalSpace,
-                  SizedBox(
-                    height: 20.h,
-                    width: 20.w,
-                    child: SvgPicture.asset(Assets.notification),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteGenerator.routeNotificationScreen,
+                      );
+                    },
+                    child: SizedBox(
+                      height: 20.h,
+                      width: 20.w,
+                      child: SvgPicture.asset(Assets.notification),
+                    ),
                   ),
                   17.horizontalSpace
                 ]
-              : []),
+              : [
+                  pageindex == 2
+                      ? InkWell(
+                          onTap: () {
+                            Navigator.pushNamed(
+                              context,
+                              RouteGenerator.routeAddPostScreen,
+                            );
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.all(7),
+                            decoration: BoxDecoration(
+                                color: Colors.black,
+                                borderRadius: BorderRadius.circular(15)),
+                            child: Row(
+                              children: [
+                                const Icon(
+                                  Icons.add,
+                                  color: Colors.white,
+                                  size: 19,
+                                ),
+                                4.horizontalSpace,
+                                Text(
+                                  "Create a Post",
+                                  style: TextStyle(
+                                      fontSize: 13.sp,
+                                      fontWeight: FontWeight.w600),
+                                )
+                              ],
+                            ),
+                          ),
+                        )
+                      : const SizedBox(),
+                  const SizedBox(
+                    width: 10,
+                  )
+                ]),
       body: pages[pageindex],
       bottomNavigationBar: Container(
         // height: 63.h,
@@ -204,12 +246,9 @@ class _MainScreenState extends State<MainScreen> {
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        //  pageindex = 2;
+                        pageindex = 2;
                         appbarTitile = Constants.post;
-                        Navigator.pushNamed(
-                          context,
-                          RouteGenerator.routeAddPostScreen,
-                        );
+                        setState(() {});
                       });
                     },
                     child: Column(

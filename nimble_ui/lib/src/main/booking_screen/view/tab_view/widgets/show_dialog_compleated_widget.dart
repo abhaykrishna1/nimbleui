@@ -1,10 +1,12 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/generate/assets.dart';
+import 'package:nimple_ui/src/main/booking_screen/view/tab_view/widgets/click_here_widget.dart';
+import 'package:nimple_ui/src/main/booking_screen/view/tab_view/widgets/feedback_dialog_widget.dart';
 import 'package:nimple_ui/src/main/message_screen/tab_view/widget/small_border_text_widget.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
@@ -217,98 +219,182 @@ class ShowDialogCompleatedWidget extends StatelessWidget {
                             child: SvgPicture.asset(Assets.help),
                           ),
                           16.horizontalSpace,
-                          // Expanded(
-                          //   child: Text(
-                          //     "If the task is not completed",
-                          //     style: FontPalette.black_14_400.copyWith(),
-                          //   ),
-                          // ),
-                          // Text(
-                          //   " Click here",
-                          //   style: FontPalette.black_14_600,
-                          // )
                           Expanded(
-                            child: Text.rich(
-                              TextSpan(
-                                // with no TextStyle it will have default text style
-                                text: 'If the task is not completed',
-                                style: FontPalette.black_14_400.copyWith(),
-                                children: <TextSpan>[
-                                  TextSpan(
-                                      text: ' Clickhere',
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14.sp)),
-                                ],
-                              ),
+                            child: Text(
+                              "If the task is not completed",
+                              style: FontPalette.black_14_400.copyWith(),
+                            ),
+                          ),
+                          InkWell(
+                            onTap: () {
+                              showGeneralDialog(
+                                barrierLabel: "Label",
+                                barrierDismissible: true,
+                                barrierColor: Colors.black.withOpacity(0.5),
+                                transitionDuration:
+                                    const Duration(milliseconds: 300),
+                                context: context,
+                                pageBuilder: (context, anim1, anim2) {
+                                  return const ClickHereWidget();
+                                },
+                                transitionBuilder:
+                                    (context, anim1, anim2, child) {
+                                  return SlideTransition(
+                                    position: Tween(
+                                            begin: const Offset(0, 1),
+                                            end: const Offset(0, 0))
+                                        .animate(anim1),
+                                    child: child,
+                                  );
+                                },
+                              );
+                            },
+                            child: Text(
+                              " Click here",
+                              style: FontPalette.black_14_600.copyWith(
+                                  decoration: TextDecoration.underline),
                             ),
                           )
+                          // InkWell(
+                          //   onTap: () {
+                          //     showGeneralDialog(
+                          //       barrierLabel: "Label",
+                          //       barrierDismissible: true,
+                          //       barrierColor: Colors.black.withOpacity(0.5),
+                          //       transitionDuration:
+                          //           const Duration(milliseconds: 300),
+                          //       context: context,
+                          //       pageBuilder: (context, anim1, anim2) {
+                          //         return Align(
+                          //             alignment: Alignment.bottomCenter,
+                          //             child: IntrinsicHeight(
+                          //               child: Material(
+                          //                 child: Container(
+                          //                   height: 400,
+                          //                   width: double.maxFinite,
+                          //                   color: Colors.green,
+                          //                 ),
+                          //               ),
+                          //             ));
+                          //       },
+                          //       transitionBuilder:
+                          //           (context, anim1, anim2, child) {
+                          //         return SlideTransition(
+                          //           position: Tween(
+                          //                   begin: const Offset(0, 1),
+                          //                   end: const Offset(0, 0))
+                          //               .animate(anim1),
+                          //           child: child,
+                          //         );
+                          //       },
+                          //     );
+                          //   },
+                          //   child: Expanded(
+                          //     child: Text.rich(
+                          //       TextSpan(
+                          //         // with no TextStyle it will have default text style
+                          //         text: 'If the task is not completed',
+                          //         style: FontPalette.black_14_400.copyWith(),
+                          //         children: <TextSpan>[
+                          //           TextSpan(
+                          //               text: ' Clickhere',
+                          //               style: TextStyle(
+                          //                   fontWeight: FontWeight.bold,
+                          //                   fontSize: 14.sp)),
+                          //         ],
+                          //       ),
+                          //     ),
+                          //   ),
+                          // )
                         ],
                       ),
                     ),
                     10.verticalSpace,
-                    Container(
-                      padding: const EdgeInsets.all(20),
-                      width: double.maxFinite,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: Colors.white),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'How was your service experience?',
-                            style: FontPalette.black_16_600,
-                          ),
-                          4.verticalSpace,
-                          Text(
-                            "Rate your experience",
-                            style: FontPalette.black_14_400,
-                          ),
-                          10.verticalSpace,
-                          const Divider(),
-                          10.verticalSpace,
-                          Container(
-                            padding: const EdgeInsets.only(top: 4, bottom: 4),
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                                color: HexColor("#39BF78"),
-                                borderRadius: BorderRadius.circular(16)),
-                            child: Text(
-                              "Excellent",
-                              style: FontPalette.black_14_600
-                                  .copyWith(color: Colors.white),
+                    InkWell(
+                      onTap: () {
+                        showGeneralDialog(
+                          barrierLabel: "Label",
+                          barrierDismissible: true,
+                          barrierColor: Colors.black.withOpacity(0.5),
+                          transitionDuration: const Duration(milliseconds: 300),
+                          context: context,
+                          pageBuilder: (context, anim1, anim2) {
+                            return const FeedBackDialogWidget();
+                          },
+                          transitionBuilder: (context, anim1, anim2, child) {
+                            return SlideTransition(
+                              position: Tween(
+                                      begin: const Offset(0, 1),
+                                      end: const Offset(0, 0))
+                                  .animate(anim1),
+                              child: child,
+                            );
+                          },
+                        );
+                      },
+                      child: Container(
+                        padding: const EdgeInsets.all(20),
+                        width: double.maxFinite,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.white),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'How was your service experience?',
+                              style: FontPalette.black_16_600,
                             ),
-                          ),
-                          7.verticalSpace,
-                          Row(
-                            children: [
-                              SizedBox(
-                                height: 45.h,
-                                width: 45.w,
-                                child: SvgPicture.asset(Assets.emogiSmile),
+                            4.verticalSpace,
+                            Text(
+                              "Rate your experience",
+                              style: FontPalette.black_14_400,
+                            ),
+                            10.verticalSpace,
+                            const Divider(),
+                            10.verticalSpace,
+                            Container(
+                              padding: const EdgeInsets.only(top: 4, bottom: 4),
+                              alignment: Alignment.center,
+                              decoration: BoxDecoration(
+                                  color: HexColor("#39BF78"),
+                                  borderRadius: BorderRadius.circular(16)),
+                              child: Text(
+                                "Excellent",
+                                style: FontPalette.black_14_600
+                                    .copyWith(color: Colors.white),
                               ),
-                              10.horizontalSpace,
-                              RatingBar.builder(
-                                initialRating: 4,
-                                minRating: 1,
-                                direction: Axis.horizontal,
-                                itemCount: 5,
-                                itemPadding:
-                                    const EdgeInsets.symmetric(horizontal: 4.0),
-                                itemSize: 20.h,
-                                itemBuilder: (context, _) => SizedBox(
-                                    height: 15.h,
-                                    width: 15.w,
-                                    child: SvgPicture.asset(
-                                      Assets.staricon,
-                                      color: HexColor("#FFC80D"),
-                                    )),
-                                onRatingUpdate: (rating) {},
-                              ),
-                            ],
-                          )
-                        ],
+                            ),
+                            7.verticalSpace,
+                            Row(
+                              children: [
+                                SizedBox(
+                                  height: 45.h,
+                                  width: 45.w,
+                                  child: SvgPicture.asset(Assets.emogiSmile),
+                                ),
+                                10.horizontalSpace,
+                                RatingBar.builder(
+                                  initialRating: 4,
+                                  minRating: 1,
+                                  direction: Axis.horizontal,
+                                  itemCount: 5,
+                                  itemPadding: const EdgeInsets.symmetric(
+                                      horizontal: 4.0),
+                                  itemSize: 20.h,
+                                  itemBuilder: (context, _) => SizedBox(
+                                      height: 15.h,
+                                      width: 15.w,
+                                      child: SvgPicture.asset(
+                                        Assets.staricon,
+                                        color: HexColor("#FFC80D"),
+                                      )),
+                                  onRatingUpdate: (rating) {},
+                                ),
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     // Container(

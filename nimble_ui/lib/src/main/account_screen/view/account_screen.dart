@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
@@ -32,7 +33,9 @@ class _AccountScreenState extends State<AccountScreen> {
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
-                          "https://s3-alpha-sig.figma.com/img/02fc/e6d5/eada0def258fb385a439b529a424c75a?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j6ANjqpWGpFDLbOCfi7JX3UQddwxsBcSnxNoSWvSUpZEdURROOINA7anvZ1KmGtyNncdi0K7y~PE9iAaUVvYWNvJmuwGrt0MxiWkwMTbWdwse4oOKASDpuqaJUJ~GDGqAdV6nihv8-D10oX~fejNuadr54X1T31NL495kxBc3nKr5LVpjfbkAQszj1ScHoqtns8PXAvFTTapOsGiE7mjmWnuK689pKwtL0G8cY5eRc6i0Xbt432jkfPFyVwZJkKS2BcJdhL-cLkwRWhS5id4YnR23aJZrlboYv3URf4iiqa89c~nzmGIVnx4ZiumZdQmyGJTFtjQMJR3ukQbo6uIOg__")),
+                        "https://t3.ftcdn.net/jpg/02/68/56/00/360_F_268560006_F2fIixDnlVRNGwCyne9EMQJhaAxalKTq.jpg",
+                      ),
+                      fit: BoxFit.cover),
                   shape: BoxShape.circle,
                   color: Colors.white,
                 ),
@@ -111,7 +114,10 @@ class _AccountScreenState extends State<AccountScreen> {
                     accountListWidget("Payment information",
                         Assets.paymentInformationIcon, () {}),
                     const Divider(),
-                    accountListWidget("Settings", Assets.settings, () {}),
+                    accountListWidget("Settings", Assets.settings, () {
+                      Navigator.pushNamed(
+                          context, RouteGenerator.routesettingsscreen);
+                    }),
                     const Divider(),
                     accountListWidget(
                         "Privacy policy", Assets.privacyPolicy, () {}),
@@ -126,7 +132,10 @@ class _AccountScreenState extends State<AccountScreen> {
                     color: Colors.white),
                 child: Column(
                   children: [
-                    accountListWidget("Help center", Assets.helpIcon, () {}),
+                    accountListWidget("Help center", Assets.helpIcon, () {
+                      Navigator.pushNamed(
+                          context, RouteGenerator.routehelpcenterscreen);
+                    }),
                     const Divider(),
                     accountListWidget("Log out", Assets.logoutIcon, () {}),
                   ],
@@ -137,32 +146,36 @@ class _AccountScreenState extends State<AccountScreen> {
     );
   }
 
-  Widget accountListWidget(String title, String icon, Function ontap) {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              SizedBox(
-                height: 20.h,
-                width: 20.w,
-                child: SvgPicture.asset(icon),
-              ),
-              20.horizontalSpace,
-              Text(
-                title,
-                overflow: TextOverflow.ellipsis,
-                style: TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
-              )
-            ],
-          ),
-          const Icon(
-            Icons.arrow_forward_ios_outlined,
-            size: 16,
-          )
-        ],
+  Widget accountListWidget(String title, String icon, VoidCallback ontap) {
+    return InkWell(
+      onTap: ontap,
+      child: Container(
+        padding: const EdgeInsets.all(10),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                  height: 20.h,
+                  width: 20.w,
+                  child: SvgPicture.asset(icon),
+                ),
+                20.horizontalSpace,
+                Text(
+                  title,
+                  overflow: TextOverflow.ellipsis,
+                  style:
+                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
+                )
+              ],
+            ),
+            const Icon(
+              Icons.arrow_forward_ios_outlined,
+              size: 16,
+            )
+          ],
+        ),
       ),
     );
   }
