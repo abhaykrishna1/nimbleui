@@ -122,9 +122,11 @@ class _ClickHereWidgetState extends State<FeedBackDialogWidget> {
                                       const Divider(),
                                       10.verticalSpace,
                                       Container(
-                                        padding: const EdgeInsets.only(
-                                            top: 4, bottom: 4),
-                                        alignment: Alignment.center,
+                                        padding: EdgeInsets.only(
+                                            top: 4,
+                                            bottom: 4,
+                                            right: 10.w,
+                                            left: 10.w),
                                         decoration: BoxDecoration(
                                             color: HexColor("#39BF78"),
                                             borderRadius:

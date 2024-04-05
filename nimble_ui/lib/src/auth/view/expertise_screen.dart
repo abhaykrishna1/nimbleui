@@ -145,7 +145,7 @@ class _ExpertiseScreenState extends State<ExpertiseScreen> {
               title: Constants.next,
               onpressed: () {
                 widget.controller.animateToPage(3,
-                    duration: const Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 300),
                     curve: Curves.linear);
               }),
         ],

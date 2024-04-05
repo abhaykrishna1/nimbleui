@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:nimple_ui/src/main/message_screen/tab_view/accepted_profile_tab.dart';
@@ -8,7 +7,7 @@ import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 
 class MessageScreen extends StatefulWidget {
-  MessageScreen({super.key});
+ const MessageScreen({super.key});
 
   @override
   State<MessageScreen> createState() => _MessageScreenState();
@@ -27,7 +26,7 @@ class _MessageScreenState extends State<MessageScreen> {
         body: Column(
           children: [
             SizedBox(
-              height: 75.h,
+              height: 85.h,
               width: double.maxFinite,
               child: TabBar(
                 overlayColor:

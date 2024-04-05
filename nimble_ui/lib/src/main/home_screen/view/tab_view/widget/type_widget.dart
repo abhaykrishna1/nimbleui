@@ -11,7 +11,7 @@ class TypeWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      height: 27.h,
+      height: 34.h,
       width: 60.w,
       decoration: BoxDecoration(
         color: HexColor("#F0EEFD"),

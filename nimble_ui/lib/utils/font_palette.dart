@@ -9,10 +9,10 @@ class FontPalette {
       TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600);
   static TextStyle black_14_400 =
       TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400);
-        static TextStyle black_14_600 =
-      TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w600,color: Colors.black);
-              static TextStyle black_16_600 =
-      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w600,color: Colors.black);
-                    static TextStyle black_18_600 =
-      TextStyle(fontSize: 18.sp, fontWeight: FontWeight.w600,color: Colors.black);
+  static TextStyle black_14_600 = TextStyle(
+      fontSize: 14.sp, fontWeight: FontWeight.w600, color: Colors.black);
+  static TextStyle black_16_600 = TextStyle(
+      fontSize: 16.sp, fontWeight: FontWeight.w600, color: Colors.black);
+  static TextStyle black_18_600 = TextStyle(
+      fontSize: 18.sp, fontWeight: FontWeight.w600, color: Colors.black);
 }

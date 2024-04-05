@@ -166,6 +166,7 @@ class _PostScreenState extends State<PostScreen> {
                               },
                               child: SizedBox(
                                 height: 20.h,
+                                width: 20.w,
                                 child: SvgPicture.asset(Assets.more),
                               ),
                             )

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
+import 'package:nimple_ui/src/favorites/view/favorites_screen.dart';
 import 'package:nimple_ui/src/main/home_screen/view/tab_view/widget/type_widget.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
@@ -168,7 +169,7 @@ class GridViewWidget extends StatelessWidget {
                                     const TypeWidget(title: "Clean")
                                   ],
                                 ),
-                                10.verticalSpace,
+                                17.verticalSpace,
                                 Row(
                                   children: [
                                     Text(
@@ -177,7 +178,7 @@ class GridViewWidget extends StatelessWidget {
                                     ),
                                     Expanded(
                                       child: Text(
-                                        "  English,Malayalam,French",
+                                        "English,Malayalam,French",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: FontPalette.black_14_400,
@@ -185,13 +186,13 @@ class GridViewWidget extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                10.verticalSpace,
+                                17.verticalSpace,
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     SizedBox(
-                                      height: 48.h,
+                                      height: 58.h,
                                       width: 118.w,
                                       child: CustomButton(
                                           textColor: "#000000",
@@ -199,10 +200,15 @@ class GridViewWidget extends StatelessWidget {
                                           title: "Skip",
                                           onpressed: () {
                                             debugPrint("object");
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        FavoritesScreen()));
                                           }),
                                     ),
                                     SizedBox(
-                                      height: 48.h,
+                                      height: 58.h,
                                       width: 166.w,
                                       child: CustomButton(
                                           title: "Send Request",

@@ -93,7 +93,7 @@ class _ServiceTypeScreenState extends State<ServiceTypeScreen> {
               title: Constants.next,
               onpressed: () {
                 widget.controller.animateToPage(2,
-                    duration: const Duration(milliseconds: 500),
+                    duration: const Duration(milliseconds: 300),
                     curve: Curves.linear);
               })
         ],

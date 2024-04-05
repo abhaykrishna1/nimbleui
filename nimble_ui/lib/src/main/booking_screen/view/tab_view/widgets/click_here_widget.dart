@@ -25,7 +25,7 @@ class _ClickHereWidgetState extends State<ClickHereWidget> {
         child: IntrinsicHeight(
           child: Material(
             child: Container(
-               height: MediaQuery.of(context).size.height * 0.8,
+              height: MediaQuery.of(context).size.height * 0.8,
               width: double.maxFinite,
               decoration: BoxDecoration(
                   color: Colors.white,
@@ -90,14 +90,12 @@ class _ClickHereWidgetState extends State<ClickHereWidget> {
                                 10.verticalSpace,
                                 const ResonsWidget(
                                   valueIndex: 1,
-                                  title:
-                                      "Service Provider Communication Issue",
+                                  title: "Service Provider Communication Issue",
                                 ),
                                 const Divider(),
                                 const ResonsWidget(
                                   valueIndex: 1,
-                                  title:
-                                      "Emergency on Service Provider's End",
+                                  title: "Emergency on Service Provider's End",
                                 ),
                                 const Divider(),
                                 const ResonsWidget(

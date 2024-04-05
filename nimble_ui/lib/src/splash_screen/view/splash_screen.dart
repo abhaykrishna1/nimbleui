@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nimple_ui/commons/constants.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
@@ -27,14 +29,23 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.sizeOf(context);
     return Scaffold(
         body: Padding(
       padding: const EdgeInsets.only(bottom: 28.0),
       child: Stack(
         children: [
-          Align(
-            alignment: Alignment.center,
-            child: Text(Constants.name, style: FontPalette.bold_50_772077),
+          SizedBox(
+            width: size.width,
+            height: size.height,
+            child: Center(
+                child: Text(
+              Constants.name,
+              style: TextStyle(
+                  fontWeight: FontWeight.w800,
+                  fontSize: 50.sp,
+                  color: HexColor("#772077")),
+            )),
           ),
           Align(
             alignment: Alignment.bottomCenter,

@@ -8,7 +8,7 @@ class CustomRoundedRectRangeSliderTrackShape extends RangeSliderTrackShape
   /// outer track segments are inactive.
   const CustomRoundedRectRangeSliderTrackShape({this.activeTrackHeight = 2.0});
 
-final double activeTrackHeight;
+  final double activeTrackHeight;
 
   @override
   void paint(
@@ -75,7 +75,7 @@ final double activeTrackHeight;
 
     context.canvas.drawRRect(
       RRect.fromLTRBAndCorners(
-        trackRect.left - thumbRadius, 
+        trackRect.left - thumbRadius,
         trackRect.top,
         leftThumbOffset.dx,
         trackRect.bottom,
@@ -97,7 +97,7 @@ final double activeTrackHeight;
       RRect.fromLTRBAndCorners(
         rightThumbOffset.dx,
         trackRect.top,
-        trackRect.right + thumbRadius, 
+        trackRect.right + thumbRadius,
         trackRect.bottom,
         topRight: trackRadius,
         bottomRight: trackRadius,

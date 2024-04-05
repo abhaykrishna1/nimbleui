@@ -36,7 +36,7 @@ class _AuthScreenState extends State<AuthScreen>
               leading: GestureDetector(
                   onTap: () {
                     controller.previousPage(
-                        duration: const Duration(milliseconds: 500),
+                        duration: const Duration(milliseconds: 300),
                         curve: Curves.linear);
                   },
                   child: const Icon(Icons.arrow_back_ios)),
@@ -91,7 +91,7 @@ class _AuthScreenState extends State<AuthScreen>
                       SkipButton(
                         onpressed: () {
                           controller.nextPage(
-                              duration: const Duration(milliseconds: 500),
+                              duration: const Duration(milliseconds: 300),
                               curve: Curves.linear);
                         },
                       ),

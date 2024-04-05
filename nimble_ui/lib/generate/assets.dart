@@ -44,4 +44,5 @@ class Assets {
   static const String callicon = "assets/icons/Vector.svg";
   static const String infoicon = "assets/icons/info.svg";
   static const String addicon = "assets/icons/add.svg";
+  static const String sendicon = "assets/icons/send.svg";
 }

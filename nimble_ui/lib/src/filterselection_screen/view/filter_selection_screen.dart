@@ -42,41 +42,41 @@ class _FilterSelectionScreenState extends State<FilterSelectionScreen> {
       ),
       body: ListView.separated(
           itemBuilder: (ctx, index) {
-            return Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Row(
-                children: [
-                  // SizedBox(
-                  //   height: 25.h,
-                  //   width: 25.w,
-                  //   child: SvgPicture.asset(Assets.tickIcon),
-                  // ),20.horizontalSpace,
-                  // Transform.scale(
-                  //   scale: 1.5,
-                  //   child: Checkbox(
-                  //     checkColor: Colors.white,
-                  //     activeColor: Colors.black,
-                  //     shape: const CustomCircleBorder(),
-                  //     value: selct,
-                  //     onChanged: (val) {
-                  //       setState(() {
-                  //         selct = val!;
-                  //       });
-                  //     },
-                  //   ),
-                  // ),
-                  InkWell(
-                    borderRadius: BorderRadius.circular(100),
-                    onTap: () {
-                      setState(() {
-                        if (checkingTickAdd) {
-                          checkingTickAdd = false;
-                        } else {
-                          checkingTickAdd = true;
-                        }
-                      });
-                    },
-                    child: AnimatedContainer(
+            return InkWell(
+              borderRadius: BorderRadius.circular(100),
+              onTap: () {
+                setState(() {
+                  if (checkingTickAdd) {
+                    checkingTickAdd = false;
+                  } else {
+                    checkingTickAdd = true;
+                  }
+                });
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  children: [
+                    // SizedBox(
+                    //   height: 25.h,
+                    //   width: 25.w,
+                    //   child: SvgPicture.asset(Assets.tickIcon),
+                    // ),20.horizontalSpace,
+                    // Transform.scale(
+                    //   scale: 1.5,
+                    //   child: Checkbox(
+                    //     checkColor: Colors.white,
+                    //     activeColor: Colors.black,
+                    //     shape: const CustomCircleBorder(),
+                    //     value: selct,
+                    //     onChanged: (val) {
+                    //       setState(() {
+                    //         selct = val!;
+                    //       });
+                    //     },
+                    //   ),
+                    // ),
+                    AnimatedContainer(
                         curve: Curves.easeIn,
                         duration: const Duration(milliseconds: 300),
                         padding: const EdgeInsets.all(4),
@@ -88,14 +88,14 @@ class _FilterSelectionScreenState extends State<FilterSelectionScreen> {
                                 checkingTickAdd ? Colors.black : Colors.white,
                             shape: BoxShape.circle),
                         child: SvgPicture.asset(Assets.doneIcon)),
-                  ),
-                  10.horizontalSpace,
-                  Text(
-                    languageList[index],
-                    style: FontPalette.black_16_600
-                        .copyWith(fontWeight: FontWeight.w400),
-                  )
-                ],
+                    10.horizontalSpace,
+                    Text(
+                      languageList[index],
+                      style: FontPalette.black_16_600
+                          .copyWith(fontWeight: FontWeight.w400),
+                    )
+                  ],
+                ),
               ),
             );
           },

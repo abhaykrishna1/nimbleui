@@ -29,6 +29,9 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
     "Tastybites",
     "Hashtag"
   ];
+    List tags2 = [
+   
+  ];
   List serviceType = ["Care", "Clean", "Cook"];
   @override
   Widget build(BuildContext context) {
@@ -152,7 +155,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
                                                 debugPrint("object");
                                               }),
                                         ),
-                                      ),
+                                      ),    
                                       10.horizontalSpace,
                                       Expanded(
                                         child: SizedBox(
@@ -202,7 +205,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
                 ? Expanded(
                     child: Wrap(
                       children: [
-                        for (var item in tags)
+                        for (var item in tags2)
                           Padding(
                             padding:
                                 const EdgeInsets.only(right: 10.0, top: 10),

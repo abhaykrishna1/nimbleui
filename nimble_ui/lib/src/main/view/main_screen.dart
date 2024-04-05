@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/constants.dart';
@@ -150,100 +151,104 @@ class _MainScreenState extends State<MainScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       setState(() {
                         pageindex = 0;
                       });
                     },
-                    child: Column(
-                      children: [
-                        pageindex == 0
-                            ? Container(
-                                width: 24.w,
-                                height: 3.h,
-                                decoration: BoxDecoration(
-                                    color: HexColor("#772077"),
-                                    borderRadius: const BorderRadius.only(
-                                        bottomRight: Radius.circular(10),
-                                        bottomLeft: Radius.circular(10))),
-                              )
-                            : const SizedBox(),
-                        pageindex == 0 ? 6.verticalSpace : 9.verticalSpace,
-                        SizedBox(
-                          height: 24.h,
-                          width: 24.w,
-                          child: SvgPicture.asset(
-                            Assets.homeicon,
-                            color: pageindex == 0
-                                ? HexColor("#772077")
-                                : HexColor("#616068"),
+                    child: SizedBox(
+                      child: Column(
+                        children: [
+                          pageindex == 0
+                              ? Container(
+                                  width: 24.w,
+                                  height: 3.h,
+                                  decoration: BoxDecoration(
+                                      color: HexColor("#772077"),
+                                      borderRadius: const BorderRadius.only(
+                                          bottomRight: Radius.circular(10),
+                                          bottomLeft: Radius.circular(10))),
+                                )
+                              : const SizedBox(),
+                          pageindex == 0 ? 6.verticalSpace : 9.verticalSpace,
+                          SizedBox(
+                            height: 24.h,
+                            width: 24.w,
+                            child: SvgPicture.asset(
+                              Assets.homeicon,
+                              color: pageindex == 0
+                                  ? HexColor("#772077")
+                                  : HexColor("#616068"),
+                            ),
                           ),
-                        ),
-                        3.verticalSpace,
-                        Expanded(
-                          child: Text(
-                            "Home",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12.sp,
-                                color: pageindex == 0
-                                    ? HexColor("#772077")
-                                    : HexColor("#616068")),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        )
-                      ],
+                          3.verticalSpace,
+                          Expanded(
+                            child: Text(
+                              "Home",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12.sp,
+                                  color: pageindex == 0
+                                      ? HexColor("#772077")
+                                      : HexColor("#616068")),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       setState(() {
                         pageindex = 1;
                         appbarTitile = Constants.booking;
                       });
                     },
-                    child: Column(
-                      children: [
-                        pageindex == 1
-                            ? Container(
-                                width: 24.w,
-                                height: 3.h,
-                                decoration: BoxDecoration(
-                                    color: HexColor("#772077"),
-                                    borderRadius: const BorderRadius.only(
-                                        bottomRight: Radius.circular(10),
-                                        bottomLeft: Radius.circular(10))),
-                              )
-                            : const SizedBox(),
-                        pageindex == 1 ? 1.verticalSpace : 4.verticalSpace,
-                        SizedBox(
-                          height: 32.h,
-                          width: 32.w,
-                          child: SvgPicture.asset(
-                            Assets.bookingsicon,
-                            color: pageindex == 1
-                                ? HexColor("#772077")
-                                : HexColor("#616068"),
+                    child: SizedBox(
+                      child: Column(
+                        children: [
+                          pageindex == 1
+                              ? Container(
+                                  width: 24.w,
+                                  height: 3.h,
+                                  decoration: BoxDecoration(
+                                      color: HexColor("#772077"),
+                                      borderRadius: const BorderRadius.only(
+                                          bottomRight: Radius.circular(10),
+                                          bottomLeft: Radius.circular(10))),
+                                )
+                              : const SizedBox(),
+                          pageindex == 1 ? 1.verticalSpace : 4.verticalSpace,
+                          SizedBox(
+                            height: 32.h,
+                            width: 32.w,
+                            child: SvgPicture.asset(
+                              Assets.bookingsicon,
+                              color: pageindex == 1
+                                  ? HexColor("#772077")
+                                  : HexColor("#616068"),
+                            ),
                           ),
-                        ),
-                        0.verticalSpace,
-                        Expanded(
-                          child: Text(
-                            "Bookings",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12.sp,
-                                color: pageindex == 1
-                                    ? HexColor("#772077")
-                                    : HexColor("#616068")),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        )
-                      ],
+                          0.verticalSpace,
+                          Expanded(
+                            child: Text(
+                              "Bookings",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12.sp,
+                                  color: pageindex == 1
+                                      ? HexColor("#772077")
+                                      : HexColor("#616068")),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       setState(() {
                         pageindex = 2;
@@ -251,132 +256,138 @@ class _MainScreenState extends State<MainScreen> {
                         setState(() {});
                       });
                     },
-                    child: Column(
-                      children: [
-                        pageindex == 2
-                            ? Container(
-                                width: 24.w,
-                                height: 3.h,
-                                decoration: BoxDecoration(
-                                    color: HexColor("#772077"),
-                                    borderRadius: const BorderRadius.only(
-                                        bottomRight: Radius.circular(10),
-                                        bottomLeft: Radius.circular(10))),
-                              )
-                            : const SizedBox(),
-                        pageindex == 2 ? 6.verticalSpace : 9.verticalSpace,
-                        SizedBox(
-                          height: 24.h,
-                          width: 24.w,
-                          child: SvgPicture.asset(
-                            Assets.posticon,
-                            color: pageindex == 2
-                                ? HexColor("#772077")
-                                : HexColor("#616068"),
+                    child: SizedBox(
+                      child: Column(
+                        children: [
+                          pageindex == 2
+                              ? Container(
+                                  width: 24.w,
+                                  height: 3.h,
+                                  decoration: BoxDecoration(
+                                      color: HexColor("#772077"),
+                                      borderRadius: const BorderRadius.only(
+                                          bottomRight: Radius.circular(10),
+                                          bottomLeft: Radius.circular(10))),
+                                )
+                              : const SizedBox(),
+                          pageindex == 2 ? 6.verticalSpace : 9.verticalSpace,
+                          SizedBox(
+                            height: 24.h,
+                            width: 24.w,
+                            child: SvgPicture.asset(
+                              Assets.posticon,
+                              color: pageindex == 2
+                                  ? HexColor("#772077")
+                                  : HexColor("#616068"),
+                            ),
                           ),
-                        ),
-                        3.verticalSpace,
-                        Expanded(
-                          child: Text(
-                            "Post",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12.sp,
-                                color: pageindex == 2
-                                    ? HexColor("#772077")
-                                    : HexColor("#616068")),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        )
-                      ],
+                          3.verticalSpace,
+                          Expanded(
+                            child: Text(
+                              "Post",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12.sp,
+                                  color: pageindex == 2
+                                      ? HexColor("#772077")
+                                      : HexColor("#616068")),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       setState(() {
                         pageindex = 3;
                         appbarTitile = Constants.message;
                       });
                     },
-                    child: Column(
-                      children: [
-                        pageindex == 3
-                            ? Container(
-                                width: 24.w,
-                                height: 3.h,
-                                decoration: BoxDecoration(
-                                    color: HexColor("#772077"),
-                                    borderRadius: const BorderRadius.only(
-                                        bottomRight: Radius.circular(10),
-                                        bottomLeft: Radius.circular(10))),
-                              )
-                            : const SizedBox(),
-                        pageindex == 3 ? 6.verticalSpace : 9.verticalSpace,
-                        SizedBox(
-                          height: 24.h,
-                          width: 24.w,
-                          child: SvgPicture.asset(
-                            Assets.messageicon,
-                            color: pageindex == 3
-                                ? HexColor("#772077")
-                                : HexColor("#616068"),
+                    child: SizedBox(
+                      child: Column(
+                        children: [
+                          pageindex == 3
+                              ? Container(
+                                  width: 24.w,
+                                  height: 3.h,
+                                  decoration: BoxDecoration(
+                                      color: HexColor("#772077"),
+                                      borderRadius: const BorderRadius.only(
+                                          bottomRight: Radius.circular(10),
+                                          bottomLeft: Radius.circular(10))),
+                                )
+                              : const SizedBox(),
+                          pageindex == 3 ? 6.verticalSpace : 9.verticalSpace,
+                          SizedBox(
+                            height: 24.h,
+                            width: 24.w,
+                            child: SvgPicture.asset(
+                              Assets.messageicon,
+                              color: pageindex == 3
+                                  ? HexColor("#772077")
+                                  : HexColor("#616068"),
+                            ),
                           ),
-                        ),
-                        3.verticalSpace,
-                        Expanded(
-                          child: Text(
-                            "Message",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12.sp,
-                                color: pageindex == 3
-                                    ? HexColor("#772077")
-                                    : HexColor("#616068")),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        )
-                      ],
+                          3.verticalSpace,
+                          Expanded(
+                            child: Text(
+                              "Message",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12.sp,
+                                  color: pageindex == 3
+                                      ? HexColor("#772077")
+                                      : HexColor("#616068")),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
-                  GestureDetector(
+                  InkWell(
                     onTap: () {
                       setState(() {
                         pageindex = 4;
                         appbarTitile = Constants.account;
                       });
                     },
-                    child: Column(
-                      children: [
-                        pageindex == 4
-                            ? Container(
-                                width: 24.w,
-                                height: 3.h,
-                                decoration: BoxDecoration(
-                                    color: HexColor("#772077"),
-                                    borderRadius: const BorderRadius.only(
-                                        bottomRight: Radius.circular(10),
-                                        bottomLeft: Radius.circular(10))),
-                              )
-                            : const SizedBox(),
-                        pageindex == 4 ? 6.verticalSpace : 9.verticalSpace,
-                        SizedBox(
-                            height: 24.h,
-                            width: 24.w,
-                            child: Image.asset(Assets.accounticon)),
-                        3.verticalSpace,
-                        Expanded(
-                          child: Text(
-                            "Account",
-                            style: TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 12.sp,
-                                color: pageindex == 4
-                                    ? HexColor("#772077")
-                                    : HexColor("#616068")),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        )
-                      ],
+                    child: SizedBox(
+                      child: Column(
+                        children: [
+                          pageindex == 4
+                              ? Container(
+                                  width: 24.w,
+                                  height: 3.h,
+                                  decoration: BoxDecoration(
+                                      color: HexColor("#772077"),
+                                      borderRadius: const BorderRadius.only(
+                                          bottomRight: Radius.circular(10),
+                                          bottomLeft: Radius.circular(10))),
+                                )
+                              : const SizedBox(),
+                          pageindex == 4 ? 6.verticalSpace : 9.verticalSpace,
+                          SizedBox(
+                              height: 24.h,
+                              width: 24.w,
+                              child: Image.asset(Assets.accounticon)),
+                          3.verticalSpace,
+                          Expanded(
+                            child: Text(
+                              "Account",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 12.sp,
+                                  color: pageindex == 4
+                                      ? HexColor("#772077")
+                                      : HexColor("#616068")),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ],

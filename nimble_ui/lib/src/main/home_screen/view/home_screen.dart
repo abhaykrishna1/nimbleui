@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Column(
           children: [
             SizedBox(
-              height: 73.h,
+              height: 88.h,
               width: double.maxFinite,
               child: TabBar(
                 overlayColor:
@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 tabs: List.generate(tabs.length, (index) {
                   return Container(
                     // alignment: Alignment.center,
-                    height: 51.h,
+                    height: 61.h,
                     margin: EdgeInsets.only(right: index <= 2 ? 10 : 0),
                     decoration: BoxDecoration(
                         color:

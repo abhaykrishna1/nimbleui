@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 
@@ -23,7 +22,9 @@ class NotificatioListWidget extends StatelessWidget {
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: NetworkImage(
-                            "https://s3-alpha-sig.figma.com/img/02fc/e6d5/eada0def258fb385a439b529a424c75a?Expires=1711324800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=j6ANjqpWGpFDLbOCfi7JX3UQddwxsBcSnxNoSWvSUpZEdURROOINA7anvZ1KmGtyNncdi0K7y~PE9iAaUVvYWNvJmuwGrt0MxiWkwMTbWdwse4oOKASDpuqaJUJ~GDGqAdV6nihv8-D10oX~fejNuadr54X1T31NL495kxBc3nKr5LVpjfbkAQszj1ScHoqtns8PXAvFTTapOsGiE7mjmWnuK689pKwtL0G8cY5eRc6i0Xbt432jkfPFyVwZJkKS2BcJdhL-cLkwRWhS5id4YnR23aJZrlboYv3URf4iiqa89c~nzmGIVnx4ZiumZdQmyGJTFtjQMJR3ukQbo6uIOg__")),
+                          "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg",
+                        ),
+                        fit: BoxFit.cover),
                     shape: BoxShape.circle,
                     color: Colors.white,
                   ),
@@ -49,7 +50,7 @@ class NotificatioListWidget extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(left: 66.w),
-              child: Row(
+              child: const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [Text("Yesterday")],
               ),

@@ -28,7 +28,7 @@ class CompleatedTabListViewWidget extends StatelessWidget {
                       barrierLabel: "Label",
                       barrierDismissible: true,
                       barrierColor: Colors.black.withOpacity(0.5),
-                      transitionDuration: const Duration(milliseconds: 300),
+                      transitionDuration: const Duration(milliseconds: 200),
                       context: context,
                       pageBuilder: (context, anim1, anim2) {
                         return const ShowDialogCompleatedWidget();

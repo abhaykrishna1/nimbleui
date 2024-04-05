@@ -69,9 +69,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                     ),
                     6.verticalSpace,
                     CustomDropDownButton(
-                 
                       isVisible: true,
-                    
                     ),
                     // Container(
                     //   decoration: BoxDecoration(
@@ -87,9 +85,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                     ),
                     6.verticalSpace,
                     CustomDropDownButton(
-                 
                       isVisible: true,
-                   
                     ),
                     10.verticalSpace,
                     Text(
@@ -134,10 +130,8 @@ class _AddPostScreenState extends State<AddPostScreen> {
                     ),
                     6.verticalSpace,
                     CustomDropDownButton(
-                   
                       isVisible: false,
                       title: "Select type (one-time/recurring)",
-                    
                     ),
                     10.verticalSpace,
                     Text(
@@ -148,10 +142,8 @@ class _AddPostScreenState extends State<AddPostScreen> {
                     ),
                     6.verticalSpace,
                     CustomDropDownButton(
-                   
                       isVisible: false,
                       title: "Select Time",
-                   
                     ),
                     10.verticalSpace,
                     Text(

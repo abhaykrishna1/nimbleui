@@ -53,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
             title: Constants.next,
             onpressed: () {
               controller.animateToPage(1,
-                  duration: const Duration(milliseconds: 500),
+                  duration: const Duration(milliseconds: 300),
                   curve: Curves.linear);
             },
           ),
