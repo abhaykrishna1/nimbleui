@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
@@ -73,9 +74,12 @@ class _ChatScreenState extends State<ChatScreen> {
               ),
             ),
             10.horizontalSpace,
-            Text(
-              "Ann Robinson",
-              style: FontPalette.black_18_600,
+            Expanded(
+              child: Text(
+                "Ann Robinson",
+                style: FontPalette.black_18_600,
+                overflow: TextOverflow.ellipsis,
+              ),
             )
           ],
         ),
@@ -120,7 +124,7 @@ class _ChatScreenState extends State<ChatScreen> {
                               shape: BoxShape.circle,
                               color: Colors.black),
                         ),
-                        Text(  
+                        Text(
                           "Ann Robinson",
                           style: FontPalette.black_18_600,
                         ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nimple_ui/src/main/booking_screen/view/tab_view/widgets/show_dialog_compleated_widget.dart';
-import 'package:nimple_ui/src/main/message_screen/tab_view/widget/small_border_text_widget.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
+import 'package:nimple_ui/widget/type_widget.dart';
 
 class CompleatedTabListViewWidget extends StatelessWidget {
   const CompleatedTabListViewWidget({super.key});
@@ -77,7 +77,7 @@ class CompleatedTabListViewWidget extends StatelessWidget {
                                           .copyWith(fontSize: 16.sp),
                                     ),
                                   ),
-                                  const SmallBorderTextWidget(title: "Clean")
+                                  const TypeWidgett(title: "Clean")
                                 ],
                               ),
                               6.verticalSpace,

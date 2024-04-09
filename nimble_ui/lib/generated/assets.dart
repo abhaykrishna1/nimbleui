@@ -50,5 +50,6 @@ class Assets {
   static const String iconsWhatsApp = 'assets/icons/WhatsApp.svg';
   static const String iconsWork = 'assets/icons/work.svg';
   static const String sendicon = "assets/icons/send.svg";
+  static const String paydone = "assets/icons/paydone.svg";
 
 }

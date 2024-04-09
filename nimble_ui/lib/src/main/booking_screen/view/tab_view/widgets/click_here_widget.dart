@@ -53,8 +53,8 @@ class _ClickHereWidgetState extends State<ClickHereWidget> {
                             ),
                           ),
                           Padding(
-                            padding:
-                                const EdgeInsets.only(left: 16, right: 16.0),
+                            padding: EdgeInsets.only(
+                                left: 16, right: 16.0, top: 10.h),
                             child: Row(
                               children: [
                                 Expanded(
@@ -185,7 +185,7 @@ class _ClickHereWidgetState extends State<ClickHereWidget> {
                           padding: const EdgeInsets.only(
                               left: 18, right: 18, bottom: 18),
                           child: SizedBox(
-                            height: 48.h,
+                            width: double.maxFinite,
                             child: CustomButton(
                                 textColor: "#FFFFFF",
                                 color: "#772077",

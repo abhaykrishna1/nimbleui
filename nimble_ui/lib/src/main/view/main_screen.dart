@@ -58,25 +58,32 @@ class _MainScreenState extends State<MainScreen> {
                 ),
           actions: pageindex == 0
               ? [
-                  SizedBox(
-                    height: 30.h,
-                    width: 100.w,
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          height: 20.h,
-                          width: 20.w,
-                          child: SvgPicture.asset(Assets.locationsvg),
-                        ),
-                        3.horizontalSpace,
-                        Flexible(
-                          child: Text(
-                            "Thrissur kerala",
-                            style: FontPalette.black_14_600,
-                            overflow: TextOverflow.ellipsis,
+                  InkWell(
+                    borderRadius: BorderRadius.circular(10),
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, RouteGenerator.routelocationScreen);
+                    },
+                    child: SizedBox(
+                      height: 30.h,
+                      width: 100.w,
+                      child: Row(
+                        children: [
+                          SizedBox(
+                            height: 20.h,
+                            width: 20.w,
+                            child: SvgPicture.asset(Assets.locationsvg),
                           ),
-                        ),
-                      ],
+                          3.horizontalSpace,
+                          Flexible(
+                            child: Text(
+                              "Thrissur kerala",
+                              style: FontPalette.black_14_600,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   12.horizontalSpace,

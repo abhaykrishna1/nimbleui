@@ -585,13 +585,11 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                                 }),
                           ),
                           10.horizontalSpace,
-                          Expanded(
-                            child: CustomButton(
-                                title: "Send Request",
-                                onpressed: () {
-                                  debugPrint("object");
-                                }),
-                          ),
+                          CustomButton(
+                              title: "Send Request",
+                              onpressed: () {
+                                debugPrint("object");
+                              }),
                         ],
                       ),
                     ),

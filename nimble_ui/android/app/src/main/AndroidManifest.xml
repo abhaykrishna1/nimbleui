@@ -4,6 +4,9 @@
         android:label="Nimble"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyDigvLG70GO5zwojHtL9Zef4YVogjE8gFc"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

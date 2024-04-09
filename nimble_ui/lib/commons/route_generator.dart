@@ -9,8 +9,10 @@ import 'package:nimple_ui/src/filter_screen/view/filter_screen.dart';
 import 'package:nimple_ui/src/add_post/view/add_post_screen.dart';
 import 'package:nimple_ui/src/filterselection_screen/view/filter_selection_screen.dart';
 import 'package:nimple_ui/src/help_center_screen/view/help_center_screen.dart';
+import 'package:nimple_ui/src/location/view/location_screen.dart';
 import 'package:nimple_ui/src/main/view/main_screen.dart';
 import 'package:nimple_ui/src/notification/view/notification_screen.dart';
+import 'package:nimple_ui/src/payment_done/view/payment_done_screen.dart';
 import 'package:nimple_ui/src/profile_detail_screen/view/profile_detail_screen.dart';
 import 'package:nimple_ui/src/settings/view/settings_screen.dart';
 
@@ -47,6 +49,8 @@ class RouteGenerator {
   static const String routehelpcenterscreen = "help_center_screen";
   static const String routesettingsscreen = "settings_screen";
   static const String routetaskinfoscreen = "task_info_screen";
+  static const String routelocationScreen = "location_screen";
+  static const String routepaymentdonescreen = "payment_done_screen";
 
   Route generateRoute(RouteSettings settings, {var routeBuilder}) {
     switch (settings.name) {
@@ -80,13 +84,17 @@ class RouteGenerator {
       case routeNotificationScreen:
         return _buildRoute(routeNotificationScreen, const NotificationScreen());
       case routechatscreen:
-        return _buildRoute(routechatscreen,  ChatScreen());
+        return _buildRoute(routechatscreen, ChatScreen());
       case routehelpcenterscreen:
         return _buildRoute(routehelpcenterscreen, HelpCenterScreen());
-        case routesettingsscreen:
+      case routesettingsscreen:
         return _buildRoute(routesettingsscreen, SettingsScreen());
-        case routetaskinfoscreen:
+      case routetaskinfoscreen:
         return _buildRoute(routetaskinfoscreen, TaskInfoScreen());
+      case routelocationScreen:
+        return _buildRoute(routelocationScreen, LocationScreen());
+      case routepaymentdonescreen:
+        return _buildRoute(routepaymentdonescreen, PaymentDoneScreen());
 
       default:
         return _buildRoute(routeInitial, const SplashScreen());
