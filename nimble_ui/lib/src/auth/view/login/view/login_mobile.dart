@@ -138,14 +138,17 @@ class LoginMobileScreen extends StatelessWidget {
                 ],
               ),
               15.verticalSpace,
-              CustomButton(
-                  title: "Continue",
-                  onpressed: () {
-                    Navigator.pushNamed(
-                      context,
-                      RouteGenerator.routeLoginOtpScreen,
-                    );
-                  })
+              SizedBox(
+                width: double.maxFinite,
+                child: CustomButton(
+                    title: "Continue",
+                    onpressed: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteGenerator.routeLoginOtpScreen,
+                      );
+                    }),
+              )
             ],
           ),
         ));

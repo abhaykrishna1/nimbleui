@@ -375,39 +375,33 @@ class _ChatScreenState extends State<ChatScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Expanded(
-                                child: SizedBox(
-                                  height: 48.h,
-                                  child: CustomButton(
-                                      textColor: "#1F1E24",
-                                      color: "#EEEEF2",
-                                      title: "Decline",
-                                      onpressed: () {
-                                        debugPrint("object");
-                                      }),
-                                ),
+                                child: CustomButton(
+                                    textColor: "#1F1E24",
+                                    color: "#EEEEF2",
+                                    title: "Decline",
+                                    onpressed: () {
+                                      debugPrint("object");
+                                    }),
                               ),
                               10.horizontalSpace,
                               Expanded(
-                                child: SizedBox(
-                                  height: 46.h,
-                                  child: CustomButton(
-                                      title: "Accept",
-                                      onpressed: () {
-                                        debugPrint("object");
-                                        debugPrint("Clicked Accept button");
-                                        setState(() {
-                                          acceptCheckingbool = true;
-                                          // if (_scrollController.hasClients) {
-                                          //   _scrollController.animateTo(
-                                          //       _scrollController
-                                          //           .position.maxScrollExtent,
-                                          //       duration: const Duration(
-                                          //           milliseconds: 100),
-                                          //       curve: Curves.easeInOut);
-                                          // }
-                                        });
-                                      }),
-                                ),
+                                child: CustomButton(
+                                    title: "Accept",
+                                    onpressed: () {
+                                      debugPrint("object");
+                                      debugPrint("Clicked Accept button");
+                                      setState(() {
+                                        acceptCheckingbool = true;
+                                        // if (_scrollController.hasClients) {
+                                        //   _scrollController.animateTo(
+                                        //       _scrollController
+                                        //           .position.maxScrollExtent,
+                                        //       duration: const Duration(
+                                        //           milliseconds: 100),
+                                        //       curve: Curves.easeInOut);
+                                        // }
+                                      });
+                                    }),
                               ),
                             ],
                           ),

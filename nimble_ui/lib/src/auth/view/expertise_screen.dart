@@ -141,13 +141,16 @@ class _ExpertiseScreenState extends State<ExpertiseScreen> {
                   ]),
             ),
           ),
-          CustomButton(
-              title: Constants.next,
-              onpressed: () {
-                widget.controller.animateToPage(3,
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.linear);
-              }),
+          SizedBox(
+            width: double.maxFinite,
+            child: CustomButton(
+                title: Constants.next,
+                onpressed: () {
+                  widget.controller.animateToPage(3,
+                      duration: const Duration(milliseconds: 300),
+                      curve: Curves.linear);
+                }),
+          ),
         ],
       ),
     );

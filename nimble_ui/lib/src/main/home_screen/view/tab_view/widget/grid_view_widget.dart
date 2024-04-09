@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
@@ -191,9 +192,7 @@ class GridViewWidget extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    SizedBox(
-                                      height: 58.h,
-                                      width: 118.w,
+                                    Expanded(
                                       child: CustomButton(
                                           textColor: "#000000",
                                           color: "#EEEEF2",
@@ -204,18 +203,15 @@ class GridViewWidget extends StatelessWidget {
                                                 context,
                                                 MaterialPageRoute(
                                                     builder: (context) =>
-                                                        FavoritesScreen()));
+                                                        const FavoritesScreen()));
                                           }),
                                     ),
-                                    SizedBox(
-                                      height: 58.h,
-                                      width: 166.w,
-                                      child: CustomButton(
-                                          title: "Send Request",
-                                          onpressed: () {
-                                            debugPrint("object");
-                                          }),
-                                    ),
+                                    5.horizontalSpace,
+                                    CustomButton(
+                                        title: "Send Request",
+                                        onpressed: () {
+                                          debugPrint("object");
+                                        }),
                                   ],
                                 )
                               ],

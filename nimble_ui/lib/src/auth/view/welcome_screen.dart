@@ -49,13 +49,16 @@ class WelcomeScreen extends StatelessWidget {
               ),
             ],
           ),
-          CustomButton(
-            title: Constants.next,
-            onpressed: () {
-              controller.animateToPage(1,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.linear);
-            },
+          SizedBox(
+            width: double.maxFinite,
+            child: CustomButton(
+              title: Constants.next,
+              onpressed: () {
+                controller.animateToPage(1,
+                    duration: const Duration(milliseconds: 300),
+                    curve: Curves.linear);
+              },
+            ),
           ),
         ],
       ),

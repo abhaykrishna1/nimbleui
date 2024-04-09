@@ -21,21 +21,20 @@ class CustomButton extends StatelessWidget {
       borderRadius: BorderRadius.circular(80),
       child: Ink(
         child: Container(
-          width: double.maxFinite,
-          padding: const EdgeInsets.only(left: 10, right: 10),
-          height: 54.h,
+          padding:
+              EdgeInsets.only(left: 30.w, right: 30.w, top: 16.h, bottom: 16.h),
           decoration: BoxDecoration(
               color: HexColor(color ?? "#772077"),
               borderRadius: BorderRadius.circular(80)),
-          child: Center(
-              child: Text(
+          child: Text(
             title,
             style: TextStyle(
                 fontSize: 16.sp,
                 fontWeight: FontWeight.w600,
                 color: textColor == null ? Colors.white : HexColor(textColor!)),
             overflow: TextOverflow.ellipsis,
-          )),
+            textAlign: TextAlign.center,
+          ),
         ),
       ),
     );

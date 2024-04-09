@@ -45,4 +45,9 @@ class Assets {
   static const String infoicon = "assets/icons/info.svg";
   static const String addicon = "assets/icons/add.svg";
   static const String sendicon = "assets/icons/send.svg";
+  static const String emptybookingicon = "assets/icons/Group 48095884 (1).svg";
+  static const String noticon = "assets/icons/not_icon.svg";
+  static const String emptymsgicon = "assets/icons/empty_msg_icon.svg";
+  static const String favoriteicon = "assets/icons/favorite (2).svg";
+  static const String emptyServer = "assets/icons/empty_server_icon.svg";
 }

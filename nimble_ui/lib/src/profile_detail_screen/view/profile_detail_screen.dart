@@ -314,171 +314,161 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                       ),
                       15.verticalSpace,
                       Text("Cooking service", style: FontPalette.black_14_600),
-                      ExpansionPanelList(
-                        elevation: 0,
-                        expansionCallback: (panelIndex, isExpanded) {
-                          active = !active;
-
-                          setState(() {});
-                        },
-                        children: <ExpansionPanel>[
-                          ExpansionPanel(
-                              backgroundColor: Colors.white,
-                              headerBuilder: (context, isExpanded) {
-                                return Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            RatingBar.builder(
-                                              initialRating: 3,
-                                              minRating: 1,
-                                              direction: Axis.horizontal,
-                                              itemCount: 5,
-                                              itemPadding:
-                                                  const EdgeInsets.symmetric(
-                                                      horizontal: 4.0),
-                                              itemSize: 15.h,
-                                              itemBuilder: (context, _) =>
-                                                  SizedBox(
-                                                      height: 10,
-                                                      width: 10,
-                                                      child: SvgPicture.asset(
-                                                        Assets.staricon,
-                                                      )),
-                                              onRatingUpdate: (rating) {},
-                                            ),
-                                            10.horizontalSpace,
-                                            Text("3.0",
-                                                style: TextStyle(
-                                                    fontSize: 22.sp,
-                                                    fontWeight:
-                                                        FontWeight.w500)),
-                                            Text(
-                                              "/5 rating",
-                                              style: FontPalette.black_14_400
-                                                  .copyWith(fontSize: 16.sp),
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                );
-                              },
-                              body: Column(
+                      Theme(
+                        data: ThemeData()
+                            .copyWith(dividerColor: Colors.transparent),
+                        child: ListTileTheme(
+                          contentPadding: const EdgeInsets.all(0),
+                          child: ExpansionTile(
+                              tilePadding: EdgeInsets.zero,
+                              childrenPadding: EdgeInsets.zero,
+                              title: Row(
                                 children: [
-                                  SizedBox(
-                                    width: double.maxFinite,
-                                    height: 96.h,
-                                    child: ListView.separated(
-                                        scrollDirection: Axis.horizontal,
-                                        itemBuilder: (ctx, index) {
-                                          return Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Container(
-                                              height: 96.h,
-                                              width: 96.w,
-                                              decoration: BoxDecoration(
-                                                  borderRadius:
-                                                      BorderRadius.circular(8),
-                                                  image: const DecorationImage(
-                                                      image: NetworkImage(
-                                                          "https://bfoodale.com/uploads/2021/12/Biryani.jpg"))),
-                                            ),
-                                          );
-                                        },
-                                        separatorBuilder: (ctx, index) {
-                                          return const SizedBox();
-                                        },
-                                        itemCount: 10),
+                                  RatingBar.builder(
+                                    initialRating: 3,
+                                    minRating: 1,
+                                    direction: Axis.horizontal,
+                                    itemCount: 5,
+                                    itemPadding: const EdgeInsets.symmetric(
+                                        horizontal: 4.0),
+                                    itemSize: 15.h,
+                                    itemBuilder: (context, _) => SizedBox(
+                                        height: 10,
+                                        width: 10,
+                                        child: SvgPicture.asset(
+                                          Assets.staricon,
+                                        )),
+                                    onRatingUpdate: (rating) {},
                                   ),
-                                  const Divider(),
-                                  SizedBox(
-                                    height: 170.h,
-                                    child: PageView.builder(
-                                        controller: pageController,
-                                        itemCount: 5,
-                                        itemBuilder: (ctx, index) {
-                                          return Padding(
-                                            padding: const EdgeInsets.all(8.0),
-                                            child: Column(
-                                              children: [
-                                                Row(
-                                                  children: [
-                                                    Container(
-                                                      height: 47.h,
-                                                      width: 47.w,
-                                                      decoration:
-                                                          const BoxDecoration(
-                                                              shape: BoxShape
-                                                                  .circle,
-                                                              color:
-                                                                  Colors.grey),
-                                                    ),
-                                                    10.horizontalSpace,
-                                                    Column(
-                                                      crossAxisAlignment:
-                                                          CrossAxisAlignment
-                                                              .start,
-                                                      children: [
-                                                        Text(
-                                                          "John King",
-                                                          style: FontPalette
-                                                              .black_14_600
-                                                              .copyWith(
-                                                                  fontSize:
-                                                                      16.sp),
-                                                        ),
-                                                        Text("3 days ago",
-                                                            style: TextStyle(
-                                                                fontSize: 12.sp,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .w600,
-                                                                color: HexColor(
-                                                                    "#909090")))
-                                                      ],
-                                                    )
-                                                  ],
-                                                ),
-                                                10.verticalSpace,
-                                                Text(
-                                                  "Hi there! I'm Robinson, a dedicated and compassionate home nurse with a passion for providing personalized care. With years of experience in nursing, I bring a warm and empathetic approach to every home I visit.",
-                                                  maxLines: 4,
-                                                  overflow:
-                                                      TextOverflow.ellipsis,
-                                                  style:
-                                                      FontPalette.black_14_400,
-                                                ),
-                                              ],
-                                            ),
-                                          );
-                                        }),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsets.only(bottom: 10.h),
-                                    child: SmoothPageIndicator(
-                                      controller: pageController,
-                                      count: 5,
-                                      effect: ScrollingDotsEffect(
-                                          strokeWidth: 1.0,
-                                          activeStrokeWidth: 1.0,
-                                          paintStyle: PaintingStyle.fill,
-                                          activeDotColor: HexColor("#845684"),
-                                          dotColor: HexColor("#C7C6CD"),
-                                          dotHeight: 6.r,
-                                          dotWidth: 6.r),
-                                    ),
-                                  ),
+                                  10.horizontalSpace,
+                                  Text("3.0",
+                                      style: TextStyle(
+                                          fontSize: 22.sp,
+                                          fontWeight: FontWeight.w500)),
+                                  Text(
+                                    "/5 rating",
+                                    style: FontPalette.black_14_400
+                                        .copyWith(fontSize: 16.sp),
+                                  )
                                 ],
                               ),
-                              isExpanded: active,
-                              canTapOnHeader: true)
-                        ],
+                              expandedCrossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                              expandedAlignment: Alignment.centerLeft,
+                              children: <Widget>[
+                                Column(
+                                  children: [
+                                    SizedBox(
+                                      width: double.maxFinite,
+                                      height: 96.h,
+                                      child: ListView.separated(
+                                          scrollDirection: Axis.horizontal,
+                                          itemBuilder: (ctx, index) {
+                                            return Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Container(
+                                                height: 96.h,
+                                                width: 96.w,
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8),
+                                                    image: const DecorationImage(
+                                                        image: NetworkImage(
+                                                            "https://bfoodale.com/uploads/2021/12/Biryani.jpg"))),
+                                              ),
+                                            );
+                                          },
+                                          separatorBuilder: (ctx, index) {
+                                            return const SizedBox();
+                                          },
+                                          itemCount: 10),
+                                    ),
+                                    const Divider(),
+                                    SizedBox(
+                                      height: 170.h,
+                                      child: PageView.builder(
+                                          controller: pageController,
+                                          itemCount: 5,
+                                          itemBuilder: (ctx, index) {
+                                            return Padding(
+                                              padding:
+                                                  const EdgeInsets.all(8.0),
+                                              child: Column(
+                                                children: [
+                                                  Row(
+                                                    children: [
+                                                      Container(
+                                                        height: 47.h,
+                                                        width: 47.w,
+                                                        decoration:
+                                                            const BoxDecoration(
+                                                                shape: BoxShape
+                                                                    .circle,
+                                                                color: Colors
+                                                                    .grey),
+                                                      ),
+                                                      10.horizontalSpace,
+                                                      Column(
+                                                        crossAxisAlignment:
+                                                            CrossAxisAlignment
+                                                                .start,
+                                                        children: [
+                                                          Text(
+                                                            "John King",
+                                                            style: FontPalette
+                                                                .black_14_600
+                                                                .copyWith(
+                                                                    fontSize:
+                                                                        16.sp),
+                                                          ),
+                                                          Text("3 days ago",
+                                                              style: TextStyle(
+                                                                  fontSize:
+                                                                      12.sp,
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w600,
+                                                                  color: HexColor(
+                                                                      "#909090")))
+                                                        ],
+                                                      )
+                                                    ],
+                                                  ),
+                                                  10.verticalSpace,
+                                                  Text(
+                                                    "Hi there! I'm Robinson, a dedicated and compassionate home nurse with a passion for providing personalized care. With years of experience in nursing, I bring a warm and empathetic approach to every home I visit.",
+                                                    maxLines: 4,
+                                                    overflow:
+                                                        TextOverflow.ellipsis,
+                                                    style: FontPalette
+                                                        .black_14_400,
+                                                  ),
+                                                ],
+                                              ),
+                                            );
+                                          }),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(bottom: 10.h),
+                                      child: SmoothPageIndicator(
+                                        controller: pageController,
+                                        count: 5,
+                                        effect: ScrollingDotsEffect(
+                                            strokeWidth: 1.0,
+                                            activeStrokeWidth: 1.0,
+                                            paintStyle: PaintingStyle.fill,
+                                            activeDotColor: HexColor("#845684"),
+                                            dotColor: HexColor("#C7C6CD"),
+                                            dotHeight: 6.r,
+                                            dotWidth: 6.r),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ]),
+                        ),
                       ),
                       10.verticalSpace,
                       Text(
@@ -586,27 +576,21 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Expanded(
-                            child: SizedBox(
-                              height: 48.h,
-                              child: CustomButton(
-                                  textColor: "#1F1E24",
-                                  color: "#EEEEF2",
-                                  title: "Skip",
-                                  onpressed: () {
-                                    debugPrint("object");
-                                  }),
-                            ),
+                            child: CustomButton(
+                                textColor: "#1F1E24",
+                                color: "#EEEEF2",
+                                title: "Skip",
+                                onpressed: () {
+                                  debugPrint("object");
+                                }),
                           ),
                           10.horizontalSpace,
                           Expanded(
-                            child: SizedBox(
-                              height: 48.h,
-                              child: CustomButton(
-                                  title: "Send Request",
-                                  onpressed: () {
-                                    debugPrint("object");
-                                  }),
-                            ),
+                            child: CustomButton(
+                                title: "Send Request",
+                                onpressed: () {
+                                  debugPrint("object");
+                                }),
                           ),
                         ],
                       ),

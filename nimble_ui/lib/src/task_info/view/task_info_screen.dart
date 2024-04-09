@@ -307,27 +307,21 @@ class TaskInfoScreen extends StatelessWidget {
                                                 MainAxisAlignment.spaceBetween,
                                             children: [
                                               Expanded(
-                                                child: SizedBox(
-                                                  height: 48.h,
-                                                  child: CustomButton(
-                                                      textColor: "#1F1E24",
-                                                      color: "#EEEEF2",
-                                                      title: "No",
-                                                      onpressed: () {
-                                                        debugPrint("object");
-                                                      }),
-                                                ),
+                                                child: CustomButton(
+                                                    textColor: "#1F1E24",
+                                                    color: "#EEEEF2",
+                                                    title: "No",
+                                                    onpressed: () {
+                                                      debugPrint("object");
+                                                    }),
                                               ),
                                               10.horizontalSpace,
                                               Expanded(
-                                                child: SizedBox(
-                                                  height: 48.h,
-                                                  child: CustomButton(
-                                                      title: "Yes,Cancel",
-                                                      onpressed: () {
-                                                        debugPrint("object");
-                                                      }),
-                                                ),
+                                                child: CustomButton(
+                                                    title: "Yes,Cancel",
+                                                    onpressed: () {
+                                                      debugPrint("object");
+                                                    }),
                                               ),
                                             ],
                                           ),

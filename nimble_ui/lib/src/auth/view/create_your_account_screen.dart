@@ -93,15 +93,18 @@ class CreateYourAccountScreen extends StatelessWidget {
               ],
             ),
             32.verticalSpace,
-            CustomButton(
-                title: "Submit",
-                onpressed: () {
-                  Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    RouteGenerator.routeMainScreen,
-                    (route) => false,
-                  );
-                }),
+            SizedBox(
+              width: double.maxFinite,
+              child: CustomButton(
+                  title: "Submit",
+                  onpressed: () {
+                    Navigator.pushNamedAndRemoveUntil(
+                      context,
+                      RouteGenerator.routeMainScreen,
+                      (route) => false,
+                    );
+                  }),
+            ),
             10.verticalSpace,
             Row(
               mainAxisAlignment: MainAxisAlignment.center,

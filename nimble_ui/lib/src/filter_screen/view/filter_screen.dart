@@ -435,27 +435,21 @@ class _FilterScreenState extends State<FilterScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Expanded(
-                          child: SizedBox(
-                            height: 48.h,
-                            child: CustomButton(
-                                textColor: "#1F1E24",
-                                color: "#EEEEF2",
-                                title: "Clear All",
-                                onpressed: () {
-                                  debugPrint("object");
-                                }),
-                          ),
+                          child: CustomButton(
+                              textColor: "#1F1E24",
+                              color: "#EEEEF2",
+                              title: "Clear All",
+                              onpressed: () {
+                                debugPrint("object");
+                              }),
                         ),
                         10.horizontalSpace,
                         Expanded(
-                          child: SizedBox(
-                            height: 48.h,
-                            child: CustomButton(
-                                title: "Apply",
-                                onpressed: () {
-                                  debugPrint("object");
-                                }),
-                          ),
+                          child: CustomButton(
+                              title: "Apply",
+                              onpressed: () {
+                                debugPrint("object");
+                              }),
                         ),
                       ],
                     ),

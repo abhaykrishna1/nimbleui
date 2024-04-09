@@ -68,7 +68,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                           color: HexColor("#616068")),
                     ),
                     6.verticalSpace,
-                    CustomDropDownButton(
+                    const CustomDropDownButton(
                       isVisible: true,
                     ),
                     // Container(
@@ -84,7 +84,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                           color: HexColor("#616068")),
                     ),
                     6.verticalSpace,
-                    CustomDropDownButton(
+                    const CustomDropDownButton(
                       isVisible: true,
                     ),
                     10.verticalSpace,
@@ -129,7 +129,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                           color: HexColor("#616068")),
                     ),
                     6.verticalSpace,
-                    CustomDropDownButton(
+                    const CustomDropDownButton(
                       isVisible: false,
                       title: "Select type (one-time/recurring)",
                     ),
@@ -141,7 +141,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                           color: HexColor("#616068")),
                     ),
                     6.verticalSpace,
-                    CustomDropDownButton(
+                    const CustomDropDownButton(
                       isVisible: false,
                       title: "Select Time",
                     ),
@@ -201,7 +201,7 @@ class _AddPostScreenState extends State<AddPostScreen> {
                   padding:
                       const EdgeInsets.only(left: 18, right: 18, bottom: 18),
                   child: SizedBox(
-                    height: 48.h,
+                    width: double.maxFinite,
                     child: CustomButton(
                         textColor: "#FFFFFF",
                         color: "#772077",
