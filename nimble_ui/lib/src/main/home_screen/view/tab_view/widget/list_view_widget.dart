@@ -6,6 +6,7 @@ import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/src/main/home_screen/view/tab_view/widget/type_widget.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
+import 'package:nimple_ui/widget/type_widget.dart';
 
 class ListViewWidget extends StatelessWidget {
   const ListViewWidget({super.key});
@@ -36,7 +37,7 @@ class ListViewWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
-                          height: 126.h,
+                          height: MediaQuery.of(context).size.height * 0.17,
                           width: 114.w,
                           decoration: const BoxDecoration(
                               borderRadius: BorderRadius.only(
@@ -91,9 +92,9 @@ class ListViewWidget extends StatelessWidget {
                                 5.verticalSpace,
                                 Row(
                                   children: [
-                                    const TypeWidget(title: "Cook"),
+                                    const TypeWidgett(title: "Cook"),
                                     5.horizontalSpace,
-                                    const TypeWidget(title: "Clean")
+                                    const TypeWidgett(title: "Clean")
                                   ],
                                 ),
                                 6.verticalSpace,

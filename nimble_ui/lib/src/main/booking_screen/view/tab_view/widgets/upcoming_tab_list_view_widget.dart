@@ -19,12 +19,12 @@ class UpComingTabListViewWidget extends StatelessWidget {
                 const EdgeInsets.only(left: 16.0, right: 16, top: 7, bottom: 7),
             child: CustomPaint(
               painter: CouponPainterTwo(
-                  bgColor: Colors.white, cutPosition: 35, cutOutRadius: 10),
+                  bgColor: Colors.white, cutPosition: 29, cutOutRadius: 10),
               child: Container(
                 constraints: BoxConstraints(minHeight: 100.h),
                 width: double.maxFinite,
                 child: InkWell(
-                  borderRadius: BorderRadius.circular(100),
+                  borderRadius: BorderRadius.circular(120),
                   splashColor: HexColor("#EEEEF2"),
                   onTap: () {
                     showGeneralDialog(
@@ -53,10 +53,10 @@ class UpComingTabListViewWidget extends StatelessWidget {
                       Container(
                         margin: EdgeInsets.only(left: 7.w, top: 7, bottom: 7),
                         padding: const EdgeInsets.all(10),
-                        width: 100.w,
-                        height: 100.h,
+                        constraints: const BoxConstraints(minHeight: 100),
+                        width: 80.w,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
                                 image: NetworkImage(
                                     "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"),

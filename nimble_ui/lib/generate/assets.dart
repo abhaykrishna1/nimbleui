@@ -50,4 +50,5 @@ class Assets {
   static const String emptymsgicon = "assets/icons/empty_msg_icon.svg";
   static const String favoriteicon = "assets/icons/favorite (2).svg";
   static const String emptyServer = "assets/icons/empty_server_icon.svg";
+  static const String requesticon = "assets/icons/request_icon.svg";
 }

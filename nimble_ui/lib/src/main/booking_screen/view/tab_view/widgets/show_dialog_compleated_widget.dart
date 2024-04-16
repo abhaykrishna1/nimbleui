@@ -354,7 +354,8 @@ class ShowDialogCompleatedWidget extends StatelessWidget {
                             const Divider(),
                             10.verticalSpace,
                             Container(
-                              padding:  EdgeInsets.only(top: 4, bottom: 4,right: 10.w,left: 10.w),
+                              padding: EdgeInsets.only(
+                                  top: 4, bottom: 4, right: 10.w, left: 10.w),
                               decoration: BoxDecoration(
                                   color: HexColor("#39BF78"),
                                   borderRadius: BorderRadius.circular(16)),

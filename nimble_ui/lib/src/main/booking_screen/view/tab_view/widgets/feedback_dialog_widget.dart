@@ -1,7 +1,5 @@
 import 'package:dotted_border/dotted_border.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -50,22 +48,33 @@ class _ClickHereWidgetState extends State<FeedBackDialogWidget> {
                       ))),
               child: Column(
                 children: [
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Container(
+                      margin: const EdgeInsets.all(10),
+                      height: 5.h,
+                      width: 77.w,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                  ),
                   Expanded(
                     child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Align(
-                            alignment: Alignment.topCenter,
-                            child: Container(
-                              margin: const EdgeInsets.all(10),
-                              height: 5.h,
-                              width: 77.w,
-                              decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(10)),
-                            ),
-                          ),
+                          // Align(
+                          //   alignment: Alignment.topCenter,
+                          //   child: Container(
+                          //     margin: const EdgeInsets.all(10),
+                          //     height: 5.h,
+                          //     width: 77.w,
+                          //     decoration: BoxDecoration(
+                          //         color: Colors.black,
+                          //         borderRadius: BorderRadius.circular(10)),
+                          //   ),
+                          // ),
                           Padding(
                             padding:
                                 const EdgeInsets.only(left: 16, right: 16.0),
@@ -299,10 +308,10 @@ class _ClickHereWidgetState extends State<FeedBackDialogWidget> {
                                 DottedBorder(
                                   strokeWidth: 1,
                                   borderType: BorderType.RRect,
-                                  radius: Radius.circular(12),
+                                  radius: const Radius.circular(12),
                                   child: ClipRRect(
-                                    borderRadius:
-                                        BorderRadius.all(Radius.circular(12)),
+                                    borderRadius: const BorderRadius.all(
+                                        Radius.circular(12)),
                                     child: Container(
                                       height: 100.h,
                                       width: 110.w,
@@ -332,10 +341,10 @@ class _ClickHereWidgetState extends State<FeedBackDialogWidget> {
                         ),
                         10.verticalSpace,
                         Padding(
-                          padding: const EdgeInsets.only(
-                              left: 18, right: 18, bottom: 18),
+                          padding: EdgeInsets.only(
+                              left: 18.w, right: 18.w, bottom: 18.h),
                           child: SizedBox(
-                            height: 48.h,
+                            width: double.maxFinite,
                             child: CustomButton(
                                 textColor: "#FFFFFF",
                                 color: "#772077",

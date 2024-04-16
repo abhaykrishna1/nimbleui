@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 tabs: List.generate(tabs.length, (index) {
                   return Container(
                     // alignment: Alignment.center,
-                    height: 61.h,
+                    padding: EdgeInsets.only(top: 14.h, bottom: 14.h),
                     margin: EdgeInsets.only(right: index <= 2 ? 10 : 0),
                     decoration: BoxDecoration(
                         color:

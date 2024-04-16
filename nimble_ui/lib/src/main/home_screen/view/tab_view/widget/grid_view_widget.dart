@@ -47,7 +47,7 @@ class GridViewWidget extends StatelessWidget {
                         children: [
                           Container(
                             padding: const EdgeInsets.all(20),
-                            height: MediaQuery.of(context).size.height * 0.28,
+                            height: MediaQuery.of(context).size.height * 0.32,
                             width: double.maxFinite,
                             decoration: const BoxDecoration(
                                 borderRadius: BorderRadius.only(
@@ -56,7 +56,7 @@ class GridViewWidget extends StatelessWidget {
                                 image: DecorationImage(
                                     image: NetworkImage(
                                         "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"),
-                                    fit: BoxFit.fill)),
+                                    fit: BoxFit.cover)),
                             child: Stack(
                               children: [
                                 Positioned(
@@ -128,8 +128,8 @@ class GridViewWidget extends StatelessWidget {
                             ),
                           ),
                           Padding(
-                            padding: const EdgeInsets.only(
-                                left: 24.0, right: 24, top: 16),
+                            padding: EdgeInsets.only(
+                                left: 24.0, right: 24, top: 10.h),
                             child: Column(
                               children: [
                                 Row(
@@ -163,7 +163,7 @@ class GridViewWidget extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                13.verticalSpace,
+                                10.verticalSpace,
                                 Row(
                                   children: [
                                     const TypeWidget(title: "Cook"),
@@ -171,7 +171,7 @@ class GridViewWidget extends StatelessWidget {
                                     const TypeWidget(title: "Clean")
                                   ],
                                 ),
-                                17.verticalSpace,
+                                10.verticalSpace,
                                 Row(
                                   children: [
                                     Text(
@@ -188,7 +188,7 @@ class GridViewWidget extends StatelessWidget {
                                     )
                                   ],
                                 ),
-                                17.verticalSpace,
+                                9.verticalSpace,
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,

@@ -4,28 +4,28 @@ import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/constants.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
-import 'package:nimple_ui/src/main/account_screen/view/account_screen.dart';
-import 'package:nimple_ui/src/main/booking_screen/view/booking_screen.dart';
-import 'package:nimple_ui/src/main/home_screen/view/home_screen.dart';
-import 'package:nimple_ui/src/main/message_screen/view/message_screen.dart';
-import 'package:nimple_ui/src/main/post/view/post_screen.dart';
+import 'package:nimple_ui/src/provider/provider_main/provider_account_screen/view/provider_account_screen.dart';
+import 'package:nimple_ui/src/provider/provider_main/provider_booking_screen/view/provider_booking_screen.dart';
+import 'package:nimple_ui/src/provider/provider_main/provider_home_screen/view/provider_home_screen.dart';
+import 'package:nimple_ui/src/provider/provider_main/provider_message_screen/view/provider_message_screen.dart';
+import 'package:nimple_ui/src/provider/provider_main/provider_request_screen/view/provider_request_screen.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 
-class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+class ProviderMainScreen extends StatefulWidget {
+  const ProviderMainScreen({super.key});
 
   @override
-  State<MainScreen> createState() => _MainScreenState();
+  State<ProviderMainScreen> createState() => _MainScreenState();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _MainScreenState extends State<ProviderMainScreen> {
   List pages = [
-    const HomeScreen(),
-    const BookingScreen(),
-    const PostScreen(),
-    const MessageScreen(),
-    const AccountScreen()
+    ProviderHomeScreen(),
+    const ProviderRequestScreen(),
+    const ProviderBookingScreen(),
+    const ProviderMessageScreen(),
+    const ProviderAccountScreen()
   ];
 
   int pageindex = 0;
@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
           elevation: pageindex == 3 ? 1 : 0,
           centerTitle: false,
           automaticallyImplyLeading: false,
-          title: pageindex == 0
+          title: pageindex == 0 || pageindex == 1
               ? Text(
                   Constants.name,
                   style: TextStyle(
@@ -55,7 +55,7 @@ class _MainScreenState extends State<MainScreen> {
                       fontWeight: FontWeight.w600,
                       color: Colors.black),
                 ),
-          actions: pageindex == 0
+          actions: pageindex == 0 || pageindex == 1
               ? [
                   InkWell(
                     borderRadius: BorderRadius.circular(10),
@@ -101,43 +101,7 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                   17.horizontalSpace
                 ]
-              : [
-                  pageindex == 2
-                      ? InkWell(
-                          onTap: () {
-                            Navigator.pushNamed(
-                              context,
-                              RouteGenerator.routeAddPostScreen,
-                            );
-                          },
-                          child: Container(
-                            padding: const EdgeInsets.all(7),
-                            decoration: BoxDecoration(
-                                color: Colors.black,
-                                borderRadius: BorderRadius.circular(15)),
-                            child: Row(
-                              children: [
-                                const Icon(
-                                  Icons.add,
-                                  color: Colors.white,
-                                  size: 19,
-                                ),
-                                4.horizontalSpace,
-                                Text(
-                                  "Create a Post",
-                                  style: TextStyle(
-                                      fontSize: 13.sp,
-                                      fontWeight: FontWeight.w600),
-                                )
-                              ],
-                            ),
-                          ),
-                        )
-                      : const SizedBox(),
-                  const SizedBox(
-                    width: 10,
-                  )
-                ]),
+              : []),
       body: pages[pageindex],
       bottomNavigationBar: Container(
         // height: 63.h,
@@ -226,21 +190,21 @@ class _MainScreenState extends State<MainScreen> {
                                           bottomLeft: Radius.circular(10))),
                                 )
                               : const SizedBox(),
-                          pageindex == 1 ? 1.verticalSpace : 4.verticalSpace,
+                          pageindex == 1 ? 6.verticalSpace : 9.verticalSpace,
                           SizedBox(
-                            height: 32.h,
-                            width: 32.w,
+                            height: 21.h,
+                            width: 21.w,
                             child: SvgPicture.asset(
-                              Assets.bookingsicon,
+                              Assets.requesticon,
                               color: pageindex == 1
                                   ? HexColor("#772077")
                                   : HexColor("#616068"),
                             ),
                           ),
-                          0.verticalSpace,
+                          6.verticalSpace,
                           Expanded(
                             child: Text(
-                              "Bookings",
+                              "Requests",
                               style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 12.sp,
@@ -258,8 +222,7 @@ class _MainScreenState extends State<MainScreen> {
                     onTap: () {
                       setState(() {
                         pageindex = 2;
-                        appbarTitile = Constants.post;
-                        setState(() {});
+                        appbarTitile = Constants.booking;
                       });
                     },
                     child: SizedBox(
@@ -276,21 +239,21 @@ class _MainScreenState extends State<MainScreen> {
                                           bottomLeft: Radius.circular(10))),
                                 )
                               : const SizedBox(),
-                          pageindex == 2 ? 6.verticalSpace : 9.verticalSpace,
+                          pageindex == 2 ? 1.verticalSpace : 4.verticalSpace,
                           SizedBox(
-                            height: 24.h,
-                            width: 24.w,
+                            height: 32.h,
+                            width: 32.w,
                             child: SvgPicture.asset(
-                              Assets.posticon,
+                              Assets.bookingsicon,
                               color: pageindex == 2
                                   ? HexColor("#772077")
                                   : HexColor("#616068"),
                             ),
                           ),
-                          3.verticalSpace,
+                          0.verticalSpace,
                           Expanded(
                             child: Text(
-                              "Post",
+                              "Bookings",
                               style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 12.sp,

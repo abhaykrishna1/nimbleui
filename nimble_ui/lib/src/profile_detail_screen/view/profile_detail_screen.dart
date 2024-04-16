@@ -225,7 +225,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                             Row(
                               children: [
                                 Text(
-                                  "18.00",
+                                  "\$18.00",
                                   style: TextStyle(
                                       fontSize: 20.sp,
                                       fontWeight: FontWeight.w700),
@@ -331,10 +331,10 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                                     itemCount: 5,
                                     itemPadding: const EdgeInsets.symmetric(
                                         horizontal: 4.0),
-                                    itemSize: 15.h,
+                                    itemSize: 22.h,
                                     itemBuilder: (context, _) => SizedBox(
-                                        height: 10,
-                                        width: 10,
+                                        height: 15,
+                                        width: 15,
                                         child: SvgPicture.asset(
                                           Assets.staricon,
                                         )),
@@ -373,7 +373,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                                                 decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
-                                                            8),
+                                                            18),
                                                     image: const DecorationImage(
                                                         image: NetworkImage(
                                                             "https://bfoodale.com/uploads/2021/12/Biryani.jpg"))),
@@ -387,7 +387,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                                     ),
                                     const Divider(),
                                     SizedBox(
-                                      height: 170.h,
+                                      height: 200.h,
                                       child: PageView.builder(
                                           controller: pageController,
                                           itemCount: 5,
@@ -507,7 +507,9 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                             )
                         ],
                       ),
-                      18.verticalSpace,
+                      12.verticalSpace,
+                      const Divider(),
+                      14.verticalSpace,
                       Text(
                         Constants.certification,
                         style:

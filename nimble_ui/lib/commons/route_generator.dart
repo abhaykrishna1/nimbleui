@@ -14,6 +14,7 @@ import 'package:nimple_ui/src/main/view/main_screen.dart';
 import 'package:nimple_ui/src/notification/view/notification_screen.dart';
 import 'package:nimple_ui/src/payment_done/view/payment_done_screen.dart';
 import 'package:nimple_ui/src/profile_detail_screen/view/profile_detail_screen.dart';
+import 'package:nimple_ui/src/provider/provider_main/view/provider_main_screen.dart';
 import 'package:nimple_ui/src/settings/view/settings_screen.dart';
 
 import 'package:nimple_ui/src/splash_screen/view/splash_screen.dart';
@@ -51,6 +52,11 @@ class RouteGenerator {
   static const String routetaskinfoscreen = "task_info_screen";
   static const String routelocationScreen = "location_screen";
   static const String routepaymentdonescreen = "payment_done_screen";
+
+  /// provider route 
+     
+     static const String routeprovidermainscreen = "provider_main_screen";
+
 
   Route generateRoute(RouteSettings settings, {var routeBuilder}) {
     switch (settings.name) {
@@ -95,6 +101,9 @@ class RouteGenerator {
         return _buildRoute(routelocationScreen, LocationScreen());
       case routepaymentdonescreen:
         return _buildRoute(routepaymentdonescreen, PaymentDoneScreen());
+
+        case routeprovidermainscreen:
+        return _buildRoute(routeprovidermainscreen, ProviderMainScreen());
 
       default:
         return _buildRoute(routeInitial, const SplashScreen());

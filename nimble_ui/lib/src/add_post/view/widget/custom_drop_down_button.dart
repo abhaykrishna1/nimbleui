@@ -29,9 +29,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
     "Tastybites",
     "Hashtag"
   ];
-    List tags2 = [
-   
-  ];
+  List tags2 = [];
   List serviceType = ["Care", "Clean", "Cook"];
   @override
   Widget build(BuildContext context) {
@@ -91,7 +89,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
                               ],
                             ),
                           ),
-                         const  Divider(),
+                          const Divider(),
                           Expanded(
                             child: Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -113,7 +111,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
                                             style: FontPalette.black_16_600
                                                 .copyWith(
                                                     fontWeight:
-                                                        FontWeight.w400),
+                                                        FontWeight.w400) ,
                                           )
                                         ],
                                       ),
@@ -145,27 +143,21 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
                                         MainAxisAlignment.spaceBetween,
                                     children: [
                                       Expanded(
-                                        child: SizedBox(
-                                          height: 48.h,
-                                          child: CustomButton(
-                                              textColor: "#1F1E24",
-                                              color: "#EEEEF2",
-                                              title: "Cancel",
-                                              onpressed: () {
-                                                debugPrint("object");
-                                              }),
-                                        ),
-                                      ),    
+                                        child: CustomButton(
+                                            textColor: "#1F1E24",
+                                            color: "#EEEEF2",
+                                            title: "Cancel",
+                                            onpressed: () {
+                                              debugPrint("object");
+                                            }),
+                                      ),
                                       10.horizontalSpace,
                                       Expanded(
-                                        child: SizedBox(
-                                          height: 48.h,
-                                          child: CustomButton(
-                                              title: "Done",
-                                              onpressed: () {
-                                                debugPrint("object");
-                                              }),
-                                        ),
+                                        child: CustomButton(
+                                            title: "Done",
+                                            onpressed: () {
+                                              debugPrint("object");
+                                            }),
                                       ),
                                     ],
                                   ),

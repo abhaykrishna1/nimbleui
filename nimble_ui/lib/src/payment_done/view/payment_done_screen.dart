@@ -28,7 +28,7 @@ class _PaymentDoneScreenState extends State<PaymentDoneScreen> {
                 SizedBox(
                   height: 200,
                   width: 200,
-                  child: SvgPicture.asset(Assets.paydone),
+                  child: SvgPicture.asset(Assets.iconsPaydone),
                 ),
                 40.verticalSpace,
                 Text(

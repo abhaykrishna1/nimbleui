@@ -5,7 +5,6 @@ import 'package:nimple_ui/src/main/booking_screen/view/tab_view/upcoming_tab.dar
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 
-
 class BookingScreen extends StatefulWidget {
   const BookingScreen({super.key});
 
@@ -40,8 +39,8 @@ class _MessageScreenState extends State<BookingScreen> {
                 dividerHeight: 0,
                 tabs: List.generate(2, (index) {
                   return Container(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
-                    height: 51.h,
+                    padding: EdgeInsets.only(top: 13.h, bottom: 13.h),
+                    // height: 51.h,
                     margin: EdgeInsets.only(right: index <= 2 ? 10 : 0),
                     decoration: BoxDecoration(
                         color:

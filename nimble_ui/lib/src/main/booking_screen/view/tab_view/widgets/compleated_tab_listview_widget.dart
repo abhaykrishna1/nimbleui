@@ -17,7 +17,7 @@ class CompleatedTabListViewWidget extends StatelessWidget {
                 const EdgeInsets.only(left: 16.0, right: 16, top: 7, bottom: 7),
             child: CustomPaint(
               painter: CouponPainterTwo(
-                  bgColor: Colors.white, cutPosition: 30, cutOutRadius: 10),
+                  bgColor: Colors.white, cutPosition: 29, cutOutRadius: 10),
               child: Container(
                 constraints: const BoxConstraints(minHeight: 100),
                 width: double.maxFinite,
@@ -49,12 +49,12 @@ class CompleatedTabListViewWidget extends StatelessWidget {
                     children: [
                       Container(
                         margin:
-                            EdgeInsets.only(left: 7.w, top: 6.h, bottom: 6.h),
+                            EdgeInsets.only(left: 7.w, top: 7.h, bottom: 7.h),
                         padding: const EdgeInsets.all(10),
                         constraints: const BoxConstraints(minHeight: 100),
                         width: 80.w,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
+                            borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
                                 image: NetworkImage(
                                     "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"),

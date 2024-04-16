@@ -42,8 +42,8 @@ class _MessageScreenState extends State<MessageScreen> {
                 dividerHeight: 0,
                 tabs: List.generate(2, (index) {
                   return Container(
-                    padding: const EdgeInsets.only(left: 10, right: 10),
-                    height: 51.h,
+                    padding:  EdgeInsets.only(top: 14.h, bottom: 14.h),
+                    // height: 51.h,
                     margin: EdgeInsets.only(right: index <= 2 ? 10 : 0),
                     decoration: BoxDecoration(
                         color: seletedIndex == index

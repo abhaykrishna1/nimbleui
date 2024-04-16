@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/generate/assets.dart';
@@ -36,22 +34,33 @@ class _ClickHereWidgetState extends State<ClickHereWidget> {
                       ))),
               child: Column(
                 children: [
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Container(
+                      margin: const EdgeInsets.all(10),
+                      height: 5.h,
+                      width: 77.w,
+                      decoration: BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.circular(10)),
+                    ),
+                  ),
                   Expanded(
                     child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Align(
-                            alignment: Alignment.topCenter,
-                            child: Container(
-                              margin: const EdgeInsets.all(10),
-                              height: 5.h,
-                              width: 77.w,
-                              decoration: BoxDecoration(
-                                  color: Colors.black,
-                                  borderRadius: BorderRadius.circular(10)),
-                            ),
-                          ),
+                          // Align(
+                          //   alignment: Alignment.topCenter,
+                          //   child: Container(
+                          //     margin: const EdgeInsets.all(10),
+                          //     height: 5.h,
+                          //     width: 77.w,
+                          //     decoration: BoxDecoration(
+                          //         color: Colors.black,
+                          //         borderRadius: BorderRadius.circular(10)),
+                          //   ),
+                          // ),
                           Padding(
                             padding: EdgeInsets.only(
                                 left: 16, right: 16.0, top: 10.h),

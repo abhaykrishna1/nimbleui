@@ -323,6 +323,8 @@ class _ChatScreenState extends State<ChatScreen> {
                                         borderRadius:
                                             BorderRadius.circular(20)),
                                     child: TextFormField(
+                                      maxLines: null,
+                                      maxLength: null,
                                       decoration: InputDecoration(
                                           suffixIcon: Container(
                                             padding: const EdgeInsets.all(10),
