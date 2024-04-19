@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nimple_ui/commons/constants.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
-import 'package:nimple_ui/utils/font_palette.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

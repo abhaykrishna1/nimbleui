@@ -111,7 +111,7 @@ class _CustomDropDownButtonState extends State<CustomDropDownButton> {
                                             style: FontPalette.black_16_600
                                                 .copyWith(
                                                     fontWeight:
-                                                        FontWeight.w400) ,
+                                                        FontWeight.w400),
                                           )
                                         ],
                                       ),

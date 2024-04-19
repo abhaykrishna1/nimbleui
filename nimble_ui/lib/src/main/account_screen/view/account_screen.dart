@@ -7,6 +7,7 @@ import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
+import 'package:nimple_ui/widget/account_list_widget.dart';
 
 class AccountScreen extends StatefulWidget {
   const AccountScreen({super.key});
@@ -105,22 +106,33 @@ class _AccountScreenState extends State<AccountScreen> {
                     color: Colors.white),
                 child: Column(
                   children: [
-                    accountListWidget(
-                        "My profile", Assets.accountCircle, () {}),
+                    AccountListWidget(
+                        title: "My profile",
+                        icon: Assets.accountCircle,
+                        ontap: () {}),
                     const Divider(),
-                    accountListWidget(
-                        "Favorites", Assets.favoriteBorder, () {}),
+                    AccountListWidget(
+                        title: "Favorites",
+                        icon: Assets.favoriteBorder,
+                        ontap: () {}),
                     const Divider(),
-                    accountListWidget("Payment information",
-                        Assets.paymentInformationIcon, () {}),
+                    AccountListWidget(
+                        title: "Payment information",
+                        icon: Assets.paymentInformationIcon,
+                        ontap: () {}),
                     const Divider(),
-                    accountListWidget("Settings", Assets.settings, () {
-                      Navigator.pushNamed(
-                          context, RouteGenerator.routesettingsscreen);
-                    }),
+                    AccountListWidget(
+                        title: "Settings",
+                        icon: Assets.settings,
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteGenerator.routesettingsscreen);
+                        }),
                     const Divider(),
-                    accountListWidget(
-                        "Privacy policy", Assets.privacyPolicy, () {}),
+                    AccountListWidget(
+                        title: "Privacy policy",
+                        icon: Assets.privacyPolicy,
+                        ontap: () {}),
                   ],
                 )),
             10.verticalSpace,
@@ -132,48 +144,20 @@ class _AccountScreenState extends State<AccountScreen> {
                     color: Colors.white),
                 child: Column(
                   children: [
-                    accountListWidget("Help center", Assets.helpIcon, () {
-                      Navigator.pushNamed(
-                          context, RouteGenerator.routehelpcenterscreen);
-                    }),
+                    AccountListWidget(
+                        title: "Help center",
+                        icon: Assets.helpIcon,
+                        ontap: () {
+                          Navigator.pushNamed(
+                              context, RouteGenerator.routehelpcenterscreen);
+                        }),
                     const Divider(),
-                    accountListWidget("Log out", Assets.logoutIcon, () {}),
+                    AccountListWidget(
+                        title: "Log out",
+                        icon: Assets.logoutIcon,
+                        ontap: () {}),
                   ],
                 ))
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget accountListWidget(String title, String icon, VoidCallback ontap) {
-    return InkWell(
-      onTap: ontap,
-      child: Container(
-        padding: const EdgeInsets.all(10),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Row(
-              children: [
-                SizedBox(
-                  height: 20.h,
-                  width: 20.w,
-                  child: SvgPicture.asset(icon),
-                ),
-                20.horizontalSpace,
-                Text(
-                  title,
-                  overflow: TextOverflow.ellipsis,
-                  style:
-                      TextStyle(fontSize: 16.sp, fontWeight: FontWeight.w500),
-                )
-              ],
-            ),
-            const Icon(
-              Icons.arrow_forward_ios_outlined,
-              size: 16,
-            )
           ],
         ),
       ),

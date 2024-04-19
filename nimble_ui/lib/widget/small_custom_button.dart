@@ -6,16 +6,23 @@ import 'package:nimple_ui/utils/font_palette.dart';
 class SmallCustomButton extends StatelessWidget {
   final String name;
   final String? color;
-    final VoidCallback onpressed;
+  final VoidCallback onpressed;
   final String? nameColor;
   const SmallCustomButton(
-      {super.key, required this.name, this.color, this.nameColor, required this.onpressed});
+      {super.key,
+      required this.name,
+      this.color,
+      this.nameColor,
+      required this.onpressed});
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(onTap: onpressed,
+    return InkWell(
+      onTap: onpressed,
       child: Container(
-        padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 5.h, bottom: 5.h),
+        alignment: Alignment.center,
+        padding:
+            EdgeInsets.only(left: 20.w, right: 20.w, top: 5.h, bottom: 5.h),
         decoration: BoxDecoration(
             color: HexColor(color ?? "#772077"),
             borderRadius: BorderRadius.circular(30)),

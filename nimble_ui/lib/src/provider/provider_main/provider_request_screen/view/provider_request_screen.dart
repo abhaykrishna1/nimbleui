@@ -18,7 +18,8 @@ class ProviderRequestScreen extends StatelessWidget {
     final maxWidth = MediaQuery.of(context).size.width;
     // final textScaleFactor = MediaQuery.of(context).textScaleFactor;
     // print(textScaleFactor);
-    final scaledFontSize = MediaQuery.textScalerOf(context);
+    TextScaler scaledFontSize = MediaQuery.textScalerOf(context);
+
     print(scaledFontSize);
     return Scaffold(
         backgroundColor: HexColor("#EEEEF2"),
@@ -97,6 +98,8 @@ class ProviderRequestScreen extends StatelessWidget {
                               ),
                               7.verticalSpace,
                               Row(
+                                // mainAxisAlignment:
+                                //     MainAxisAlignment.spaceBetween,
                                 children: [
                                   SmallCustomButton(
                                     name: "Decline",

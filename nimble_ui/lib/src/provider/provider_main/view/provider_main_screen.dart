@@ -11,6 +11,7 @@ import 'package:nimple_ui/src/provider/provider_main/provider_message_screen/vie
 import 'package:nimple_ui/src/provider/provider_main/provider_request_screen/view/provider_request_screen.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
+import 'package:nimple_ui/widget/my_account_dialog_widget.dart';
 
 class ProviderMainScreen extends StatefulWidget {
   const ProviderMainScreen({super.key});
@@ -21,7 +22,7 @@ class ProviderMainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<ProviderMainScreen> {
   List pages = [
-    ProviderHomeScreen(),
+    const ProviderHomeScreen(),
     const ProviderRequestScreen(),
     const ProviderBookingScreen(),
     const ProviderMessageScreen(),
@@ -48,12 +49,48 @@ class _MainScreenState extends State<ProviderMainScreen> {
                       fontWeight: FontWeight.w800,
                       color: HexColor("#772077")),
                 )
-              : Text(
-                  appbarTitile,
-                  style: TextStyle(
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black),
+              : GestureDetector(
+                  onTap: () {
+                    if (pageindex == 4) {
+                      showGeneralDialog(
+                        barrierLabel: "Label",
+                        barrierDismissible: true,
+                        barrierColor: Colors.black.withOpacity(0.5),
+                        transitionDuration: const Duration(milliseconds: 300),
+                        context: context,
+                        pageBuilder: (context, anim1, anim2) {
+                          return const MyAccountDialogWidget();
+                        },
+                        transitionBuilder: (context, anim1, anim2, child) {
+                          return SlideTransition(
+                            position: Tween(
+                                    begin: const Offset(0, 1),
+                                    end: const Offset(0, 0))
+                                .animate(anim1),
+                            child: child,
+                          );
+                        },
+                      );
+                    }
+                  },
+                  child: Row(
+                    children: [
+                      Text(
+                        appbarTitile,
+                        style: TextStyle(
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black),
+                      ),
+                      3.horizontalSpace,
+                      pageindex == 4
+                          ? const Icon(
+                              Icons.keyboard_arrow_down_sharp,
+                              size: 30,
+                            )
+                          : SizedBox()
+                    ],
+                  ),
                 ),
           actions: pageindex == 0 || pageindex == 1
               ? [

@@ -14,7 +14,10 @@ import 'package:nimple_ui/src/main/view/main_screen.dart';
 import 'package:nimple_ui/src/notification/view/notification_screen.dart';
 import 'package:nimple_ui/src/payment_done/view/payment_done_screen.dart';
 import 'package:nimple_ui/src/profile_detail_screen/view/profile_detail_screen.dart';
+import 'package:nimple_ui/src/provider/provider_add_bank_account_screen/view/provider_add_bank_account_screen.dart';
+import 'package:nimple_ui/src/provider/provider_bank_account_screen/view/provider_bank_account_screeen.dart';
 import 'package:nimple_ui/src/provider/provider_main/view/provider_main_screen.dart';
+import 'package:nimple_ui/src/provider/provider_my_profile_screen.dart/view/provider_myprofile_screen.dart';
 import 'package:nimple_ui/src/settings/view/settings_screen.dart';
 
 import 'package:nimple_ui/src/splash_screen/view/splash_screen.dart';
@@ -52,11 +55,15 @@ class RouteGenerator {
   static const String routetaskinfoscreen = "task_info_screen";
   static const String routelocationScreen = "location_screen";
   static const String routepaymentdonescreen = "payment_done_screen";
+  static const String routeprovidermyprofilescreen =
+      "provider_myprofile_screen";
+  static const String routebankaccountscreen = "provider_bank_account_screen";
+  static const String routeaddbankaccountscreen =
+      "provider_add_bank_account_screen";
 
-  /// provider route 
-     
-     static const String routeprovidermainscreen = "provider_main_screen";
+  /// provider route
 
+  static const String routeprovidermainscreen = "provider_main_screen";
 
   Route generateRoute(RouteSettings settings, {var routeBuilder}) {
     switch (settings.name) {
@@ -102,8 +109,17 @@ class RouteGenerator {
       case routepaymentdonescreen:
         return _buildRoute(routepaymentdonescreen, PaymentDoneScreen());
 
-        case routeprovidermainscreen:
+      case routeprovidermainscreen:
         return _buildRoute(routeprovidermainscreen, ProviderMainScreen());
+      case routeprovidermyprofilescreen:
+        return _buildRoute(
+            routeprovidermyprofilescreen, ProviderMyProfileScreen());
+
+      case routebankaccountscreen:
+        return _buildRoute(routebankaccountscreen, ProviderBankAccountScreen());
+      case routeaddbankaccountscreen:
+        return _buildRoute(
+            routeaddbankaccountscreen, ProviderAddBankAccountScreen());
 
       default:
         return _buildRoute(routeInitial, const SplashScreen());

@@ -7,15 +7,15 @@ import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 import 'package:nimple_ui/widget/type_widget.dart';
 
-class ShowDialogWidget extends StatelessWidget {
-  const ShowDialogWidget({super.key});
+class ProviderShowDialogWidget extends StatelessWidget {
+  const ProviderShowDialogWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: 90.h),
+      padding: EdgeInsets.only(top: 0.h),
       child: Align(
-        alignment: Alignment.topCenter,
+        alignment: Alignment.center,
         child: Padding(
           padding:
               const EdgeInsets.only(left: 16.0, right: 16, top: 7, bottom: 7),
@@ -44,14 +44,33 @@ class ShowDialogWidget extends StatelessWidget {
                                     margin: EdgeInsets.only(
                                         left: 7.w, top: 7, bottom: 7),
                                     padding: const EdgeInsets.all(10),
-                                    width: 100.w,
+                                    width: 85.w,
                                     height: 100.h,
                                     decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(10),
-                                        image: const DecorationImage(
-                                            image: NetworkImage(
-                                                "https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"),
-                                            fit: BoxFit.cover)),
+                                        color: Colors.green),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        SizedBox(
+                                          height: 30,
+                                          width: 30,
+                                          child: SvgPicture.asset(
+                                            Assets.cleaning_services,
+                                            color: Colors.white,
+                                          ),
+                                        ),
+                                        5.verticalSpace,
+                                        Text(
+                                          "Clean",
+                                          style: FontPalette.black_14_400
+                                              .copyWith(
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Colors.white),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                   20.horizontalSpace,
                                   Expanded(
@@ -74,8 +93,7 @@ class ShowDialogWidget extends StatelessWidget {
                                                           fontSize: 16.sp),
                                                 ),
                                               ),
-                                              const TypeWidgett(
-                                                  title: "Clean")
+                                              const TypeWidgett(title: "Clean")
                                             ],
                                           ),
                                           6.verticalSpace,
@@ -167,6 +185,7 @@ class ShowDialogWidget extends StatelessWidget {
                                     "Cancellation is only available 48 hours before.",
                                     style:
                                         TextStyle(color: HexColor("#616068")),
+                                        textAlign: TextAlign.center,
                                   ),
                                 ),
                               ),
@@ -221,19 +240,7 @@ class ShowDialogWidget extends StatelessWidget {
                   //   ),
                   // ),
 
-                  Container(
-                    padding: const EdgeInsets.all(17),
-                    width: double.maxFinite,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(100),
-                        color: HexColor("#EEEEF2")),
-                    child: Center(
-                        child: Text(
-                      "View chat history",
-                      style: FontPalette.black_14_600.copyWith(fontSize: 16.sp),
-                    )),
-                  ),
-                  20.verticalSpace,
+                  10.verticalSpace,
                   InkWell(
                     splashColor: Colors.transparent,
                     borderRadius: BorderRadius.circular(100),

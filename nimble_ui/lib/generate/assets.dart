@@ -51,4 +51,10 @@ class Assets {
   static const String favoriteicon = "assets/icons/favorite (2).svg";
   static const String emptyServer = "assets/icons/empty_server_icon.svg";
   static const String requesticon = "assets/icons/request_icon.svg";
+  static const String cameraicon = "assets/icons/photo_camera.svg";
+  static const String arrow_douwn = "assets/icons/arrow_douwn.svg";
+  static const String attachfileicon = "assets/icons/attach_file.svg";
+  static const String carebordericon = "assets/icons/care_border.svg";
+  static const String bankaccountIcon = "assets/icons/account_balance.svg";
+  
 }
