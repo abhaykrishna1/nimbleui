@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/generate/assets.dart';
@@ -15,6 +16,7 @@ class ProviderTabAllScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final textScaleFactor = MediaQuery.of(context).textScaleFactor;
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.only(
@@ -153,6 +155,7 @@ class ProviderTabAllScreen extends StatelessWidget {
                               alignment: Alignment.bottomCenter,
                               child: IntrinsicHeight(
                                   child: Material(
+                                color: Colors.transparent,
                                 child: Container(
                                   width: double.maxFinite,
                                   constraints: BoxConstraints(
@@ -160,7 +163,11 @@ class ProviderTabAllScreen extends StatelessWidget {
                                         MediaQuery.of(context).size.height *
                                             0.8,
                                   ),
-                                  color: Colors.white,
+                                  decoration: const BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.only(
+                                          topLeft: Radius.circular(30),
+                                          topRight: Radius.circular(30))),
                                   child: SingleChildScrollView(
                                     child: Column(
                                       children: [
@@ -178,7 +185,11 @@ class ProviderTabAllScreen extends StatelessWidget {
                                                 child: Container(
                                                   height: 5,
                                                   width: 100,
-                                                  color: Colors.black,
+                                                  decoration: BoxDecoration(
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              10),
+                                                      color: Colors.black),
                                                 ),
                                               ),
                                               15.verticalSpace,
@@ -361,7 +372,7 @@ class ProviderTabAllScreen extends StatelessWidget {
                         children: [
                           Container(
                             width: 114.w,
-                            height: 144.h,
+                            height: 144.h + (10 * textScaleFactor),
                             decoration: BoxDecoration(
                                 image: const DecorationImage(
                                     image: NetworkImage(
@@ -439,7 +450,7 @@ class ProviderTabAllScreen extends StatelessWidget {
                 },
                 separatorBuilder: (ctx, index) {
                   return const SizedBox(
-                    height: 29,
+                    height: 10,
                   );
                 },
                 itemCount: 10)

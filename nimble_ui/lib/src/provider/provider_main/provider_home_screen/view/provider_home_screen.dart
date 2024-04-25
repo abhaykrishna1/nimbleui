@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/generate/assets.dart';
@@ -21,8 +20,8 @@ class _ProviderHomeScreenState extends State<ProviderHomeScreen> {
 
   final List tabsIcon = [
     "",
-    Assets.heart_plus,
     Assets.skillet,
+    Assets.cleaning_services,
   ];
 
   int seletedIndex = 0;
@@ -36,7 +35,7 @@ class _ProviderHomeScreenState extends State<ProviderHomeScreen> {
           body: Column(
             children: [
               SizedBox(
-                height: 90.h,
+                // height: 90.h,
                 width: double.maxFinite,
                 child: TabBar(
                   overlayColor:
@@ -52,8 +51,12 @@ class _ProviderHomeScreenState extends State<ProviderHomeScreen> {
                   dividerHeight: 0,
                   tabs: List.generate(tabs.length, (index) {
                     return Container(
+                      // width: index == 1 || index == 2 ? double.maxFinite : 70,
                       // alignment: Alignment.center,
-                      padding: EdgeInsets.only(top: 14.h, bottom: 14.h),
+                      padding: EdgeInsets.only(
+                        top: 14.h,
+                        bottom: 14.h,
+                      ),
                       margin: EdgeInsets.only(right: index <= 1 ? 10 : 0),
                       decoration: BoxDecoration(
                           color: seletedIndex == index
@@ -88,6 +91,29 @@ class _ProviderHomeScreenState extends State<ProviderHomeScreen> {
                       ),
                     );
                   }),
+                  // tabs: [
+                  //   Container(
+                  //     padding: EdgeInsets.all(26),
+                  //     child: Text("Clean"),
+                  //     decoration: BoxDecoration(
+                  //         color: Colors.white,
+                  //         borderRadius: BorderRadius.circular(10)),
+                  //   ),
+                  //   Container(
+                  //     padding: EdgeInsets.all(26),
+                  //     child: Text("Clean"),
+                  //     decoration: BoxDecoration(
+                  //         color: Colors.white,
+                  //         borderRadius: BorderRadius.circular(10)),
+                  //   ),
+                  //   Container(
+                  //     padding: EdgeInsets.all(26),
+                  //     child: Text("Clean"),
+                  //     decoration: BoxDecoration(
+                  //         color: Colors.white,
+                  //         borderRadius: BorderRadius.circular(10)),
+                  //   )
+                  // ],
                 ),
               ),
               Expanded(

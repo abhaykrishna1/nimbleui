@@ -220,7 +220,7 @@ class ProviderTabCookScreen extends StatelessWidget {
                 },
                 separatorBuilder: (ctx, index) {
                   return const SizedBox(
-                    height: 29,
+                    height: 10,
                   );
                 },
                 itemCount: 10)

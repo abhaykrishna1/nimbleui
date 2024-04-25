@@ -29,10 +29,10 @@ class ProviderUpcomingListWidget extends StatelessWidget {
                 barrierLabel: "Label",
                 barrierDismissible: true,
                 barrierColor: Colors.black.withOpacity(0.5),
-                transitionDuration: const Duration(milliseconds: 200),
+                transitionDuration: const Duration(milliseconds: 350),
                 context: context,
                 pageBuilder: (context, anim1, anim2) {
-                  return ProviderShowDialogWidget();
+                  return const ProviderShowDialogWidget();
                 },
                 transitionBuilder: (context, anim1, anim2, child) {
                   return SlideTransition(

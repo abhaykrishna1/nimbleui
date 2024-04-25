@@ -7,7 +7,7 @@ import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 
 class MessageScreen extends StatefulWidget {
- const MessageScreen({super.key});
+  const MessageScreen({super.key});
 
   @override
   State<MessageScreen> createState() => _MessageScreenState();
@@ -26,7 +26,7 @@ class _MessageScreenState extends State<MessageScreen> {
         body: Column(
           children: [
             SizedBox(
-              height: 85.h,
+              height: MediaQuery.of(context).size.height * 0.11,
               width: double.maxFinite,
               child: TabBar(
                 overlayColor:
@@ -42,7 +42,8 @@ class _MessageScreenState extends State<MessageScreen> {
                 dividerHeight: 0,
                 tabs: List.generate(2, (index) {
                   return Container(
-                    padding:  EdgeInsets.only(top: 14.h, bottom: 14.h),
+                    padding: EdgeInsets.only(
+                        top: 14.h, bottom: 14.h, left: 5.w, right: 5.w),
                     // height: 51.h,
                     margin: EdgeInsets.only(right: index <= 2 ? 10 : 0),
                     decoration: BoxDecoration(

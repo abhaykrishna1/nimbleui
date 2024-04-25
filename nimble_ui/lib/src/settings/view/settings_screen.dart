@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/constants.dart';
+import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
@@ -65,32 +66,43 @@ class SettingsScreen extends StatelessWidget {
                     style: FontPalette.black_16_600,
                   ),
                   14.verticalSpace,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Terms and conditions",
-                        style: FontPalette.black_14_400,
-                      ),
-                      const Icon(
-                        Icons.arrow_forward_ios_outlined,
-                        size: 20,
-                      )
-                    ],
+                  InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, RouteGenerator.routetermsandconditions);
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Terms and conditions",
+                          style: FontPalette.black_14_400,
+                        ),
+                        const Icon(
+                          Icons.arrow_forward_ios_outlined,
+                          size: 20,
+                        )
+                      ],
+                    ),
                   ),
                   20.verticalSpace,
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Privacy policy",
-                        style: FontPalette.black_14_400,
-                      ),
-                      const Icon(
-                        Icons.arrow_forward_ios_outlined,
-                        size: 20,
-                      )
-                    ],
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, RouteGenerator.routeprivacypolicyscreen);
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Privacy policy",
+                          style: FontPalette.black_14_400,
+                        ),
+                        const Icon(
+                          Icons.arrow_forward_ios_outlined,
+                          size: 20,
+                        )
+                      ],
+                    ),
                   )
                 ],
               ),

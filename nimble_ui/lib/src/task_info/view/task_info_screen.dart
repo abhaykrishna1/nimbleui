@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/src/main/booking_screen/view/tab_view/widgets/show_dialog_widget.dart';
 import 'package:nimple_ui/src/main/message_screen/tab_view/widget/small_border_text_widget.dart';
@@ -26,9 +27,9 @@ class TaskInfoScreen extends StatelessWidget {
       body: Column(
         children: [
           Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(29.0),
-              child: SingleChildScrollView(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: const EdgeInsets.all(29.0),
                 child: Column(
                   children: [
                     CustomPaint(
@@ -177,6 +178,7 @@ class TaskInfoScreen extends StatelessWidget {
                                       "Cancellation is only available 48 hours before.",
                                       style:
                                           TextStyle(color: HexColor("#616068")),
+                                      textAlign: TextAlign.center,
                                     ),
                                   ),
                                 ),

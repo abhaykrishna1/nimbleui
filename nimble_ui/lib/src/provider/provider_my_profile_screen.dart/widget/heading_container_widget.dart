@@ -37,6 +37,7 @@ class HeadingContainerWidget extends StatelessWidget {
         ),
         10.verticalSpace,
         InkWell(
+          borderRadius: BorderRadius.circular(8),
           onTap: ontap,
           child: Container(
             padding:

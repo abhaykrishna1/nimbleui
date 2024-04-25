@@ -48,6 +48,7 @@ class _MainScreenState extends State<ProviderMainScreen> {
                       fontSize: 30.sp,
                       fontWeight: FontWeight.w800,
                       color: HexColor("#772077")),
+                  textScaler: const TextScaler.linear(1),
                 )
               : GestureDetector(
                   onTap: () {
@@ -88,7 +89,7 @@ class _MainScreenState extends State<ProviderMainScreen> {
                               Icons.keyboard_arrow_down_sharp,
                               size: 30,
                             )
-                          : SizedBox()
+                          : const SizedBox()
                     ],
                   ),
                 ),
@@ -130,6 +131,7 @@ class _MainScreenState extends State<ProviderMainScreen> {
                         RouteGenerator.routeNotificationScreen,
                       );
                     },
+                    borderRadius: BorderRadius.circular(10),
                     child: SizedBox(
                       height: 20.h,
                       width: 20.w,
@@ -191,16 +193,17 @@ class _MainScreenState extends State<ProviderMainScreen> {
                           ),
                           3.verticalSpace,
                           Expanded(
-                            child: Text(
-                              "Home",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12.sp,
-                                  color: pageindex == 0
-                                      ? HexColor("#772077")
-                                      : HexColor("#616068")),
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                            child: Text("Home",
+                                style: TextStyle(
+                                    fontWeight: pageindex == 0
+                                        ? FontWeight.w700
+                                        : FontWeight.w400,
+                                    fontSize: 12.sp,
+                                    color: pageindex == 0
+                                        ? HexColor("#772077")
+                                        : HexColor("#616068")),
+                                overflow: TextOverflow.ellipsis,
+                                textScaler: const TextScaler.linear(1)),
                           )
                         ],
                       ),
@@ -240,16 +243,17 @@ class _MainScreenState extends State<ProviderMainScreen> {
                           ),
                           6.verticalSpace,
                           Expanded(
-                            child: Text(
-                              "Requests",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12.sp,
-                                  color: pageindex == 1
-                                      ? HexColor("#772077")
-                                      : HexColor("#616068")),
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                            child: Text("Requests",
+                                style: TextStyle(
+                                    fontWeight: pageindex == 1
+                                        ? FontWeight.w700
+                                        : FontWeight.w400,
+                                    fontSize: 12.sp,
+                                    color: pageindex == 1
+                                        ? HexColor("#772077")
+                                        : HexColor("#616068")),
+                                overflow: TextOverflow.ellipsis,
+                                textScaler: const TextScaler.linear(1)),
                           )
                         ],
                       ),
@@ -289,16 +293,17 @@ class _MainScreenState extends State<ProviderMainScreen> {
                           ),
                           0.verticalSpace,
                           Expanded(
-                            child: Text(
-                              "Bookings",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12.sp,
-                                  color: pageindex == 2
-                                      ? HexColor("#772077")
-                                      : HexColor("#616068")),
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                            child: Text("Bookings",
+                                style: TextStyle(
+                                    fontWeight: pageindex == 2
+                                        ? FontWeight.w700
+                                        : FontWeight.w400,
+                                    fontSize: 12.sp,
+                                    color: pageindex == 2
+                                        ? HexColor("#772077")
+                                        : HexColor("#616068")),
+                                overflow: TextOverflow.ellipsis,
+                                textScaler: const TextScaler.linear(1)),
                           )
                         ],
                       ),
@@ -338,16 +343,17 @@ class _MainScreenState extends State<ProviderMainScreen> {
                           ),
                           3.verticalSpace,
                           Expanded(
-                            child: Text(
-                              "Message",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12.sp,
-                                  color: pageindex == 3
-                                      ? HexColor("#772077")
-                                      : HexColor("#616068")),
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                            child: Text("Message",
+                                style: TextStyle(
+                                    fontWeight: pageindex == 3
+                                        ? FontWeight.w700
+                                        : FontWeight.w400,
+                                    fontSize: 12.sp,
+                                    color: pageindex == 3
+                                        ? HexColor("#772077")
+                                        : HexColor("#616068")),
+                                overflow: TextOverflow.ellipsis,
+                                textScaler: const TextScaler.linear(1)),
                           )
                         ],
                       ),
@@ -381,16 +387,17 @@ class _MainScreenState extends State<ProviderMainScreen> {
                               child: Image.asset(Assets.accounticon)),
                           3.verticalSpace,
                           Expanded(
-                            child: Text(
-                              "Account",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 12.sp,
-                                  color: pageindex == 4
-                                      ? HexColor("#772077")
-                                      : HexColor("#616068")),
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                            child: Text("Account",
+                                style: TextStyle(
+                                    fontWeight: pageindex == 4
+                                        ? FontWeight.w700
+                                        : FontWeight.w400,
+                                    fontSize: 12.sp,
+                                    color: pageindex == 4
+                                        ? HexColor("#772077")
+                                        : HexColor("#616068")),
+                                overflow: TextOverflow.ellipsis,
+                                textScaler: const TextScaler.linear(1)),
                           )
                         ],
                       ),

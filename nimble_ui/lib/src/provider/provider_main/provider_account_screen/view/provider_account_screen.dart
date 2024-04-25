@@ -34,7 +34,7 @@ class ProviderAccountScreen extends StatelessWidget {
                         fit: BoxFit.cover),
                   ),
                 ),
-                10.verticalSpace,
+                6.verticalSpace,
                 InkWell(
                   borderRadius: BorderRadius.circular(10),
                   onTap: () {
@@ -58,33 +58,37 @@ class ProviderAccountScreen extends StatelessWidget {
                       },
                     );
                   },
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "Ann Robinson",
-                        style: FontPalette.black_18_600,
-                      ),
-                      5.horizontalSpace,
-                      Container(
-                        height: 27,
-                        width: 29.w,
-                        decoration: BoxDecoration(
-                            border: Border.all(color: HexColor("#EEEEF2")),
-                            shape: BoxShape.circle,
-                            color: Colors.white),
-                        child: const Center(
-                          child: Icon(
-                            Icons.keyboard_arrow_down_sharp,
-                            size: 30,
-                          ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Ann Robinson",
+                          style: FontPalette.black_18_600,
                         ),
-                      )
-                    ],
+                        5.horizontalSpace,
+                        Container(
+                          height: 27,
+                          width: 29.w,
+                          decoration: BoxDecoration(
+                              border: Border.all(color: HexColor("#EEEEF2")),
+                              shape: BoxShape.circle,
+                              color: Colors.white),
+                          child: const Center(
+                            child: Icon(
+                              Icons.keyboard_arrow_down_sharp,
+                              size: 30,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-                11.verticalSpace,
+                7.verticalSpace,
                 Text(
                   "Toronto, ON M4S 0B8, Canada",
                   style: FontPalette.black_14_400,
@@ -131,7 +135,7 @@ class ProviderAccountScreen extends StatelessWidget {
                         const Divider(),
                         AccountListWidget(
                             title: "Bank Account",
-                            icon: Assets.privacyPolicy,
+                            icon: Assets.bankacconticonaccountscreen,
                             ontap: () {
                               Navigator.pushNamed(context,
                                   RouteGenerator.routebankaccountscreen);

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nimple_ui/src/main/booking_screen/view/tab_view/compleated_tab.dart';
-import 'package:nimple_ui/src/main/booking_screen/view/tab_view/upcoming_tab.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_booking_screen/view/tab_view/provider_compleate_tab.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_booking_screen/view/tab_view/provider_upcoming_tab.dart';
 import 'package:nimple_ui/utils/color_palate.dart';

@@ -56,5 +56,7 @@ class Assets {
   static const String attachfileicon = "assets/icons/attach_file.svg";
   static const String carebordericon = "assets/icons/care_border.svg";
   static const String bankaccountIcon = "assets/icons/account_balance.svg";
+  static const String bankacconticonaccountscreen = "assets/icons/account_balance_wallet.svg";
+  static const String createtickericon = "assets/icons/crate_ticket.svg";
   
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
@@ -10,14 +9,15 @@ import 'package:nimple_ui/utils/font_palette.dart';
 import 'package:nimple_ui/widget/custome_button.dart';
 
 class ChatScreen extends StatefulWidget {
-  const ChatScreen({super.key});
+   bool acceptCheckingbool;
+   ChatScreen({super.key, required this.acceptCheckingbool});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
 }
 
 class _ChatScreenState extends State<ChatScreen> {
-  bool acceptCheckingbool = false;
+  // bool acceptCheckingbool = false;
 
   final ScrollController _scrollController = ScrollController();
   @override
@@ -52,9 +52,10 @@ class _ChatScreenState extends State<ChatScreen> {
     ChatMessage(
         messageContent: "Is there any thing wrong?", messageType: "sender"),
   ];
-
+  bool? boolvalueAccept = false;
   @override
   Widget build(BuildContext context) {
+    boolvalueAccept = widget.acceptCheckingbool;
     return Scaffold(
       appBar: AppBar(
         elevation: 1,
@@ -85,6 +86,7 @@ class _ChatScreenState extends State<ChatScreen> {
         ),
         actions: [
           InkWell(
+            borderRadius: BorderRadius.circular(15),
             onTap: () {
               Navigator.pushNamed(context, RouteGenerator.routetaskinfoscreen);
             },
@@ -108,7 +110,7 @@ class _ChatScreenState extends State<ChatScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            acceptCheckingbool == false
+            boolvalueAccept == false
                 ? Expanded(
                     child: Column(
                       children: [
@@ -135,21 +137,28 @@ class _ChatScreenState extends State<ChatScreen> {
                               .copyWith(color: HexColor("#616068")),
                         ),
                         12.verticalSpace,
-                        Container(
-                          padding: const EdgeInsets.all(7),
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: HexColor("#C7C6CD"))),
-                          child: Text(
-                            "View Profile",
-                            style: FontPalette.black_14_600,
+                        InkWell(
+                          borderRadius: BorderRadius.circular(20),
+                          onTap: () {
+                            Navigator.pushNamed(
+                                context, RouteGenerator.routeviewprofilescreen);
+                          },
+                          child: Container(
+                            padding: const EdgeInsets.all(7),
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                border: Border.all(color: HexColor("#C7C6CD"))),
+                            child: Text(
+                              "View Profile",
+                              style: FontPalette.black_14_600,
+                            ),
                           ),
                         ),
                       ],
                     ),
                   )
                 : const SizedBox.shrink(),
-            acceptCheckingbool == true
+            boolvalueAccept == true
                 ? Expanded(
                     child: ListView.builder(
                     controller: _scrollController,
@@ -280,7 +289,7 @@ class _ChatScreenState extends State<ChatScreen> {
                     },
                   ))
                 : const SizedBox.shrink(),
-            acceptCheckingbool == true
+            boolvalueAccept == true
                 ? Container(
                     //  height: 100,
                     width: double.maxFinite,
@@ -297,17 +306,216 @@ class _ChatScreenState extends State<ChatScreen> {
                             children: [
                               Row(
                                 children: [
-                                  Container(
-                                    padding: const EdgeInsets.all(15),
-                                    height: 43.h,
-                                    width: 43.w,
-                                    decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: HexColor("#EEEEF2")),
-                                    child: SizedBox(
-                                      height: 1.h,
-                                      width: 1.w,
-                                      child: SvgPicture.asset(Assets.addicon),
+                                  InkWell(
+                                    onTap: () {
+                                      showGeneralDialog(
+                                        barrierLabel: "Label",
+                                        barrierDismissible: true,
+                                        barrierColor:
+                                            Colors.black.withOpacity(0.5),
+                                        transitionDuration:
+                                            const Duration(milliseconds: 300),
+                                        context: context,
+                                        pageBuilder: (context, anim1, anim2) {
+                                          return Align(
+                                            alignment: Alignment.bottomCenter,
+                                            child: IntrinsicHeight(
+                                              child: Material(
+                                                  color: Colors.transparent,
+                                                  child: Container(
+                                                    // constraints: BoxConstraints(maxHeight: 400),
+                                                    width: double.maxFinite,
+                                                    decoration: const BoxDecoration(
+                                                        color: Colors.white,
+                                                        borderRadius:
+                                                            BorderRadius.only(
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        10),
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        10))),
+                                                    child: Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              Alignment.center,
+                                                          child: Container(
+                                                            margin:
+                                                                const EdgeInsets
+                                                                    .all(14),
+                                                            height: 4.h,
+                                                            width: 100,
+                                                            decoration: BoxDecoration(
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            10),
+                                                                color: Colors
+                                                                    .black),
+                                                          ),
+                                                        ),
+                                                        InkWell(
+                                                          onTap: () {
+                                                            Navigator.pop(
+                                                                context);
+                                                            Navigator.pushNamed(
+                                                                context,
+                                                                RouteGenerator
+                                                                    .routecreatetickerscreen);
+                                                          },
+                                                          child: Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .all(16.0),
+                                                            child: Row(
+                                                              children: [
+                                                                Container(
+                                                                  padding:
+                                                                      const EdgeInsets
+                                                                          .all(
+                                                                          14),
+                                                                  height: 50.h,
+                                                                  width: 50.w,
+                                                                  decoration: BoxDecoration(
+                                                                      shape: BoxShape
+                                                                          .circle,
+                                                                      color: HexColor(
+                                                                          "#EEEEF2")),
+                                                                  child:
+                                                                      SizedBox(
+                                                                    height: 20,
+                                                                    width: 20,
+                                                                    child: SvgPicture
+                                                                        .asset(Assets
+                                                                            .createtickericon),
+                                                                  ),
+                                                                ),
+                                                                16.horizontalSpace,
+                                                                Text(
+                                                                    "Create Ticket",
+                                                                    style: FontPalette
+                                                                        .black_16_600
+                                                                        .copyWith(
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w500,
+                                                                    )),
+                                                              ],
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        const Divider(),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .all(16.0),
+                                                          child: Row(
+                                                            children: [
+                                                              Container(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                        .all(
+                                                                        14),
+                                                                height: 50.h,
+                                                                width: 50.w,
+                                                                decoration: BoxDecoration(
+                                                                    shape: BoxShape
+                                                                        .circle,
+                                                                    color: HexColor(
+                                                                        "#EEEEF2")),
+                                                                child: SizedBox(
+                                                                  height: 20,
+                                                                  width: 20,
+                                                                  child:
+                                                                      SvgPicture
+                                                                          .asset(
+                                                                    Assets
+                                                                        .locationsvg,
+                                                                    color: HexColor(
+                                                                        "#772077"),
+                                                                  ),
+                                                                ),
+                                                              ),
+                                                              16.horizontalSpace,
+                                                              Text(
+                                                                  "Share Location",
+                                                                  style: FontPalette
+                                                                      .black_16_600
+                                                                      .copyWith(
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .w500,
+                                                                  )),
+                                                            ],
+                                                          ),
+                                                        ),
+                                                        Container(
+                                                          // height: 200,
+                                                          //  padding: const EdgeInsets.only(left: 18, right: 18, bottom: 18),
+                                                          width:
+                                                              double.maxFinite,
+                                                          color: Colors.white,
+                                                          child: Column(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              const Divider(
+                                                                height: 0,
+                                                              ),
+                                                              10.verticalSpace,
+
+                                                              //  2.verticalSpace
+                                                            ],
+                                                          ),
+                                                        ),
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  top: 10,
+                                                                  bottom: 18),
+                                                          child: Center(
+                                                              child: Text(
+                                                            "Cancel",
+                                                            style: FontPalette
+                                                                .black_16_600,
+                                                          )),
+                                                        )
+                                                      ],
+                                                    ),
+                                                  )),
+                                            ),
+                                          );
+                                        },
+                                        transitionBuilder:
+                                            (context, anim1, anim2, child) {
+                                          return SlideTransition(
+                                            position: Tween(
+                                                    begin: const Offset(0, 1),
+                                                    end: const Offset(0, 0))
+                                                .animate(anim1),
+                                            child: child,
+                                          );
+                                        },
+                                      );
+                                    },
+                                    child: Container(
+                                      padding: const EdgeInsets.all(15),
+                                      height: 43.h,
+                                      width: 43.w,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: HexColor("#EEEEF2")),
+                                      child: SizedBox(
+                                        height: 1.h,
+                                        width: 1.w,
+                                        child: SvgPicture.asset(Assets.addicon),
+                                      ),
                                     ),
                                   ),
                                   10.horizontalSpace,
@@ -397,7 +605,8 @@ class _ChatScreenState extends State<ChatScreen> {
                                       debugPrint("object");
                                       debugPrint("Clicked Accept button");
                                       setState(() {
-                                        acceptCheckingbool = true;
+                                        widget.acceptCheckingbool = true;
+                                        print(boolvalueAccept);
                                         // if (_scrollController.hasClients) {
                                         //   _scrollController.animateTo(
                                         //       _scrollController

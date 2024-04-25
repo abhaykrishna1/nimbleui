@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -29,7 +31,7 @@ class ProviderCompleatedListWidget extends StatelessWidget {
                 barrierLabel: "Label",
                 barrierDismissible: true,
                 barrierColor: Colors.black.withOpacity(0.5),
-                transitionDuration: const Duration(milliseconds: 200),
+                transitionDuration: const Duration(milliseconds: 350),
                 context: context,
                 pageBuilder: (context, anim1, anim2) {
                   return const ProviderCompleatedShowDialog();
@@ -68,7 +70,11 @@ class ProviderCompleatedListWidget extends StatelessWidget {
                         ),
                       ),
                       5.verticalSpace,
-                      Text("Clean",style: FontPalette.black_14_400.copyWith(fontWeight: FontWeight.w700,color: Colors.white),)
+                      Text(
+                        "Clean",
+                        style: FontPalette.black_14_400.copyWith(
+                            fontWeight: FontWeight.w700, color: Colors.white),
+                      )
                     ],
                   ),
                 ),

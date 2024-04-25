@@ -193,12 +193,15 @@ class _MainScreenState extends State<MainScreen> {
                             child: Text(
                               "Home",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: pageindex == 0
+                                      ? FontWeight.w700
+                                      : FontWeight.w400,
                                   fontSize: 12.sp,
                                   color: pageindex == 0
                                       ? HexColor("#772077")
                                       : HexColor("#616068")),
                               overflow: TextOverflow.ellipsis,
+                              textScaler: const TextScaler.linear(1),
                             ),
                           )
                         ],
@@ -242,12 +245,15 @@ class _MainScreenState extends State<MainScreen> {
                             child: Text(
                               "Bookings",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: pageindex == 1
+                                      ? FontWeight.w700
+                                      : FontWeight.w400,
                                   fontSize: 12.sp,
                                   color: pageindex == 1
                                       ? HexColor("#772077")
                                       : HexColor("#616068")),
                               overflow: TextOverflow.ellipsis,
+                              textScaler: const TextScaler.linear(1),
                             ),
                           )
                         ],
@@ -292,12 +298,15 @@ class _MainScreenState extends State<MainScreen> {
                             child: Text(
                               "Post",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: pageindex == 2
+                                      ? FontWeight.w700
+                                      : FontWeight.w400,
                                   fontSize: 12.sp,
                                   color: pageindex == 2
                                       ? HexColor("#772077")
                                       : HexColor("#616068")),
                               overflow: TextOverflow.ellipsis,
+                              textScaler: const TextScaler.linear(1),
                             ),
                           )
                         ],
@@ -341,12 +350,15 @@ class _MainScreenState extends State<MainScreen> {
                             child: Text(
                               "Message",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: pageindex == 3
+                                      ? FontWeight.w700
+                                      : FontWeight.w400,
                                   fontSize: 12.sp,
                                   color: pageindex == 3
                                       ? HexColor("#772077")
                                       : HexColor("#616068")),
                               overflow: TextOverflow.ellipsis,
+                              textScaler: const TextScaler.linear(1),
                             ),
                           )
                         ],
@@ -384,12 +396,15 @@ class _MainScreenState extends State<MainScreen> {
                             child: Text(
                               "Account",
                               style: TextStyle(
-                                  fontWeight: FontWeight.w700,
+                                  fontWeight: pageindex == 4
+                                      ? FontWeight.w700
+                                      : FontWeight.w400,
                                   fontSize: 12.sp,
                                   color: pageindex == 4
                                       ? HexColor("#772077")
                                       : HexColor("#616068")),
                               overflow: TextOverflow.ellipsis,
+                              textScaler: const TextScaler.linear(1),
                             ),
                           )
                         ],

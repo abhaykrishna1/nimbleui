@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
+import 'package:nimple_ui/src/chat_screen/model/chat_screen_model.dart';
+import 'package:nimple_ui/src/chat_screen/view/chat_screen.dart';
 import 'package:nimple_ui/src/main/message_screen/tab_view/widget/small_border_text_widget.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
@@ -14,9 +16,14 @@ class ReceivedRequestListViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(
+        // Navigator.pushNamed(context, RouteGenerator.routechatscreen,
+        //     arguments: ChatArgPassModel(checkacceptBool: false));
+        Navigator.push(
           context,
-          RouteGenerator.routechatscreen,
+          MaterialPageRoute(
+              builder: (context) =>  ChatScreen(
+                    acceptCheckingbool: false,
+                  )),
         );
       },
       child: Container(

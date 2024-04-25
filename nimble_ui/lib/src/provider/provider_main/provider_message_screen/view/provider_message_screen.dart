@@ -28,7 +28,7 @@ class _MessageScreenState extends State<ProviderMessageScreen> {
         body: Column(
           children: [
             SizedBox(
-              height: 85.h,
+              height: MediaQuery.of(context).size.height * 0.11,
               width: double.maxFinite,
               child: TabBar(
                 overlayColor:
@@ -44,7 +44,8 @@ class _MessageScreenState extends State<ProviderMessageScreen> {
                 dividerHeight: 0,
                 tabs: List.generate(2, (index) {
                   return Container(
-                    padding: EdgeInsets.only(top: 14.h, bottom: 14.h),
+                    padding: EdgeInsets.only(
+                        top: 14.h, bottom: 14.h, left: 10.w, right: 10.w),
                     // height: 51.h,
                     margin: EdgeInsets.only(right: index <= 2 ? 10 : 0),
                     decoration: BoxDecoration(
