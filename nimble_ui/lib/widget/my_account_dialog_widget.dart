@@ -132,13 +132,17 @@ class MyAccountDialogWidget extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 10, bottom: 18),
-                    child: Center(
-                        child: Text(
-                      "Cancel",
-                      style: FontPalette.black_16_600,
-                    )),
+                  InkWell(onTap: (){
+                    Navigator.pop(context);
+                  },
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 10, bottom: 18),
+                      child: Center(
+                          child: Text(
+                        "Cancel",
+                        style: FontPalette.black_16_600,
+                      )),
+                    ),
                   )
                 ],
               ),

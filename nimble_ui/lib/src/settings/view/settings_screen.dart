@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -67,8 +66,9 @@ class SettingsScreen extends StatelessWidget {
                   ),
                   14.verticalSpace,
                   InkWell(
-                    onTap: (){
-                      Navigator.pushNamed(context, RouteGenerator.routetermsandconditions);
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, RouteGenerator.routetermsandconditions);
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -199,7 +199,7 @@ class SettingsScreen extends StatelessWidget {
                                   Padding(
                                     padding: EdgeInsets.only(
                                         left: 16.0.w, right: 16.w),
-                                    child: Divider(),
+                                    child: const Divider(),
                                   ),
                                   Padding(
                                     padding: const EdgeInsets.all(16.0),
@@ -268,6 +268,7 @@ class SettingsScreen extends StatelessWidget {
                                                     title: "Cancel",
                                                     onpressed: () {
                                                       debugPrint("object");
+                                                      Navigator.pop(context);
                                                     }),
                                               ),
                                               10.horizontalSpace,

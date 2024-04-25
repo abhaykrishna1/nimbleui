@@ -52,19 +52,19 @@ class ProviderBankAccountScreen extends StatelessWidget {
                                 padding: const EdgeInsets.all(40.0),
                                 child: Column(
                                   children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        InkWell(
-                                          onTap: () {
-                                            Navigator.pop(context);
-                                            Navigator.pushNamed(
-                                                context,
-                                                RouteGenerator
-                                                    .routeaddbankaccountscreen);
-                                          },
-                                          child: Row(
+                                    InkWell(
+                                      onTap: () {
+                                        Navigator.pop(context);
+                                        Navigator.pushNamed(
+                                            context,
+                                            RouteGenerator
+                                                .routeaddbankaccountscreen);
+                                      },
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Row(
                                             children: [
                                               SizedBox(
                                                 height: 17.h,
@@ -82,12 +82,12 @@ class ProviderBankAccountScreen extends StatelessWidget {
                                               )
                                             ],
                                           ),
-                                        ),
-                                        const Icon(
-                                          Icons.arrow_forward_ios_outlined,
-                                          size: 20,
-                                        )
-                                      ],
+                                          const Icon(
+                                            Icons.arrow_forward_ios_outlined,
+                                            size: 20,
+                                          )
+                                        ],
+                                      ),
                                     ),
                                     12.verticalSpace,
                                     const Divider(),

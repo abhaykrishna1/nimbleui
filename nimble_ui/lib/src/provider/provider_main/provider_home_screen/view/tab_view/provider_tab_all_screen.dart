@@ -14,15 +14,25 @@ class ProviderTabAllScreen extends StatelessWidget {
 
   final controller = ScrollController();
 
+  List images = [
+    "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww",
+    "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
+    "https://www.shutterstock.com/shutterstock/photos/1617540484/display_1500/stock-photo-closeup-photo-of-amazing-short-hairdo-lady-looking-up-empty-space-deep-thinking-creative-person-arm-1617540484.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8iQTGP_fRP4Hug0_8NI6m1PD9XhynUNJO_4kp0--Djw&s",
+    "https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg",
+    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww",
+    "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
+    "https://www.shutterstock.com/shutterstock/photos/1617540484/display_1500/stock-photo-closeup-photo-of-amazing-short-hairdo-lady-looking-up-empty-space-deep-thinking-creative-person-arm-1617540484.jpg",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8iQTGP_fRP4Hug0_8NI6m1PD9XhynUNJO_4kp0--Djw&s"
+  ];
+
   @override
   Widget build(BuildContext context) {
     final textScaleFactor = MediaQuery.of(context).textScaleFactor;
     return SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.only(
-          left: 16.w,
-          right: 16.w,
-        ),
+        padding: EdgeInsets.only(left: 16.w, right: 16.w, bottom: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -143,12 +153,13 @@ class ProviderTabAllScreen extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return InkWell(
+                    borderRadius: BorderRadius.circular(20),
                     onTap: () {
                       showGeneralDialog(
                         barrierLabel: "Label",
                         barrierDismissible: true,
                         barrierColor: Colors.black.withOpacity(0.5),
-                        transitionDuration: const Duration(milliseconds: 500),
+                        transitionDuration: const Duration(milliseconds: 400),
                         context: context,
                         pageBuilder: (context, anim1, anim2) {
                           return Align(
@@ -203,7 +214,7 @@ class ProviderTabAllScreen extends StatelessWidget {
                                                     decoration: BoxDecoration(
                                                         image: const DecorationImage(
                                                             image: NetworkImage(
-                                                                "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"),
+                                                                "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyc29ufGVufDB8fDB8fHww"),
                                                             fit: BoxFit.cover),
                                                         borderRadius:
                                                             BorderRadius
@@ -374,9 +385,8 @@ class ProviderTabAllScreen extends StatelessWidget {
                             width: 114.w,
                             height: 144.h + (10 * textScaleFactor),
                             decoration: BoxDecoration(
-                                image: const DecorationImage(
-                                    image: NetworkImage(
-                                        "https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg"),
+                                image: DecorationImage(
+                                    image: NetworkImage(images[index]),
                                     fit: BoxFit.cover),
                                 borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(15.r),

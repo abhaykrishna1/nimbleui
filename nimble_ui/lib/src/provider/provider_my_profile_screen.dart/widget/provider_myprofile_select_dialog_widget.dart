@@ -121,6 +121,7 @@ class ProviderMyProfileSelectWidget extends StatelessWidget {
                                     title: "Cancel",
                                     onpressed: () {
                                       debugPrint("object");
+                                        Navigator.pop(context);
                                     }),
                               ),
                               10.horizontalSpace,

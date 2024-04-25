@@ -315,6 +315,7 @@ class TaskInfoScreen extends StatelessWidget {
                                                     title: "No",
                                                     onpressed: () {
                                                       debugPrint("object");
+                                                      Navigator.pop(context);
                                                     }),
                                               ),
                                               10.horizontalSpace,

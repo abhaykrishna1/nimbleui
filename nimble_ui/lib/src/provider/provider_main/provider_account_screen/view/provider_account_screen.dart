@@ -59,7 +59,8 @@ class ProviderAccountScreen extends StatelessWidget {
                     );
                   },
                   child: Padding(
-                    padding: const EdgeInsets.all(3.0),
+                    padding: const EdgeInsets.only(
+                        top: 3.0, bottom: 3, left: 10, right: 10),
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,

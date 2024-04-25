@@ -9,8 +9,8 @@ import 'package:nimple_ui/utils/font_palette.dart';
 import 'package:nimple_ui/widget/custome_button.dart';
 
 class ChatScreen extends StatefulWidget {
-   bool acceptCheckingbool;
-   ChatScreen({super.key, required this.acceptCheckingbool});
+  bool acceptCheckingbool;
+  ChatScreen({super.key, required this.acceptCheckingbool});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -20,6 +20,7 @@ class _ChatScreenState extends State<ChatScreen> {
   // bool acceptCheckingbool = false;
 
   final ScrollController _scrollController = ScrollController();
+  TextEditingController msgController = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -530,22 +531,66 @@ class _ChatScreenState extends State<ChatScreen> {
                                         color: HexColor("#EEEEF2"),
                                         borderRadius:
                                             BorderRadius.circular(20)),
-                                    child: TextFormField(
-                                      maxLines: null,
-                                      maxLength: null,
-                                      decoration: InputDecoration(
-                                          suffixIcon: Container(
-                                            padding: const EdgeInsets.all(10),
-                                            height: 20,
-                                            width: 20,
-                                            decoration: const BoxDecoration(
-                                                color: Colors.white,
-                                                shape: BoxShape.circle),
-                                            child: SvgPicture.asset(
-                                                Assets.sendicon),
-                                          ),
-                                          border: InputBorder.none,
-                                          hintText: "Type Message..."),
+                                    child: Container(
+                                      constraints: const BoxConstraints(
+                                          maxHeight: 130, minHeight: 50),
+                                      child: TextFormField(
+                                        controller: msgController,
+                                        maxLines: null,
+                                        maxLength: null,
+                                        decoration: InputDecoration(
+                                            suffixIcon: Material(
+                                              color: Colors.white,
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
+                                              child: InkWell(
+                                                borderRadius:
+                                                    BorderRadius.circular(100),
+                                                onTap: () {
+                                                  var s = ChatMessage(
+                                                      messageContent:
+                                                          msgController.text,
+                                                      messageType: "sender");
+
+                                                  setState(() {
+                                                    messages.add(s);
+                                                    // _scrollController.jumpTo(
+                                                    //     _scrollController.position
+                                                    //         .maxScrollExtent);
+
+                                                    maxscroll();
+                                                  });
+                                                  var r = ChatMessage(
+                                                      messageContent:
+                                                          "plz speek malayalam",
+                                                      messageType: "receiver");
+                                                  setState(() async {
+                                                    await Future.delayed(
+                                                        const Duration(
+                                                            seconds: 1));
+                                                    messages.add(r);
+
+                                                    maxscroll2();
+                                                  });
+                                                },
+                                                child: Container(
+                                                  padding:
+                                                      const EdgeInsets.all(10),
+                                                  height: 20,
+                                                  width: 20,
+                                                  decoration:
+                                                      const BoxDecoration(
+                                                          color: Colors.white,
+                                                          shape:
+                                                              BoxShape.circle),
+                                                  child: SvgPicture.asset(
+                                                      Assets.sendicon),
+                                                ),
+                                              ),
+                                            ),
+                                            border: InputBorder.none,
+                                            hintText: "Type Message..."),
+                                      ),
                                     ),
                                   ))
                                 ],
@@ -627,6 +672,22 @@ class _ChatScreenState extends State<ChatScreen> {
           ],
         ),
       ),
+    );
+  }
+
+  maxscroll() {
+    _scrollController.animateTo(
+      _scrollController.position.maxScrollExtent + 100,
+      duration: const Duration(milliseconds: 10),
+      curve: Curves.easeOut,
+    );
+  }
+
+  maxscroll2() {
+    _scrollController.animateTo(
+      _scrollController.position.maxScrollExtent + 170,
+      duration: const Duration(milliseconds: 10),
+      curve: Curves.easeOut,
     );
   }
 }

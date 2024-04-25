@@ -352,7 +352,7 @@ class ProviderMyProfileScreen extends StatelessWidget {
                       ontap: () {},
                     ),
                     const SizedBox(
-                      height: 200,
+                      height: 70,
                     )
                   ],
                 ),
