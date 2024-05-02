@@ -8,7 +8,7 @@ class ProviderUpcomingTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
         itemBuilder: (ctx, index) {
-          return ProviderUpcomingListWidget();
+          return const ProviderUpcomingListWidget();
         },
         separatorBuilder: (ctx, index) {
           return const SizedBox();

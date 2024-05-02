@@ -28,7 +28,6 @@ class CustomRoundedRectRangeSliderTrackShape extends RangeSliderTrackShape
     assert(sliderTheme.activeTrackColor != null);
     assert(sliderTheme.inactiveTrackColor != null);
     assert(sliderTheme.rangeThumbShape != null);
-
     if (sliderTheme.trackHeight == null || sliderTheme.trackHeight! <= 0) {
       return;
     }

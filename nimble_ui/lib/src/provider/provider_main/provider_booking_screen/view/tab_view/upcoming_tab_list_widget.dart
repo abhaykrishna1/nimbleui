@@ -2,11 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/generate/assets.dart';
-import 'package:nimple_ui/src/main/booking_screen/view/tab_view/widgets/show_dialog_widget.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_booking_screen/view/tab_view/provider_upcoming_show_dialog.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
-import 'package:nimple_ui/widget/type_widget.dart';
 
 class ProviderUpcomingListWidget extends StatelessWidget {
   const ProviderUpcomingListWidget({super.key});

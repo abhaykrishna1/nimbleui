@@ -91,7 +91,7 @@ class ViewProfileScreen extends StatelessWidget {
                       "Mount Plasent, UT North, 876358", Assets.locationborder),
                   16.verticalSpace,
                   Container(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: HexColor("#F2F0FF")),

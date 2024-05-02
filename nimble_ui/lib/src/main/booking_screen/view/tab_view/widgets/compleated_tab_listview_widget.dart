@@ -10,9 +10,7 @@ class CompleatedTabListViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-        itemBuilder: (ctx, index) {
-          return Padding(
+    return Padding(
             padding:
                 const EdgeInsets.only(left: 16.0, right: 16, top: 7, bottom: 7),
             child: CustomPaint(
@@ -102,11 +100,6 @@ class CompleatedTabListViewWidget extends StatelessWidget {
               ),
             ),
           );
-        },
-        separatorBuilder: (ctx, index) {
-          return const SizedBox();
-        },
-        itemCount: 1);
   }
 }
 

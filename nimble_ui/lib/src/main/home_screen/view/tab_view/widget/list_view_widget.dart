@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
-import 'package:nimple_ui/src/main/home_screen/view/tab_view/widget/type_widget.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 import 'package:nimple_ui/widget/type_widget.dart';

@@ -6,6 +6,13 @@ class CompleatedTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CompleatedTabListViewWidget();
+    return ListView.separated(
+        itemBuilder: (ctx, index) {
+          return const CompleatedTabListViewWidget();
+        },
+        separatorBuilder: (ctx, index) {
+          return const SizedBox();
+        },
+        itemCount: 1);
   }
 }

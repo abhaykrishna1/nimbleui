@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
-import 'package:nimple_ui/widget/account_list_widget.dart';
-import 'package:nimple_ui/widget/custome_button.dart';
 
 class MyAccountDialogWidget extends StatelessWidget {
   const MyAccountDialogWidget({super.key});
@@ -78,7 +75,7 @@ class MyAccountDialogWidget extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.only(left: 16.0.w, right: 16.w),
-                    child: Divider(),
+                    child: const Divider(),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(16.0),
@@ -127,14 +124,14 @@ class MyAccountDialogWidget extends StatelessWidget {
                           height: 0,
                         ),
                         10.verticalSpace,
-
                         //  2.verticalSpace
                       ],
                     ),
                   ),
-                  InkWell(onTap: (){
-                    Navigator.pop(context);
-                  },
+                  InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10, bottom: 18),
                       child: Center(
