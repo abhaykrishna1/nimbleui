@@ -1,7 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/generate/assets.dart';
@@ -19,9 +16,9 @@ class ProviderRequestScreen extends StatelessWidget {
     final maxWidth = MediaQuery.of(context).size.width;
     // final textScaleFactor = MediaQuery.of(context).textScaleFactor;
     // print(textScaleFactor);
-    TextScaler scaledFontSize = MediaQuery.textScalerOf(context);
+    // TextScaler scaledFontSize = MediaQuery.textScalerOf(context);
 
-    print(scaledFontSize);
+    // print(scaledFontSize);
     return Scaffold(
         backgroundColor: HexColor("#EEEEF2"),
         body: Padding(

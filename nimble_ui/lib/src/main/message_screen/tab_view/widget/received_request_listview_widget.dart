@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -102,10 +103,12 @@ class ReceivedRequestListViewWidget extends StatelessWidget {
                       ),
                     ),
                     // 48.horizontalSpace,
-                    Text(
-                      "12 hours ago",
-                      style: TextStyle(
-                          fontSize: 12.sp, fontWeight: FontWeight.w400),
+                    Expanded(
+                      child: Text(
+                        "12 hours ago",
+                        style: TextStyle(
+                            fontSize: 12.sp, fontWeight: FontWeight.w400),
+                      ),
                     )
                   ],
                 ),

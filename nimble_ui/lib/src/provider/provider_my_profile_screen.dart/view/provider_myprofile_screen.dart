@@ -10,6 +10,7 @@ import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 import 'package:nimple_ui/widget/custome_button.dart';
 
+// ignore: must_be_immutable
 class ProviderMyProfileScreen extends StatelessWidget {
   ProviderMyProfileScreen({super.key});
 

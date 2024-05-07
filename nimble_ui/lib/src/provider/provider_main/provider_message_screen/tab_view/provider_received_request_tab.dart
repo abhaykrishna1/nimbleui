@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nimple_ui/src/main/message_screen/tab_view/widget/received_request_listview_widget.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_message_screen/tab_view/widget/provider_received_request_listview_widget.dart';
 
 class ProviderReceivedRequestTab extends StatefulWidget {

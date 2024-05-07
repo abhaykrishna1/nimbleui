@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nimple_ui/src/main/message_screen/tab_view/widget/accepted_profile_listview_widget.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_message_screen/tab_view/widget/provider_accepted_profile_listview_widget.dart';
 
 class ProviderAcceptedProfileTab extends StatefulWidget {

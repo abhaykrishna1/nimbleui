@@ -10,7 +10,8 @@ import '../../../../widget/custome_button.dart';
 class ProviderMyProfileSelectWidget extends StatelessWidget {
   final List selectionList;
   final double height;
-  const ProviderMyProfileSelectWidget({super.key, required this.selectionList,required this.height});
+  const ProviderMyProfileSelectWidget(
+      {super.key, required this.selectionList, required this.height});
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +122,7 @@ class ProviderMyProfileSelectWidget extends StatelessWidget {
                                     title: "Cancel",
                                     onpressed: () {
                                       debugPrint("object");
-                                        Navigator.pop(context);
+                                      Navigator.pop(context);
                                     }),
                               ),
                               10.horizontalSpace,

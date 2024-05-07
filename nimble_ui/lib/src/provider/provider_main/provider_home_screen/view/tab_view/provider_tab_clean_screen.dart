@@ -2,15 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:nimple_ui/generate/assets.dart';
-import 'package:nimple_ui/src/main/home_screen/view/tab_view/widget/type_widget.dart';
+
 import 'package:nimple_ui/src/provider/provider_main/provider_home_screen/view/tab_view/widget/home_card_widget.dart';
-import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
-import 'package:nimple_ui/widget/custome_button.dart';
-import 'package:nimple_ui/widget/small_custom_button.dart';
-import 'package:nimple_ui/widget/type_widget.dart';
 
 class ProviderTabCleenScreen extends StatelessWidget {
   ProviderTabCleenScreen({super.key});
@@ -28,7 +22,6 @@ class ProviderTabCleenScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-          
             13.verticalSpace,
             Text(
               "Find your Job",

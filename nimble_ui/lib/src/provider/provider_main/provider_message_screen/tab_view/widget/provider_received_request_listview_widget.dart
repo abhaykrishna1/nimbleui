@@ -91,12 +91,15 @@ class ProviderReceivedRequestListViewWidget extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              // 48.horizontalSpace,
-                              Text(
-                                "12 hours ago",
-                                style: TextStyle(
-                                    fontSize: 12.sp,
-                                    fontWeight: FontWeight.w400),
+                              8.horizontalSpace,
+                              Expanded(
+                                child: Text(
+                                  "12 hours ago",
+                                  style: TextStyle(
+                                      fontSize: 12.sp,
+                                      fontWeight: FontWeight.w400),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
                               )
                             ],
                           ),

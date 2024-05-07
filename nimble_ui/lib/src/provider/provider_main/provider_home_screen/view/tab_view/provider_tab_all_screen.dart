@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_home_screen/view/tab_view/widget/home_card_widget.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_home_screen/view/tab_view/widget/home_requests_card_widget.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
-import 'package:nimple_ui/widget/custome_button.dart';
 
 class ProviderTabAllScreen extends StatelessWidget {
   ProviderTabAllScreen({super.key});
@@ -25,7 +24,6 @@ class ProviderTabAllScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textScaleFactor = MediaQuery.of(context).textScaleFactor;
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.only(left: 16.w, right: 16.w, bottom: 20),

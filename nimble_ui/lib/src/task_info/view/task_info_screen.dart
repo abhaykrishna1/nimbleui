@@ -1,8 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/src/main/booking_screen/view/tab_view/widgets/show_dialog_widget.dart';
 import 'package:nimple_ui/src/main/message_screen/tab_view/widget/small_border_text_widget.dart';
@@ -162,8 +160,9 @@ class TaskInfoScreen extends StatelessWidget {
                                             style: FontPalette.black_14_400,
                                           ),
                                           Text(
-                                            "2",
-                                            style: FontPalette.black_14_600,
+                                            "\$2",
+                                            style: FontPalette.black_14_600
+                                                .copyWith(color: Colors.green),
                                           )
                                         ],
                                       ),
@@ -193,7 +192,7 @@ class TaskInfoScreen extends StatelessWidget {
                                         style: FontPalette.black_14_600,
                                       ),
                                       Text(
-                                        "15",
+                                        "\$15/hr",
                                         style: FontPalette.black_14_600
                                             .copyWith(fontSize: 16.sp),
                                       )
@@ -277,7 +276,7 @@ class TaskInfoScreen extends StatelessWidget {
                                           Text(
                                             "Are you sure want to cancel booking?",
                                             style: FontPalette.black_16_600,
-                                          ),
+                                          ), 
                                           4.verticalSpace,
                                           Text(
                                             "Once you cancel you need to generate another ticket",
