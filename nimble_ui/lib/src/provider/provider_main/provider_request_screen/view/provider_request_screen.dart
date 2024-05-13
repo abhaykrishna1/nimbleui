@@ -115,6 +115,8 @@ class ProviderRequestScreen extends StatelessWidget {
                                           MaterialPageRoute(
                                               builder: (context) => ChatScreen(
                                                     acceptCheckingbool: true,
+                                                    seekerOrProviderChecking:
+                                                        false,
                                                   )),
                                         );
                                       },

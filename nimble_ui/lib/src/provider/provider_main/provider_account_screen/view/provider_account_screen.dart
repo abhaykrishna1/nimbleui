@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
+import 'package:nimple_ui/src/shimmer/seeker_home_shimmer.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 import 'package:nimple_ui/widget/account_list_widget.dart';
@@ -95,18 +96,25 @@ class ProviderAccountScreen extends StatelessWidget {
                   style: FontPalette.black_14_400,
                 ),
                 11.verticalSpace,
-                Container(
-                  padding: EdgeInsets.only(
-                      left: 14.w, right: 14.w, top: 10, bottom: 10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.r),
-                      color: Colors.black),
-                  child: Text(
-                    "Service Provider",
-                    style: TextStyle(
-                        fontSize: 14.sp,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.white),
+                InkWell(onTap: (){
+                  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => SeekerHomeScreenShimmer()),
+  );
+                },
+                  child: Container(
+                    padding: EdgeInsets.only(
+                        left: 14.w, right: 14.w, top: 10, bottom: 10),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20.r),
+                        color: Colors.black),
+                    child: Text(
+                      "Service Provider",
+                      style: TextStyle(
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white),
+                    ),
                   ),
                 ),
                 25.verticalSpace,

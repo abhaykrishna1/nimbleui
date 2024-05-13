@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nimple_ui/src/chat_screen/view/chat_screen.dart';
+import 'package:nimple_ui/commons/route_generator.dart';
+import 'package:nimple_ui/src/chat_screen/model/chat_screen_model.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 
@@ -15,13 +16,16 @@ class ProviderAcceptedProfileListViewWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         onTap: () {
           // Navigator.pushNamed(context, RouteGenerator.routechatscreen);
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-                builder: (context) => ChatScreen(
-                      acceptCheckingbool: true,
-                    )),
-          );
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(
+          //       builder: (context) => ChatScreen(
+          //             acceptCheckingbool: true,
+          //           )),
+          // );
+          Navigator.pushNamed(context, RouteGenerator.routechatscreen,
+              arguments: ChatArgPassModel(
+                  checkacceptBool: true, seekerOrProviderChecking: true));
         },
         child: Container(
           padding: const EdgeInsets.all(10),
@@ -58,7 +62,7 @@ class ProviderAcceptedProfileListViewWidget extends StatelessWidget {
                           fontWeight: FontWeight.w400,
                           fontSize: 12.sp,
                           color: HexColor("#616068")),
-                    )
+                    ),
                   ],
                 ),
               ),

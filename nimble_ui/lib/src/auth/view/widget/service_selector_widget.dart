@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nimple_ui/src/auth/view_model/welcome_screen_view_model.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
@@ -27,7 +26,6 @@ class ServiceSelectorWidget extends StatelessWidget {
             onTap: onpressed,
             child: Container(
               padding: const EdgeInsets.all(16),
-           
               width: double.maxFinite,
               decoration: BoxDecoration(
                   color: HexColor("#EEEEF2"),
@@ -62,7 +60,9 @@ class ServiceSelectorWidget extends StatelessWidget {
                       checkColor: Colors.white,
                       value: value == itemIndex,
                       shape: const CircleBorder(),
-                      onChanged: (bool? value) {},
+                      onChanged: (bool? value) {
+                        onpressed;
+                      },
                     ),
                   ),
                 ],

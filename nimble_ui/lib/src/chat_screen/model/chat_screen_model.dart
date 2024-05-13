@@ -1,5 +1,6 @@
-class ChatArgPassModel{
+class ChatArgPassModel {
   final bool checkacceptBool;
-
-  ChatArgPassModel({required this.checkacceptBool});
+  final bool seekerOrProviderChecking;
+  ChatArgPassModel(
+      {required this.checkacceptBool, required this.seekerOrProviderChecking});
 }

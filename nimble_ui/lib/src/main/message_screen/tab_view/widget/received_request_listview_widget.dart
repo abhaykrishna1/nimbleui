@@ -1,10 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
-import 'package:nimple_ui/src/chat_screen/model/chat_screen_model.dart';
 import 'package:nimple_ui/src/chat_screen/view/chat_screen.dart';
 import 'package:nimple_ui/src/main/message_screen/tab_view/widget/small_border_text_widget.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
@@ -22,8 +19,9 @@ class ReceivedRequestListViewWidget extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) =>  ChatScreen(
+              builder: (context) => ChatScreen(
                     acceptCheckingbool: false,
+                    seekerOrProviderChecking: false,
                   )),
         );
       },

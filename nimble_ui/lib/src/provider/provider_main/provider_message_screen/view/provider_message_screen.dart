@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'package:nimple_ui/src/main/message_screen/tab_view/accepted_profile_tab.dart';
-import 'package:nimple_ui/src/main/message_screen/tab_view/received_request_tab.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_message_screen/tab_view/provider_accepted_profile_tab.dart';
 import 'package:nimple_ui/src/provider/provider_main/provider_message_screen/tab_view/provider_received_request_tab.dart';
 import 'package:nimple_ui/utils/color_palate.dart';

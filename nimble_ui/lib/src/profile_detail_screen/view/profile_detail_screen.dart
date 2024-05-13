@@ -240,7 +240,7 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                         ),
                       ),
                       18.verticalSpace,
-                  const  AboutsWidget(),
+                      const AboutsWidget(),
                       14.verticalSpace,
                       Container(
                         padding: const EdgeInsets.all(15),
@@ -303,11 +303,11 @@ class _ProfileDetailScreenState extends State<ProfileDetailScreen> {
                       ),
                       15.verticalSpace,
                       Text("Cooking service", style: FontPalette.black_14_600),
-                     CookingServiceExpansiontileWidget(),
+                      CookingServiceExpansiontileWidget(),
                       10.verticalSpace,
                       Text(
                         Constants.expertise,
-                        style: 
+                        style:
                             FontPalette.black_14_600.copyWith(fontSize: 16.sp),
                       ),
                       4.verticalSpace,

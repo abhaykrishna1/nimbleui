@@ -1,6 +1,9 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/src/main/booking_screen/view/tab_view/widgets/show_dialog_widget.dart';
 import 'package:nimple_ui/src/main/message_screen/tab_view/widget/small_border_text_widget.dart';
@@ -8,9 +11,10 @@ import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 import 'package:nimple_ui/widget/custome_button.dart';
 
-class TaskInfoScreen extends StatelessWidget {
-  bool seekerChecking;
-  TaskInfoScreen({super.key, required this.seekerChecking});
+class ProviderTaskInfoScreen extends StatelessWidget {
+  ProviderTaskInfoScreen({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -365,14 +369,14 @@ class TaskInfoScreen extends StatelessWidget {
                     textColor: "#1F1E24",
                   ),
                 ),
-                // 6.horizontalSpace,
-                // Expanded(
-                //     child: CustomButton(
-                //         title: "Re-schedule",
-                //         onpressed: () {
-                //           Navigator.pushNamed(
-                //               context, RouteGenerator.routecreatetickerscreen);
-                //         }))
+                6.horizontalSpace,
+                Expanded(
+                    child: CustomButton(
+                        title: "Re-schedule",
+                        onpressed: () {
+                          Navigator.pushNamed(
+                              context, RouteGenerator.routecreatetickerscreen);
+                        }))
               ],
             ),
           )

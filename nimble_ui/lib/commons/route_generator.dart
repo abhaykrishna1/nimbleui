@@ -21,6 +21,7 @@ import 'package:nimple_ui/src/provider/provider_add_bank_account_screen/view/pro
 import 'package:nimple_ui/src/provider/provider_bank_account_screen/view/provider_bank_account_screeen.dart';
 import 'package:nimple_ui/src/provider/provider_main/view/provider_main_screen.dart';
 import 'package:nimple_ui/src/provider/provider_my_profile_screen.dart/view/provider_myprofile_screen.dart';
+import 'package:nimple_ui/src/provider/provider_task_info/view/provider_task_info_screen.dart';
 import 'package:nimple_ui/src/provider/view_profile/view/view_profile_screen.dart';
 import 'package:nimple_ui/src/settings/view/settings_screen.dart';
 
@@ -70,6 +71,8 @@ class RouteGenerator {
   static const String routetermsandconditions = "terms_and_conditions";
   static const String routeviewprofilescreen = "view_profile_screen";
   static const String routecreatetickerscreen = "create_ticket_screen";
+  static const String routeChatScreen = "chat_screen";
+  static const String routeProviderTaskInfoScreen = "provider_task_info_screen";
 
   /// provider route
 
@@ -112,34 +115,66 @@ class RouteGenerator {
       case routehelpcenterscreen:
         return _buildRoute(routehelpcenterscreen, HelpCenterScreen());
       case routesettingsscreen:
-        return _buildRoute(routesettingsscreen, SettingsScreen());
+        return _buildRoute(routesettingsscreen, const SettingsScreen());
       case routetaskinfoscreen:
-        return _buildRoute(routetaskinfoscreen, TaskInfoScreen());
+        bool? seekerChecking;
+        if (args != null) {
+          seekerChecking = args as bool;
+        }
+        return _buildRoute(
+            routetaskinfoscreen,
+            TaskInfoScreen(
+              seekerChecking: seekerChecking ?? false,
+            ));
       case routelocationScreen:
         return _buildRoute(routelocationScreen, LocationScreen());
       case routepaymentdonescreen:
-        return _buildRoute(routepaymentdonescreen, PaymentDoneScreen());
+        return _buildRoute(routepaymentdonescreen, const PaymentDoneScreen());
 
       case routeprovidermainscreen:
-        return _buildRoute(routeprovidermainscreen, ProviderMainScreen());
+        return _buildRoute(routeprovidermainscreen, const ProviderMainScreen());
       case routeprovidermyprofilescreen:
         return _buildRoute(
             routeprovidermyprofilescreen, ProviderMyProfileScreen());
 
       case routebankaccountscreen:
-        return _buildRoute(routebankaccountscreen, ProviderBankAccountScreen());
+        return _buildRoute(
+            routebankaccountscreen, const ProviderBankAccountScreen());
       case routeaddbankaccountscreen:
         return _buildRoute(
             routeaddbankaccountscreen, ProviderAddBankAccountScreen());
 
       case routeprivacypolicyscreen:
-        return _buildRoute(routeprivacypolicyscreen, PrivacyPolicyScreen());
+        return _buildRoute(
+            routeprivacypolicyscreen, const PrivacyPolicyScreen());
       case routetermsandconditions:
-        return _buildRoute(routetermsandconditions, TermsAndConditionsScreen());
+        return _buildRoute(
+            routetermsandconditions, const TermsAndConditionsScreen());
       case routeviewprofilescreen:
-        return _buildRoute(routeviewprofilescreen, ViewProfileScreen());
+        return _buildRoute(routeviewprofilescreen, const ViewProfileScreen());
       case routecreatetickerscreen:
-        return _buildRoute(routecreatetickerscreen, CreateTickerScreen());
+        return _buildRoute(routecreatetickerscreen, const CreateTickerScreen());
+
+      case routechatscreen:
+        ChatArgPassModel? chatargModel;
+        if (args != null) {
+          chatargModel = args as ChatArgPassModel;
+        }
+        return _buildRoute(
+            routechatscreen,
+            ChatScreen(
+              acceptCheckingbool: chatargModel?.checkacceptBool ?? false,
+              seekerOrProviderChecking:
+                  chatargModel?.seekerOrProviderChecking ?? false,
+            ));
+
+      case routeProviderTaskInfoScreen:
+        bool? checking;
+        if (args != null) {
+          checking = args as bool;
+        }
+        return _buildRoute(routeProviderTaskInfoScreen,
+            ProviderTaskInfoScreen());
 
       default:
         return _buildRoute(routeInitial, const SplashScreen());

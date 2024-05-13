@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/src/chat_screen/model/chat_screen_model.dart';
-import 'package:nimple_ui/src/chat_screen/view/chat_screen.dart';
 import 'package:nimple_ui/src/main/message_screen/tab_view/widget/small_border_text_widget.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
@@ -12,16 +11,16 @@ class AcceptedProfileListViewWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(onTap: (){
-        //    Navigator.pushNamed(
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, RouteGenerator.routechatscreen,
+            arguments: ChatArgPassModel(
+                checkacceptBool: true, seekerOrProviderChecking: false));
+        //        Navigator.push(
         //   context,
-        //   RouteGenerator.routechatscreen,arguments: ChatArgPassModel(checkacceptBool: true)
+        //   MaterialPageRoute(builder: (context) =>  ChatScreen(acceptCheckingbool: true,)),
         // );
-         Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) =>  ChatScreen(acceptCheckingbool: true,)),
-  );
-    },
+      },
       child: Container(
         padding: const EdgeInsets.all(10),
         child: Row(
@@ -66,7 +65,7 @@ class AcceptedProfileListViewWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SmallBorderTextWidget(title: "Clean"),
+                const SmallBorderTextWidget(title: "Clean"),
                 15.verticalSpace,
                 Text(
                   "12.00 PM",

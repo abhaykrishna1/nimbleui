@@ -10,7 +10,11 @@ import 'package:nimple_ui/widget/custome_button.dart';
 
 class ChatScreen extends StatefulWidget {
   bool acceptCheckingbool;
-  ChatScreen({super.key, required this.acceptCheckingbool});
+  bool seekerOrProviderChecking;
+  ChatScreen(
+      {super.key,
+      required this.acceptCheckingbool,
+      required this.seekerOrProviderChecking});
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -57,6 +61,8 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     boolvalueAccept = widget.acceptCheckingbool;
+    debugPrint(widget.acceptCheckingbool.toString());
+    debugPrint(" seeker chcking ${widget.seekerOrProviderChecking.toString()}");
     return Scaffold(
       appBar: AppBar(
         elevation: 1,
@@ -89,7 +95,13 @@ class _ChatScreenState extends State<ChatScreen> {
           InkWell(
             borderRadius: BorderRadius.circular(15),
             onTap: () {
-              Navigator.pushNamed(context, RouteGenerator.routetaskinfoscreen);
+              if (widget.seekerOrProviderChecking == true) {
+                Navigator.pushNamed(
+                    context, RouteGenerator.routeProviderTaskInfoScreen);
+              } else {
+                Navigator.pushNamed(
+                    context, RouteGenerator.routetaskinfoscreen);
+              }
             },
             child: Container(
                 padding: const EdgeInsets.all(7),

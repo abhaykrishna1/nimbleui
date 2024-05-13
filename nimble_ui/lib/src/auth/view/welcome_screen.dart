@@ -44,6 +44,7 @@ class WelcomeScreen extends StatelessWidget {
                 subTitle: Constants.serviceprovidershot,
                 itemIndex: 1,
                 onpressed: () {
+                  
                   context.read<WelcomeScreenProvider>().selectTypeFunction(1);
                 },
               ),
