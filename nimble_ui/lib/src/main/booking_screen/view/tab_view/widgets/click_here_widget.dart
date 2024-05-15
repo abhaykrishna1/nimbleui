@@ -22,15 +22,16 @@ class _ClickHereWidgetState extends State<ClickHereWidget> {
         alignment: Alignment.bottomCenter,
         child: IntrinsicHeight(
           child: Material(
+            color: Colors.transparent,
             child: Container(
               height: MediaQuery.of(context).size.height * 0.8,
               width: double.maxFinite,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(20.r),
+                      topLeft: Radius.circular(20),
                       topRight: Radius.circular(
-                        20.r,
+                        20,
                       ))),
               child: Column(
                 children: [

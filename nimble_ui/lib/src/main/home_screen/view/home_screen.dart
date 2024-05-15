@@ -9,9 +9,9 @@ import 'package:nimple_ui/src/main/home_screen/view/tab_view/tab_care_screen.dar
 import 'package:nimple_ui/src/main/home_screen/view/tab_view/tab_clean_screen.dart';
 import 'package:nimple_ui/src/main/home_screen/view/tab_view/tab_cook_screen.dart';
 import 'package:nimple_ui/src/main/home_screen/view_model/home_provider.dart';
-import 'package:nimple_ui/src/shimmer/provider/provider_home_screen_shimmer.dart';
-import 'package:nimple_ui/src/shimmer/seeker_home_list_shimmer.dart';
-import 'package:nimple_ui/src/shimmer/seeker_home_shimmer.dart';
+// import 'package:nimple_ui/src/shimmer/provider/provider_home_screen_shimmer.dart';
+// import 'package:nimple_ui/src/shimmer/seeker_home_list_shimmer.dart';
+// import 'package:nimple_ui/src/shimmer/seeker_home_shimmer.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
 import 'package:nimple_ui/utils/font_palette.dart';
 import 'package:provider/provider.dart';
@@ -36,163 +36,163 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // return DefaultTabController(
-    //   length: 4,
-    //   child: Scaffold(
-    //     backgroundColor: HexColor("#EEEEF2"),
-    //     body: Column(
-    //       children: [
-    //         SizedBox(
-    //           height: 88.h,
-    //           width: double.maxFinite,
-    //           child: TabBar(
-    //             overlayColor:
-    //                 MaterialStateProperty.all<Color>(Colors.transparent),
-    //             onTap: (value) {
-    //               setState(() {
-    //                 seletedIndex = value;
-    //               });
-    //             },
-    //             padding: const EdgeInsets.all(20),
-    //             labelPadding: EdgeInsets.zero,
-    //             indicatorColor: Colors.transparent,
-    //             dividerHeight: 0,
-    //             tabs: List.generate(tabs.length, (index) {
-    //               return Container(
-    //                 // alignment: Alignment.center,
-    //                 padding: EdgeInsets.only(top: 14.h, bottom: 14.h),
-    //                 margin: EdgeInsets.only(right: index <= 2 ? 10 : 0),
-    //                 decoration: BoxDecoration(
-    //                     color:
-    //                         seletedIndex == index ? Colors.black : Colors.white,
-    //                     borderRadius: BorderRadius.circular(32)),
-    //                 child: Row(
-    //                   mainAxisAlignment: MainAxisAlignment.center,
-    //                   children: [
-    //                     index == 0
-    //                         ? 0.horizontalSpace
-    //                         : SizedBox(
-    //                             height: 17.h,
-    //                             width: 17.w,
-    //                             child: SvgPicture.asset(
-    //                               tabsIcon[index],
-    //                               color: seletedIndex == index
-    //                                   ? Colors.white
-    //                                   : Colors.black,
-    //                             ),
-    //                           ),
-    //                     3.horizontalSpace,
-    //                     Text(
-    //                       tabs[index],
-    //                       style: FontPalette.black_14_600.copyWith(
-    //                           color: seletedIndex == index
-    //                               ? Colors.white
-    //                               : Colors.black),
-    //                       overflow: TextOverflow.ellipsis,
-    //                     ),
-    //                   ],
-    //                 ),
-    //               );
-    //             }),
-    //           ),
-    //         ),
-    //         Expanded(
-    //           child: TabBarView(
-    //             physics: const NeverScrollableScrollPhysics(),
-    //             children: [
-    //               TabAllScreen(),
-    //               const TabCareScreen(),
-    //               const TabCookScreen(),
-    //               const TabCleanScreen()
-    //               // const ClipTestWidget(),
-    //             ],
-    //           ),
-    //         ),
-    //         Container(
-    //           color: Colors.white,
-    //           height: 41.h,
-    //           width: double.maxFinite,
-    //           child: Row(
-    //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-    //             children: [
-    //               InkWell(
-    //                 onTap: () {
-    //                   Navigator.pushNamed(
-    //                     context,
-    //                     RouteGenerator.routefilterScreen,
-    //                   );
-    //                 },
-    //                 child: SizedBox(
-    //                   height: 21.h,
-    //                   width: 100.w,
-    //                   child: Row(
-    //                     mainAxisAlignment: MainAxisAlignment.center,
-    //                     children: [
-    //                       SizedBox(
-    //                         height: 30.h,
-    //                         width: 30.w,
-    //                         child: SvgPicture.asset(
-    //                           Assets.filter,
-    //                         ),
-    //                       ),
-    //                       10.horizontalSpace,
-    //                       Text(
-    //                         Constants.filter,
-    //                         style: FontPalette.black_14_600,
-    //                       )
-    //                     ],
-    //                   ),
-    //                 ),
-    //               ),
-    //               Container(
-    //                 height: 21.h,
-    //                 width: 1,
-    //                 color: HexColor("#C7C6CD"),
-    //               ),
-    //               InkWell(
-    //                 onTap: () {
-    //                   if (context.read<HomeProvider>().listAndGridBool) {
-    //                     context.read<HomeProvider>().onClick(false);
-    //                   } else {
-    //                     context.read<HomeProvider>().onClick(true);
-    //                   }
-    //                 },
-    //                 child: Selector<HomeProvider, bool>(
-    //                     selector: (p0, p1) => p1.listAndGridBool,
-    //                     builder: (context, data, _) {
-    //                       return SizedBox(
-    //                         height: 21.h,
-    //                         width: 100.w,
-    //                         child: Row(
-    //                           mainAxisAlignment: MainAxisAlignment.center,
-    //                           children: [
-    //                             SizedBox(
-    //                               height: 19.h,
-    //                               width: 19.w,
-    //                               child: SvgPicture.asset(
-    //                                 data == true
-    //                                     ? Assets.gridIcon
-    //                                     : Assets.list,
-    //                               ),
-    //                             ),
-    //                             10.horizontalSpace,
-    //                             Text(
-    //                               data == true ? "Grid" : Constants.list,
-    //                               style: FontPalette.black_14_600,
-    //                             )
-    //                           ],
-    //                         ),
-    //                       );
-    //                     }),
-    //               ),
-    //             ],
-    //           ),
-    //         ),
-    //       ],
-    //     ),
-    //   ),
-    // );
-    return ProviderHomeScreenShimmer();
+    return DefaultTabController(
+      length: 4,
+      child: Scaffold(
+        backgroundColor: HexColor("#EEEEF2"),
+        body: Column(
+          children: [
+            SizedBox(
+              height: 88.h,
+              width: double.maxFinite,
+              child: TabBar(
+                overlayColor:
+                    MaterialStateProperty.all<Color>(Colors.transparent),
+                onTap: (value) {
+                  setState(() {
+                    seletedIndex = value;
+                  });
+                },
+                padding: const EdgeInsets.all(20),
+                labelPadding: EdgeInsets.zero,
+                indicatorColor: Colors.transparent,
+                dividerHeight: 0,
+                tabs: List.generate(tabs.length, (index) {
+                  return Container(
+                    // alignment: Alignment.center,
+                    padding: EdgeInsets.only(top: 14.h, bottom: 14.h),
+                    margin: EdgeInsets.only(right: index <= 2 ? 10 : 0),
+                    decoration: BoxDecoration(
+                        color:
+                            seletedIndex == index ? Colors.black : Colors.white,
+                        borderRadius: BorderRadius.circular(32)),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        index == 0
+                            ? 0.horizontalSpace
+                            : SizedBox(
+                                height: 17.h,
+                                width: 17.w,
+                                child: SvgPicture.asset(
+                                  tabsIcon[index],
+                                  color: seletedIndex == index
+                                      ? Colors.white
+                                      : Colors.black,
+                                ),
+                              ),
+                        3.horizontalSpace,
+                        Text(
+                          tabs[index],
+                          style: FontPalette.black_14_600.copyWith(
+                              color: seletedIndex == index
+                                  ? Colors.white
+                                  : Colors.black),
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                    ),
+                  );
+                }),
+              ),
+            ),
+            Expanded(
+              child: TabBarView(
+                physics: const NeverScrollableScrollPhysics(),
+                children: [
+                  TabAllScreen(),
+                  const TabCareScreen(),
+                  const TabCookScreen(),
+                  const TabCleanScreen()
+                  // const ClipTestWidget(),
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.white,
+              height: 41.h,
+              width: double.maxFinite,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                        context,
+                        RouteGenerator.routefilterScreen,
+                      );
+                    },
+                    child: SizedBox(
+                      height: 21.h,
+                      width: 100.w,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 30.h,
+                            width: 30.w,
+                            child: SvgPicture.asset(
+                              Assets.filter,
+                            ),
+                          ),
+                          10.horizontalSpace,
+                          Text(
+                            Constants.filter,
+                            style: FontPalette.black_14_600,
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 21.h,
+                    width: 1,
+                    color: HexColor("#C7C6CD"),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      if (context.read<HomeProvider>().listAndGridBool) {
+                        context.read<HomeProvider>().onClick(false);
+                      } else {
+                        context.read<HomeProvider>().onClick(true);
+                      }
+                    },
+                    child: Selector<HomeProvider, bool>(
+                        selector: (p0, p1) => p1.listAndGridBool,
+                        builder: (context, data, _) {
+                          return SizedBox(
+                            height: 21.h,
+                            width: 100.w,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                SizedBox(
+                                  height: 19.h,
+                                  width: 19.w,
+                                  child: SvgPicture.asset(
+                                    data == true
+                                        ? Assets.gridIcon
+                                        : Assets.list,
+                                  ),
+                                ),
+                                10.horizontalSpace,
+                                Text(
+                                  data == true ? "Grid" : Constants.list,
+                                  style: FontPalette.black_14_600,
+                                )
+                              ],
+                            ),
+                          );
+                        }),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+    //return ProviderHomeScreenShimmer();
   }
 }
 

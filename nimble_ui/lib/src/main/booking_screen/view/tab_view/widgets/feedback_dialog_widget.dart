@@ -36,6 +36,7 @@ class _ClickHereWidgetState extends State<FeedBackDialogWidget> {
         alignment: Alignment.bottomCenter,
         child: IntrinsicHeight(
           child: Material(
+            color: Colors.transparent,
             child: Container(
               height: MediaQuery.of(context).size.height * 0.8,
               width: double.maxFinite,

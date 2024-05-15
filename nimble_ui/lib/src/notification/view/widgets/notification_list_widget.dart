@@ -17,8 +17,8 @@ class NotificatioListWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  height: 48.h,
-                  width: 48.w,
+                  height: 43.h,
+                  width: 43.w,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                         image: NetworkImage(
@@ -52,7 +52,7 @@ class NotificatioListWidget extends StatelessWidget {
               padding: EdgeInsets.only(left: 66.w),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.end,
-                children: [Text("Yesterday")],
+                children: [Text("a week ago")],
               ),
             )
           ],

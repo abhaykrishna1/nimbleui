@@ -25,28 +25,28 @@ class ProviderHomeScreenShimmer extends StatelessWidget {
                         children: [
                           Container(
                             height: 65,
-                            width: 85,
+                            width: 95,
                             decoration: BoxDecoration(
                                 color: Colors.grey.shade400,
                                 borderRadius: BorderRadius.circular(30)),
                           ),
                           Container(
                             height: 65,
-                            width: 125,
+                            width: 135,
                             decoration: BoxDecoration(
                                 color: Colors.grey.shade400,
                                 borderRadius: BorderRadius.circular(30)),
                           ),
                           Container(
                             height: 65,
-                            width: 125,
+                            width: 135,
                             decoration: BoxDecoration(
                                 color: Colors.grey.shade400,
                                 borderRadius: BorderRadius.circular(30)),
                           ),
                         ],
                       ),
-                      27.verticalSpace,
+                      17.verticalSpace,
                       Container(
                         height: 180,
                         width: double.infinity,
@@ -55,7 +55,7 @@ class ProviderHomeScreenShimmer extends StatelessWidget {
                           color: Colors.grey.shade400,
                         ),
                       ),
-                      10.verticalSpace,
+                      13.verticalSpace,
                       Expanded(
                         child: ListView.separated(
                             shrinkWrap: true,
@@ -64,7 +64,9 @@ class ProviderHomeScreenShimmer extends StatelessWidget {
                               return Container(
                                 height: 120,
                                 width: double.maxFinite,
-                                color: Colors.grey,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    color: Colors.grey),
                               );
                             },
                             separatorBuilder: (ctx, index) {
