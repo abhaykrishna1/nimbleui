@@ -14,8 +14,6 @@ class ReceivedRequestListViewWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        // Navigator.pushNamed(context, RouteGenerator.routechatscreen,
-        //     arguments: ChatArgPassModel(checkacceptBool: false));
         Navigator.push(
           context,
           MaterialPageRoute(

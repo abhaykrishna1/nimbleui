@@ -96,12 +96,14 @@ class ProviderAccountScreen extends StatelessWidget {
                   style: FontPalette.black_14_400,
                 ),
                 11.verticalSpace,
-                InkWell(onTap: (){
-                  Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => SeekerHomeScreenShimmer()),
-  );
-                },
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => SeekerHomeScreenShimmer()),
+                    );
+                  },
                   child: Container(
                     padding: EdgeInsets.only(
                         left: 14.w, right: 14.w, top: 10, bottom: 10),

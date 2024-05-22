@@ -44,7 +44,7 @@ class SeekerProfileScreenShimmer extends StatelessWidget {
                       Container(
                         height: 60,
                         width: 70,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle, color: Colors.grey),
                       )
                     ],

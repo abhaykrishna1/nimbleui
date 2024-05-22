@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:nimple_ui/commons/route_generator.dart';
 import 'package:nimple_ui/generate/assets.dart';
 import 'package:nimple_ui/utils/color_palate.dart';
@@ -17,6 +14,8 @@ class AccountScreen extends StatefulWidget {
 }
 
 class _AccountScreenState extends State<AccountScreen> {
+  final String image =
+      "https://t3.ftcdn.net/jpg/02/68/56/00/360_F_268560006_F2fIixDnlVRNGwCyne9EMQJhaAxalKTq.jpg";
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -31,10 +30,10 @@ class _AccountScreenState extends State<AccountScreen> {
               child: Container(
                 height: 91.h,
                 width: 91.w,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   image: DecorationImage(
                       image: NetworkImage(
-                        "https://t3.ftcdn.net/jpg/02/68/56/00/360_F_268560006_F2fIixDnlVRNGwCyne9EMQJhaAxalKTq.jpg",
+                        image,
                       ),
                       fit: BoxFit.cover),
                   shape: BoxShape.circle,

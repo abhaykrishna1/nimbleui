@@ -404,3 +404,38 @@ class _ResonsWidgetState extends State<ResonsWidget> {
     );
   }
 }
+
+
+
+// class _HomeViewHandler extends StatelessWidget {
+//   const _HomeViewHandler();
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Selector<HomeProvider, Tuple2<LoaderState, List<Widget>>>(
+//       selector: (context, provider) =>
+//           Tuple2(provider.loaderState, provider.homeWidgets),
+//       builder: (context, homeModel, child) {
+//         debugPrint(homeModel.item1.toString());
+//         switch (homeModel.item1) {
+//           case LoaderState.loaded:
+//             return _CustomScrollView(children: homeModel.item2);
+//           case LoaderState.loading:
+//             return const HomeScreenShimmer();
+//           case LoaderState.noData:
+//             return const ApiErrorScreens(loaderState: LoaderState.noData);
+//           case LoaderState.error:
+//             return const ApiErrorScreens(loaderState: LoaderState.error);
+//           case LoaderState.networkErr:
+//             return const ApiErrorScreens(loaderState: LoaderState.networkErr);
+//           default:
+//             return Container(
+//               height: context.sh(),
+//               width: context.sw(),
+//               color: Colors.red,
+//             );
+//         }
+//       },
+//     );
+//   }
+// }
