@@ -12,17 +12,17 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding:
-              const EdgeInsets.only(left: 16, right: 16, top: 16, bottom: 5),
-          child: Column(
-            children: [
-              Expanded(
+        child: Column(
+          children: [
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(
+                    left: 16, right: 16, top: 16, bottom: 5),
                 child: Column(
                   children: [
                     Shimmer.fromColors(
-                      baseColor: HexColor("#D5D5D5"),
-                      highlightColor: HexColor("#D5D5D5").withOpacity(0.5),
+                      baseColor: HexColor("#EEEEF2"),
+                      highlightColor: HexColor("#EEEEF2").withOpacity(0.5),
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -101,9 +101,9 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Shimmer.fromColors(
-                                  baseColor: HexColor("#D5D5D5"),
+                                  baseColor: HexColor("#EEEEF2"),
                                   highlightColor:
-                                      HexColor("#D5D5D5").withOpacity(0.5),
+                                      HexColor("#EEEEF2").withOpacity(0.5),
                                   child: const Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -117,9 +117,9 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                                 ),
                                 12.verticalSpace,
                                 Shimmer.fromColors(
-                                  baseColor: HexColor("#D5D5D5"),
+                                  baseColor: HexColor("#EEEEF2"),
                                   highlightColor:
-                                      HexColor("#D5D5D5").withOpacity(0.5),
+                                      HexColor("#EEEEF2").withOpacity(0.5),
                                   child: Row(
                                     children: [
                                       const ShimmerContainer(
@@ -132,17 +132,17 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                                 ),
                                 12.verticalSpace,
                                 Shimmer.fromColors(
-                                  baseColor: HexColor("#D5D5D5"),
+                                  baseColor: HexColor("#EEEEF2"),
                                   highlightColor:
-                                      HexColor("#D5D5D5").withOpacity(0.5),
+                                      HexColor("#EEEEF2").withOpacity(0.5),
                                   child: const ShimmerContainer(
                                       height: 10.0, width: 280.0),
                                 ),
                                 30.verticalSpace,
                                 Shimmer.fromColors(
-                                  baseColor: HexColor("#D5D5D5"),
+                                  baseColor: HexColor("#EEEEF2"),
                                   highlightColor:
-                                      HexColor("#D5D5D5").withOpacity(0.5),
+                                      HexColor("#EEEEF2").withOpacity(0.5),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -166,22 +166,23 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                   ],
                 ),
               ),
-              const Divider(),
-              0.verticalSpace,
-              Shimmer.fromColors(
-                baseColor: HexColor("#D5D5D5"),
-                highlightColor: HexColor("#D5D5D5").withOpacity(0.5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    const ShimmerContainer(height: 33.0, width: 100.0),
-                    10.horizontalSpace,
-                    const ShimmerContainer(height: 33.0, width: 100.0),
-                  ],
-                ),
-              )
-            ],
-          ),
+            ),
+            const Divider(),
+            0.verticalSpace,
+            Shimmer.fromColors(
+              baseColor: HexColor("#EEEEF2"),
+              highlightColor: HexColor("#EEEEF2").withOpacity(0.5),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  const ShimmerContainer(height: 33.0, width: 120.0),
+                  10.horizontalSpace,
+                  const ShimmerContainer(height: 33.0, width: 120.0),
+                ],
+              ),
+            ),
+            7.verticalSpace,
+          ],
         ),
       ),
     );

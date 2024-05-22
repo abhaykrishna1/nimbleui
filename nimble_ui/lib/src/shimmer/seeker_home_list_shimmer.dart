@@ -19,8 +19,8 @@ class SeekerHomeScreenListShimmer extends StatelessWidget {
               Column(
                 children: [
                   Shimmer.fromColors(
-                    baseColor: HexColor("#D5D5D5"),
-                    highlightColor: HexColor("#D5D5D5").withOpacity(0.5),
+                    baseColor: HexColor("#EEEEF2"),
+                    highlightColor: HexColor("#EEEEF2").withOpacity(0.5),
                     child: const Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -61,9 +61,9 @@ class SeekerHomeScreenListShimmer extends StatelessWidget {
                         child: Row(
                           children: [
                             Shimmer.fromColors(
-                              baseColor: HexColor("#D5D5D5"),
+                              baseColor: HexColor("#EEEEF2"),
                               highlightColor:
-                                  HexColor("#D5D5D5").withOpacity(0.5),
+                                  HexColor("#EEEEF2").withOpacity(0.5),
                               child: Container(
                                 width: 140,
                                 decoration: BoxDecoration(
@@ -76,9 +76,9 @@ class SeekerHomeScreenListShimmer extends StatelessWidget {
                             10.horizontalSpace,
                             Expanded(
                               child: Shimmer.fromColors(
-                                baseColor: HexColor("#D5D5D5"),
+                                baseColor: HexColor("#EEEEF2"),
                                 highlightColor:
-                                    HexColor("#D5D5D5").withOpacity(0.5),
+                                    HexColor("#EEEEF2").withOpacity(0.5),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -143,8 +143,8 @@ class SeekerHomeScreenListShimmer extends StatelessWidget {
               const Divider(),
               0.verticalSpace,
               Shimmer.fromColors(
-                baseColor: HexColor("#D5D5D5"),
-                highlightColor: HexColor("#D5D5D5").withOpacity(0.5),
+                baseColor: HexColor("#EEEEF2"),
+                highlightColor: HexColor("#EEEEF2").withOpacity(0.5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

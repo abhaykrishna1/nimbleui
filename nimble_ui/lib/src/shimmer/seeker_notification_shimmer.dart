@@ -25,9 +25,9 @@ class NotificationShimmerScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Shimmer.fromColors(
-                            baseColor: const Color(0xFFF4F4F4),
+                            baseColor: HexColor("#EEEEF2"),
                             highlightColor:
-                                const Color(0xFFF4F4F4).withOpacity(0.5),
+                                HexColor("#EEEEF2").withOpacity(0.5),
                             child: Container(
                               height: 43.h,
                               width: 43.w,
@@ -40,9 +40,9 @@ class NotificationShimmerScreen extends StatelessWidget {
                           10.horizontalSpace,
                           Expanded(
                             child: Shimmer.fromColors(
-                              baseColor: const Color(0xFFF4F4F4),
+                              baseColor: HexColor("#EEEEF2"),
                               highlightColor:
-                                  const Color(0xFFF4F4F4).withOpacity(0.5),
+                                  HexColor("#EEEEF2").withOpacity(0.5),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -59,9 +59,8 @@ class NotificationShimmerScreen extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.only(left: 66.w),
                         child: Shimmer.fromColors(
-                          baseColor: const Color(0xFFF4F4F4),
-                          highlightColor:
-                              const Color(0xFFF4F4F4).withOpacity(0.5),
+                          baseColor: HexColor("#EEEEF2"),
+                          highlightColor: HexColor("#EEEEF2").withOpacity(0.5),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [

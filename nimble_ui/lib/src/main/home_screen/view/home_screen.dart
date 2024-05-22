@@ -198,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //     ),
     //   ),
     // );
-    return const SeekerHomeScreenListShimmer();
+    return const NotificationShimmerScreen();
     //return const SeekerHomeScreenShimmer();
   }
 }
@@ -213,7 +213,7 @@ class ClipTestWidget extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: 
+          padding:
               const EdgeInsets.only(left: 16.0, right: 16, top: 7, bottom: 7),
           child: CustomPaint(
             painter: CouponPainterTwo(

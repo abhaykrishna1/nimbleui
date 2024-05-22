@@ -18,8 +18,8 @@ class SeekerBookingScreenShimmer extends StatelessWidget {
           children: [
             10.verticalSpace,
             Shimmer.fromColors(
-              baseColor: const Color(0xFFF4F4F4),
-              highlightColor: const Color(0xFFF4F4F4).withOpacity(0.5),
+              baseColor: HexColor("#EEEEF2"),
+              highlightColor: HexColor("#EEEEF2").withOpacity(0.5),
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -389,9 +389,9 @@ class SeekerBookingScreenShimmer extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Shimmer.fromColors(
-                                  baseColor: HexColor("#D5D5D5"),
+                                  baseColor: HexColor("#EEEEF2"),
                                   highlightColor:
-                                      HexColor("#D5D5D5").withOpacity(0.5),
+                                      HexColor("#EEEEF2").withOpacity(0.5),
                                   child: Container(
                                     margin: EdgeInsets.only(
                                         left: 7.w, top: 7, bottom: 7),
@@ -414,9 +414,9 @@ class SeekerBookingScreenShimmer extends StatelessWidget {
                                         top: 12.h,
                                         bottom: 12.h),
                                     child: Shimmer.fromColors(
-                                      baseColor: HexColor("#D5D5D5"),
+                                      baseColor: HexColor("#EEEEF2"),
                                       highlightColor:
-                                          HexColor("#D5D5D5").withOpacity(0.5),
+                                          HexColor("#EEEEF2").withOpacity(0.5),
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
