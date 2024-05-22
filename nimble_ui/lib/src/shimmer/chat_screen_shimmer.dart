@@ -79,9 +79,8 @@ class ChatShimmerScreen extends StatelessWidget {
                             topLeft: const Radius.circular(16),
                           )),
                       child: Shimmer.fromColors(
-                        baseColor: const Color(0xFFF4F4F4),
-                        highlightColor:
-                            const Color(0xFFF4F4F4).withOpacity(0.5),
+                      baseColor: HexColor("#D5D5D5"),
+                          highlightColor: HexColor("#D5D5D5").withOpacity(0.5),
                         child: Column(
                           crossAxisAlignment:
                               messages[index].messageType != "receiver"

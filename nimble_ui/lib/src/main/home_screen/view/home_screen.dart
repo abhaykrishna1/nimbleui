@@ -14,6 +14,7 @@ import 'package:nimple_ui/src/shimmer/seeker_boking_screen_shimmer.dart';
 import 'package:nimple_ui/src/shimmer/seeker_home_list_shimmer.dart';
 import 'package:nimple_ui/src/shimmer/seeker_home_shimmer.dart';
 import 'package:nimple_ui/src/shimmer/seeker_notification_shimmer.dart';
+import 'package:nimple_ui/src/shimmer/seeker_profile_screen_shimmer.dart';
 // import 'package:nimple_ui/src/shimmer/provider/provider_home_screen_shimmer.dart';
 // import 'package:nimple_ui/src/shimmer/seeker_home_list_shimmer.dart';
 // import 'package:nimple_ui/src/shimmer/seeker_home_shimmer.dart';
@@ -197,7 +198,7 @@ class _HomeScreenState extends State<HomeScreen> {
     //     ),
     //   ),
     // );
-    return const SeekerBookingScreenShimmer();
+    return const SeekerHomeScreenListShimmer();
     //return const SeekerHomeScreenShimmer();
   }
 }

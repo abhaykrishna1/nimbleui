@@ -19,14 +19,6 @@ class SeekerProfileScreenShimmer extends StatelessWidget {
               color: Colors.grey,
             ),
             10.verticalSpace,
-            // Container(
-            //   clipBehavior: Clip.antiAliasWithSaveLayer,
-            //   transform: Matrix4.translationValues(0, -32, 0),
-            //   height: 1000,
-            //   width: double.maxFinite,
-            //   decoration: const BoxDecoration(color: Colors.black),
-            // )
-
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(

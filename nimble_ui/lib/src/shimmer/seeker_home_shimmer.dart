@@ -21,8 +21,8 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                 child: Column(
                   children: [
                     Shimmer.fromColors(
-                      baseColor: const Color(0xFFF4F4F4),
-                      highlightColor: const Color(0xFFF4F4F4).withOpacity(0.5),
+                      baseColor: HexColor("#D5D5D5"),
+                      highlightColor: HexColor("#D5D5D5").withOpacity(0.5),
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -74,9 +74,9 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                                     topLeft: Radius.circular(20),
                                     topRight: Radius.circular(20))),
                             child: Shimmer.fromColors(
-                              baseColor: HexColor("#D0D0D6"),
+                              baseColor: HexColor("#D5D5D5"),
                               highlightColor:
-                                  const Color(0xFFF4F4F4).withOpacity(0.5),
+                                  HexColor("#D5D5D5").withOpacity(0.5),
                               child: Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
@@ -101,9 +101,9 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Shimmer.fromColors(
-                                  baseColor: const Color(0xFFF4F4F4),
+                                  baseColor: HexColor("#D5D5D5"),
                                   highlightColor:
-                                      const Color(0xFFF4F4F4).withOpacity(0.5),
+                                      HexColor("#D5D5D5").withOpacity(0.5),
                                   child: const Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -117,9 +117,9 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                                 ),
                                 12.verticalSpace,
                                 Shimmer.fromColors(
-                                  baseColor: const Color(0xFFF4F4F4),
+                                  baseColor: HexColor("#D5D5D5"),
                                   highlightColor:
-                                      const Color(0xFFF4F4F4).withOpacity(0.5),
+                                      HexColor("#D5D5D5").withOpacity(0.5),
                                   child: Row(
                                     children: [
                                       const ShimmerContainer(
@@ -132,17 +132,17 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
                                 ),
                                 12.verticalSpace,
                                 Shimmer.fromColors(
-                                  baseColor: const Color(0xFFF4F4F4),
+                                  baseColor: HexColor("#D5D5D5"),
                                   highlightColor:
-                                      const Color(0xFFF4F4F4).withOpacity(0.5),
+                                      HexColor("#D5D5D5").withOpacity(0.5),
                                   child: const ShimmerContainer(
                                       height: 10.0, width: 280.0),
                                 ),
                                 30.verticalSpace,
                                 Shimmer.fromColors(
-                                  baseColor: const Color(0xFFF4F4F4),
+                                  baseColor: HexColor("#D5D5D5"),
                                   highlightColor:
-                                      const Color(0xFFF4F4F4).withOpacity(0.5),
+                                      HexColor("#D5D5D5").withOpacity(0.5),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -169,8 +169,8 @@ class SeekerHomeScreenShimmer extends StatelessWidget {
               const Divider(),
               0.verticalSpace,
               Shimmer.fromColors(
-                baseColor: const Color(0xFFF4F4F4),
-                highlightColor: const Color(0xFFF4F4F4).withOpacity(0.5),
+                baseColor: HexColor("#D5D5D5"),
+                highlightColor: HexColor("#D5D5D5").withOpacity(0.5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
